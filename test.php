@@ -7,5 +7,5 @@
  */
 echo "hallo";
 echo "test";
-echo "test2<br>";
+echo "test2</br>";
 echo "banane";
