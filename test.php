@@ -6,7 +6,3 @@
  * Time: 02:05
  */
 echo "hallo";
-echo "test";
-echo "test2</br>";
-echo "banane";
-echo "guten Tag";
