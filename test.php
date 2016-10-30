@@ -1,11 +1,14 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Juan Carlos
- * Date: 29.10.2016
- * Time: 02:05
- */
-echo "hallo";
-echo "gut";
-echo "versuch2<br>";
-echo "nochmal";
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <?php
+    echo "hallo";
+    echo "gut";
+    echo "versuch2<br>";
+    echo "nochmal";
+    ?>
+</body>
+</html>
