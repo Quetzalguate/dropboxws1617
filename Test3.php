@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <title>Dropbox</title>
-</head>
-
-<body>
-<h1>Herzlich Willkommen</h1>
-
 <?php
 session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=u-jv029', 'jv029', 'IeBu2chie3');
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrierung</title>
+</head>
+<body>
+
 <?php
 $showFormular = true;
 
@@ -48,12 +45,12 @@ if(isset($_GET['register'])) {
         $statement = $pdo->prepare("INSERT INTO dbuser (user, passwort) VALUES (:user, :passwort)");
         $result = $statement->execute(array('user' => $user, 'passwort' => $passwort_hash));
 
-        /*if($result) {
+        if($result) {
             echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
             $showFormular = false;
         } else {
             echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
-        }*/
+        }
     }
 }
 
