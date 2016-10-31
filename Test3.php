@@ -31,7 +31,7 @@ if(isset($_GET['register'])) {
     }
 
     if(!$error) {
-        $statement = $pdo->prepare("SELECT * FROM dbuser WHERE dbuser = :user");
+        $statement = $pdo->prepare("SELECT * FROM dbuser WHERE user = :user");
         $result = $statement->execute(array('user' => $user));
         $user = $statement->fetch();
 
