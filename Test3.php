@@ -48,12 +48,12 @@ if(isset($_GET['register'])) {
         $statement = $pdo->prepare("INSERT INTO dbuser (user, passwort) VALUES (:user, :passwort)");
         $result = $statement->execute(array('user' => $user, 'passwort' => $passwort_hash));
 
-        if($result) {
+        /*if($result) {
             echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
             $showFormular = false;
         } else {
             echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
-        }
+        }*/
     }
 }
 
