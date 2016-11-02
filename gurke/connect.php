@@ -12,4 +12,10 @@ catch(PDOException $e)
     {
         echo "Connection failed: " . $e->getMessage();
     }
-?>
+?><?php
+/**
+ * Created by PhpStorm.
+ * User: Ludi
+ * Date: 02.11.2016
+ * Time: 12:32
+ */
