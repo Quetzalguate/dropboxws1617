@@ -9,7 +9,7 @@
     echo "gut";
     echo "versuch2<br>";
     echo "nochmal";
-    echo "vsdfsdfgdfhfh2<br>";
+    echo "vsdfsdfgdf<br>";
     ?>
 </body>
 </html>
