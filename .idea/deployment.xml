@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" uploadOnCheckin="7a72f386-a4ea-4508-aa67-1ca4bb594d25">
+  <component name="PublishConfigData">
     <serverData>
-      <paths name="mars">
+      <paths name="mars.iuk.hdm-stuttgart.de">
         <serverdata>
           <mappings>
-            <mapping deploy="/public_html" local="$PROJECT_DIR$" web="/~jv029/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="mars" />
   </component>
 </project>
