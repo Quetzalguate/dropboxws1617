@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="mars.iuk.hdm-stuttgart.de" uploadOnCheckin="f3669042-3e4e-4275-93d3-fd1c6a00797a">
+  <component name="PublishConfigData" uploadOnCheckin="7a72f386-a4ea-4508-aa67-1ca4bb594d25">
     <serverData>
-      <paths name="mars.iuk.hdm-stuttgart.de">
+      <paths name="mars">
         <serverdata>
           <mappings>
             <mapping deploy="/public_html" local="$PROJECT_DIR$" web="/~jv029/" />
@@ -10,6 +10,6 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="mars.iuk.hdm-stuttgart.de" />
+    <option name="myUploadOnCheckinName" value="mars" />
   </component>
 </project>
