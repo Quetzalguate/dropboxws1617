@@ -22,7 +22,7 @@
 </head>
 
 <body>
-<nav class="navbar">
+<nav class="navbar nav-pills">
     <div class="container-fluid">
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Dropbox</a></li>
