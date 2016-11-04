@@ -22,7 +22,7 @@
 </head>
 
 <body>
-<nav class="navbar">
+<nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -36,7 +36,7 @@
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
-</div>
+            </div>
         </div>
     </div>
 </nav>
