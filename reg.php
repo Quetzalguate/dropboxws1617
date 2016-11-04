@@ -54,11 +54,11 @@
         <div class="col-lg-3">
             <form>
                 <div class="form-group">
-                    <label for="username">Benutzername kreieren:</label>
+                    <label for="username">Benutzername erstellen:</label>
                     <input type="text" class="form-control" id="username">
                 </div>
                 <div class="form-group">
-                    <label for="pw1">Passwort kreieren:</label>
+                    <label for="pw1">Passwort erstellen:</label>
                     <input type="password" class="form-control" id="pw1">
                 </div>
                 <div class="form-group">
