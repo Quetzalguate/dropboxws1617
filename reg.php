@@ -1,7 +1,7 @@
 <!-- Start Include Dateien -->
 <?php include ("includes/bsfooter.php"); ?>
 <?php include ("includes/bseinbindung.php"); ?>
-<?php include ("includes/bsfixednavbar.php"); ?>
+
 <!-- Ende Include Dateien -->
 
 
