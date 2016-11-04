@@ -22,9 +22,9 @@
 </head>
 
 <body>
-<nav class="navbar nav-pills">
+<nav class="navbar">
     <div class="container-fluid">
-        <ul class="nav navbar-nav">
+        <ul class="nav nav-pills">
             <li class="active"><a href="#">Dropbox</a></li>
             <li><a href="#">Upload</a></li>
             <li><a href="#">Suche</a></li>
