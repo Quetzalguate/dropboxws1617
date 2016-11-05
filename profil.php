@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col-lg-6">
             <h3><u>Profilbild</u></h3>
-            <label class="control-label">Select File</label>
+            <label class="control-label">Profilbild auswählen</label>
             <input id="input-1" type="file" class="file">
         </div>
         <div class="col-lg-6">
