@@ -26,6 +26,9 @@
         <div class="col-lg-6">
             <h2><u>Profilbild</u></h2>
         </div>
+        <div class="col-lg-6">
+            <h2><u>Passwort ändern</u></h2>
+        </div>
     </div>
 </div>
 <body>
