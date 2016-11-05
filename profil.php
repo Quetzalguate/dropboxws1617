@@ -27,6 +27,9 @@
             <h3><u>Profilbild</u></h3>
             <label class="control-label">Profilbild auswählen</label>
             <input id="input-1" type="file" class="file">
+
+            <label class="control-label">Select File</label>
+            <input id="input-2" name="input2[]" type="file" class="file" multiple data-show-upload="false" data-show-caption="true">
         </div>
         <div class="col-lg-6">
             <h3><u>Passwort ändern</u></h3>
