@@ -24,10 +24,10 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <h2><u>Profilbild</u></h2>
+            <h3><u>Profilbild</u></h3>
         </div>
         <div class="col-lg-6">
-            <h2><u>Passwort ändern</u></h2>
+            <h3><u>Passwort ändern</u></h3>
         </div>
     </div>
 </div>
