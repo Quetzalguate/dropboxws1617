@@ -32,15 +32,15 @@
             <h3><u>Passwort ändern</u></h3>
             <form>
                 <div class="form-group">
-                    <label for="pw1">Passwort erstellen:</label>
+                    <label for="pw1">Altes Passwort:</label>
                     <input type="password" class="form-control" id="pw1">
                 </div>
                 <div class="form-group">
-                    <label for="pw2">Passwort erstellen:</label>
+                    <label for="pw2">Neues Passwort erstellen:</label>
                     <input type="password" class="form-control" id="pw2">
                 </div>
                 <div class="form-group">
-                    <label for="pw3">Passwort wiederholen:</label>
+                    <label for="pw3">Neues Passwort wiederholen:</label>
                     <input type="password" class="form-control" id="pw3">
                 </div>
                 <button type="submit" class="btn btn-default">Passwort ändern</button>
