@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php">Dropbox</a></li>
-                    <li><a href="#">Upload</a></li>
+                    <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/upload.php">Upload</a></li>
                     <li><a href="#">Suche</a></li>
                     <li><a href="#">Einladen</a></li>
                 </ul>
