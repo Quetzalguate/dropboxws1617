@@ -24,7 +24,7 @@
 </br></br>
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-1">
             <h3><u>Datei hochladen</u></h3>
             <label class="control-label">Datei auswählen</label>
             <input id="input-1" type="file" class="file">
