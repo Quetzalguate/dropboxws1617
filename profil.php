@@ -32,7 +32,7 @@
             </br>
             <button type="submit" class="btn btn-default">Datei hochladen</button>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-3">
             <h3><u>Passwort ändern</u></h3>
             <form>
                 <div class="form-group">
