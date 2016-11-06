@@ -26,6 +26,7 @@
     <div class="row">
         <div class="col-lg-6">
             <h3><u>Profilbild</u></h3>
+            <img class="img-responsive pull-right" src="images/placeholder-Copy.png" alt="image placeholder" width="300" height="200">
             <label class="control-label">Profilbild auswählen</label>
             <input id="input-1" type="file" class="file">
         </div>
