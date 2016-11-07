@@ -66,7 +66,7 @@
         </div>
         <!-- Ende Registrierungsformular -->
         <div class="col-lg-12">
-            <p class="text-center">Kostenlos deine Daten online sichern!</p>
+            <p class="text-center">Kostenlos deine Daten banane online sichern!</p>
         </div>
     </div>
 </div>
