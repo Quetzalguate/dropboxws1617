@@ -33,7 +33,8 @@
         </div>
         <div class="form-group">
             <label for="comment">Nachricht</label>
-            <textarea class="form-control" rows="5" id="comment">Hallo</textarea>
+            <textarea class="form-control" rows="5" id="comment">Hallo,</br>
+            wie</textarea>
         </div>
     </div>
 </div>
