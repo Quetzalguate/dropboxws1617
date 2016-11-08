@@ -25,7 +25,7 @@
 <body>
 </br></br>
 <div class="container-fluid">
-    <div class="col-lg-4">
+    <div class="col-lg-3">
         <h3><u>Datei teilen</u></h3>
             <table class="table table-bordered">
                 <thead>
