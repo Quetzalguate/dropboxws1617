@@ -25,14 +25,12 @@
 <body>
 </br></br>
 <div class="container">
-    <div class="input-group col-lg-4">
-    <input type="text" class="form-control input-lg" placeholder="Suchen" />
-    <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </span>
-    </div>
+    <form>
+        <div class="form-group">
+            <input type="text" class="from-control" placeholder="Suchen"
+                   <button type="submit" class="btn btn-default">Suchen</button>
+        </div>
+    </form>
 </div>
 </body>
 </html>
