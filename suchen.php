@@ -28,7 +28,7 @@
     <form>
         <div class="form-group">
             <input type="text" class="from-control" placeholder="Suchen"
-                   <button type="submit" class="btn btn-default">Suchen</button>
+                   <span><button type="submit" class="btn btn-default">Suchen</button></span>
         </div>
     </form>
 </div>
