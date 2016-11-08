@@ -41,7 +41,7 @@
             </table>
         <form>
             <div class="form-group">
-                <label for="username">Datei mit Nutzer teilen:</label>
+                <label for="username">Dateivariable mit Nutzer teilen:</label>
                 <input type="text" class="form-control" id="username">
             </div>
             <button type="submit" class="btn btn-default">Teilen</button>
