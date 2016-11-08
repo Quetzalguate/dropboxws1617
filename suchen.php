@@ -25,12 +25,14 @@
 <body>
 </br></br>
 <div class="container">
-    <form>
-        <div class="form-group">
-            <input type="text" class="from-control" placeholder="Suchen"
-        </div>
-        <button type="submit" class="btn btn-default">Suchen</button>
-    </form>
+    <div class="col-lg-12">
+        <form>
+            <div class="form-group">
+                <input type="text" class="from-control" placeholder="Suchen"
+            </div>
+            <button type="submit" class="btn btn-default">Suchen</button>
+        </form>
+    </div>
 </div>
 </body>
 </html>
