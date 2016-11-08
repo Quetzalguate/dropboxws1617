@@ -38,7 +38,7 @@
                         <tr>
                             <td>
                                 <div class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">Dateiname-Variable
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span>Dateiname-Variable
                                         <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Umbenennen</a></li>
