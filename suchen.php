@@ -25,7 +25,7 @@
 <body>
 </br></br>
 <div class="container">
-    <div class="input-group col-lg-12">
+    <div class="input-group col-lg-4">
     <input type="text" class="form-control input-lg" placeholder="Suchen" />
     <span class="input-group-btn">
                         <button class="btn btn-info btn-lg" type="button">
