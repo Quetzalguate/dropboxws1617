@@ -30,34 +30,10 @@
         <form>
             <div class="form-group">
                 <label for="text">Datei: Dateinamenvariable</label>
-                <input type="text" class="from-control" placeholder="Neuen Dateinamen eingeben"
+                <input type="text" class="from-control" placeholder="Neuen Namen eingeben"
             </div>
             <button type="submit" class="btn btn-default">Datei umbenennen</button>
         </form>
-
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th>Suchergebnis</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> Dateiname-Variable
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Umbenennen</a></li>
-                            <li><a href="#">Herunterladen</a></li>
-                            <li><a href="#">Teilen</a></li>
-                            <li><a href="#">Löschen</a></li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
     </div>
 </div>
 </body>
