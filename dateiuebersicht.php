@@ -40,7 +40,7 @@
                         <tr>
                             <td>Dateiname-Variable
                                 <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dateiname-Variable
                                         <span class="caret"></span></button>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">HTML</a></li>
