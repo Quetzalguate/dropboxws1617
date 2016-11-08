@@ -29,9 +29,7 @@
         <div class="form-group">
             <input type="text" class="from-control" placeholder="Suchen"
         </div>
-        <div>
-            <button type="submit" class="btn btn-default">Suchen</button>
-        </div>
+        <button type="submit" class="btn btn-default">Suchen</button>
     </form>
 </div>
 </body>
