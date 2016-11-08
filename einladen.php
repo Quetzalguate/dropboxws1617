@@ -25,7 +25,7 @@
 <body>
 </br></br>
 <div class="container-fluid">
-    <div class="col-lg-6">
+    <div class="col-lg-4">
         <h3><u>Freund einladen</u></h3>
         <div class="form-group">
             <label for="email">Email:</label>
