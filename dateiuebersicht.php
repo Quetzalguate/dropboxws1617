@@ -26,7 +26,7 @@
 </br></br>
 <div class="container-fluid">
             <h3><u>Dateiübersicht</u></h3>
-            <div class="table-responsive">
+
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -52,7 +52,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+
 </div>
 </body>
 </html>
