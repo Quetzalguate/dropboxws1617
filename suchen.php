@@ -37,8 +37,7 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <th>Dateiname</th>
-                <th>Dateigröße</th>
+                <th>Suchergebnis</th>
             </tr>
             </thead>
             <tbody>
