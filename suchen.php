@@ -24,7 +24,7 @@
 
 <body>
 </br></br>
-<div class="container">
+<div class="container-fluid">
     <div class="col-lg-12">
         <form>
             <div class="form-group">
