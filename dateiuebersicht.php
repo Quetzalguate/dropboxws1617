@@ -40,8 +40,8 @@
                         <tr>
                             <td>
                                 <div class="dropdown">
-                                    <button class="dropdown-toggle" data-toggle="dropdown">Dateiname-Variable
-                                        <span class="caret"></span></button>
+                                    <a class="dropdown-toggle" data-toggle="dropdown">Dateiname-Variable
+                                        <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">HTML</a></li>
                                         <li><a href="#">CSS</a></li>
