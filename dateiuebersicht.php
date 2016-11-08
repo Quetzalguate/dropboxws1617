@@ -42,7 +42,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/umbenennen.php">Umbenennen</a></li>
                                 <li><a href="#">Herunterladen</a></li>
-                                <li><a href="#">Teilen</a></li>
+                                <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/teilen.php">Teilen</a></li>
                                 <li><a href="#">Löschen</a></li>
                             </ul>
                         </div>
