@@ -62,21 +62,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <?php foreach ($erg AS $dateiname): ?>
                         <tr>
                             <td>
                                 <div class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-file"></span> <?php echo $dateiname['dateiname']; ?>
                                         <span class="caret"></span></button>
                                         <ul class="dropdown-menu">
-                                            <li><a href="index.php?namef=<?php echo $dateiname['dateiname']; ?>"><span class="glyphicon glyphicon-share"></span> Freigeben</a></li>
+                                            <li><a href="index.php?namef=?php echo $dateiname['dateiname']; ?>"><span class="glyphicon glyphicon-share"></span> Freigeben</a></li>
                                             <li><a href="index.php?nameb=<?php echo $dateiname['dateiname']; ?>"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a></li>
                                             <li><a href="includes/loeschen.php?name=<?php echo $dateiname['dateiname']; ?>"><span class="glyphicon glyphicon-remove"></span> Löschen</a></li>
                                         </ul>
                                 </div>
                             </td>
                         </tr>
-                    <?php endforeach; ?>
                     </tbody>
                 </table>
 
