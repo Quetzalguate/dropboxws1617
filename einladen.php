@@ -25,14 +25,16 @@
 <body>
 </br></br>
 <div class="container-fluid">
-    <h3><u>Freund einladen</u></h3>
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="text" class="form-control" id="email">
-    </div>
-    <div class="form-group">
-        <label for="comment">Nachricht</label>
-        <textarea class="form-control" rows="5" id="comment"></textarea>
+    <div class="col-lg-6">
+        <h3><u>Freund einladen</u></h3>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="comment">Nachricht</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
     </div>
 </div>
 </body>
