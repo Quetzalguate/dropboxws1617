@@ -30,7 +30,7 @@
 
             <div class="navbar">
                 <ul class="nav nav-pills  navbar-right">
-                    <li><a href="#" class="glyphicon glyphicon-log-in"> Login</a></li>
+                    <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/login.php" class="glyphicon glyphicon-log-in"> Login</a></li>
                 </ul>
             </div>
         </div>
