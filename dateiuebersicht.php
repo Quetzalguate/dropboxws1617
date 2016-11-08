@@ -25,7 +25,7 @@
 <body>
 </br></br>
 <div class="container-fluid">
-    <div class="row">
+
         <div class="col-lg-6">
             <h3><u>Dateiübersicht</u></h3>
             <div class="table-responsive">
@@ -56,7 +56,7 @@
                 </table>
             </div>
         </div>
-    </div>
+
 </div>
 </body>
 </html>
