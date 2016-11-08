@@ -34,8 +34,8 @@
         </thead>
         <tbody>
             <tr>
-                <th>Dateiname-Variable</th>
-                <th>Dateigröße-Variable</th>
+                <td>Dateiname-Variable</td>
+                <td>Dateigröße-Variable</td>
             </tr>
         </tbody>
     </table>
