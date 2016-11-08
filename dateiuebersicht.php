@@ -38,7 +38,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Dateiname-Variable
+                            <td>
                                 <div class="dropdown">
                                     <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dateiname-Variable
                                         <span class="caret"></span></button>
