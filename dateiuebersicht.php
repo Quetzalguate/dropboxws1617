@@ -25,7 +25,6 @@
 <body>
 </br></br>
 <div class="container-fluid">
-        <div class="col-lg-6">
             <h3><u>Dateiübersicht</u></h3>
             <div class="table-responsive">
                 <table class="table table-hover">
@@ -53,33 +52,7 @@
                         </tr>
                     </tbody>
                 </table>
-
-
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-file"></span> <?php echo $dateiname['dateiname']; ?>
-                                        <span class="caret"></span></button>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="index.php?namef=?php echo $dateiname['dateiname']; ?>"><span class="glyphicon glyphicon-share"></span> Freigeben</a></li>
-                                            <li><a href="index.php?nameb=<?php echo $dateiname['dateiname']; ?>"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a></li>
-                                            <li><a href="includes/loeschen.php?name=<?php echo $dateiname['dateiname']; ?>"><span class="glyphicon glyphicon-remove"></span> Löschen</a></li>
-                                        </ul>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
             </div>
-        </div>
 </div>
 </body>
 </html>
