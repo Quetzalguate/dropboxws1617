@@ -27,9 +27,11 @@
         <div class="col-lg-12">
             <h3><u>Datei hochladen</u></h3>
             <label class="control-label">Datei auswählen</label>
-            <input id="input-1" type="file" class="file">
-            </br>
-            <button type="submit" class="btn btn-default">Datei hochladen</button>
+            <form>
+                <input id="input-1" type="file" class="file">
+                </br>
+                <button type="submit" class="btn btn-default">Datei hochladen</button>
+            </form>
         </div>
     </div>
 </div>
