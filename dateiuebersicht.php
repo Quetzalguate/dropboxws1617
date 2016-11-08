@@ -43,9 +43,10 @@
                                     <a class="dropdown-toggle" data-toggle="dropdown">Dateiname-Variable
                                         <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">HTML</a></li>
-                                        <li><a href="#">CSS</a></li>
-                                        <li><a href="#">JavaScript</a></li>
+                                        <li><a href="#">Umbenennen</a></li>
+                                        <li><a href="#">Herunterladen</a></li>
+                                        <li><a href="#">Teilen</a></li>
+                                        <li><a href="#">Löschen</a></li>
                                     </ul>
                                 </div>
                             </td>
