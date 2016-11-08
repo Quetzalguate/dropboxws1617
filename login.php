@@ -18,7 +18,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dropbox - Login</title>
+    <title>Dropbox - Logi</title>
 
 </head>
 
