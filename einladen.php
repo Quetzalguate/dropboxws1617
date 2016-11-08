@@ -29,7 +29,7 @@
         <h3><u>Freund einladen</u></h3>
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email">
+            <input type="email" class="form-control" id="email" placeholder="email-deines-freundes@email.de">
         </div>
         <div class="form-group">
             <label for="comment">Nachricht</label>
