@@ -28,9 +28,11 @@
             <h3><u>Profilbild</u></h3>
             <img class="img-responsive" src="images/placeholder-Copy.png" alt="image placeholder" width="300" height="200">
             <label class="control-label">Profilbild auswählen</label>
-            <input id="input-1" type="file" class="file">
-            </br>
-            <button type="submit" class="btn btn-default">Datei hochladen</button>
+           <form>
+                <input id="input-1" type="file" class="file">
+                </br>
+                <button type="submit" class="btn btn-default">Datei hochladen</button>
+           </form>
         </div>
         <div class="col-lg-3">
             <h3><u>Passwort ändern</u></h3>
