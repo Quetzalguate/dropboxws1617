@@ -18,7 +18,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dropbox - Dateiübersicht</title>
+    <title>Dropbox - Einladen</title>
 
 </head>
 
