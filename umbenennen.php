@@ -32,7 +32,7 @@
                 <label for="text">Datei: Dateinamenvariable</label>
                 <input type="text" class="from-control" placeholder="Neuen Namen eingeben"
             </div>
-            <button type="submit" class="btn btn-default">Datei umbenennen</button>
+            <button type="submit" class="btn btn-default">Umbenennen</button>
         </form>
     </div>
 </div>
