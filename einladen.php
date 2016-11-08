@@ -34,12 +34,11 @@
             </div>
             <div class="form-group">
                 <label for="comment">Nachricht</label>
-                <textarea class="form-control" rows="5" id="comment">
-                    <p>Hallo,</p>
-    Probier die neue Dropbox aus.
-    Ich bin begeistert!
-    Hier kannst du dich Registrieren: https://mars.iuk.hdm-stuttgart.de/~jv029/reg.php
-    Wir sehen uns auf der anderen Seite ;-)</textarea>
+                <textarea class="form-control" rows="5" id="comment">Hallo,
+Probier die neue Dropbox aus.
+Ich bin begeistert!
+Hier kannst du dich Registrieren: https://mars.iuk.hdm-stuttgart.de/~jv029/reg.php
+Wir sehen uns auf der anderen Seite ;-)</textarea>
             </div>
             <button type="submit" class="btn btn-default">Einladen</button>
         </form>
