@@ -4,7 +4,7 @@
 <form action="einladentest.php" method="post">
     email: <input type="text" name="email"><br>
     nachricht: <input type="text" name="nachricht"><br>
-    <input type="submit">
+    <input type="submit" name="submit">
 </form>
 
 
