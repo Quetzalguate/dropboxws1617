@@ -6,20 +6,7 @@
 
 
 <!-- Start Dateiübersicht -->
-<?php
-$msg = $_POST['nachricht'];
-$email = $_POST['email'];
-echo $email;
-if(isset($_POST['submit'])){
 
-    mail("$email","Einladung zur Dropbox","$msg");
-    echo "Einladung wurde versendet";
-
-}
-
-
-
-?>
 <!-- Ende Dateiübersicht -->
 
 
@@ -57,5 +44,21 @@ Wir sehen uns auf der anderen Seite ;-)</textarea>
         </form>
     </div>
 </div>
+
+<?php
+$msg = $_POST['nachricht'];
+$email = $_POST['email'];
+echo $email;
+if(isset($_POST['submit'])){
+
+    mail("$email","Einladung zur Dropbox","$msg");
+    echo "Einladung wurde versendet";
+
+}
+
+
+
+?>
+
 </body>
 </html>
