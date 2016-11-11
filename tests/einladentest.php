@@ -11,18 +11,14 @@
 <?php
 $msg = $_POST['nachricht'];
 $email = $_POST['email'];
-$submit = $_POST['submit'];
 
 if(isset($_POST['submit'])){
 
-   echo "hallo";
     mail("$email","My subject","$msg");
-    echo $msg;
-    echo $email;
+    echo "Einladung wurde versendet";
 
 }
-else
-    echo"nein";
+
 
 
 ?>
