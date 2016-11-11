@@ -9,21 +9,14 @@
 
 
 <?php
-$nachricht = $_POST['nachricht'];
-$email = $_POST['email'];
-$msg = "$nachricht";
-$submit = $_POST['submit'];
+// the message
+$msg = "First line of text\nSecond line of text";
 
-if(isset($submit)) {
-
-    // use wordwrap() if lines are longer than 70 characters
-    $msg = wordwrap($msg,70);
+// use wordwrap() if lines are longer than 70 characters
+$msg = wordwrap($msg,70);
 
 // send email
-    mail("$email","My subject",$msg);
-
-}
-
+mail("juancavel93@gmail.com","My subject",$msg);
 ?>
 
 </body>
