@@ -13,9 +13,9 @@ $msg = $_POST['nachricht'];
 $email = $_POST['email'];
 
 
-    mail($email,"My subject",$msg);
+    mail("$email","My subject","$msg");
     echo $msg;
-    echo $_POST['email'];
+    echo $email;
 
 
 ?>
