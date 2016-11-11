@@ -21,7 +21,8 @@ if(isset($_POST['submit'])){
     echo $email;
 
 }
-
+else
+    echo"nein";
 
 
 ?>
