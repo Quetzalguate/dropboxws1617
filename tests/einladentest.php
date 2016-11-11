@@ -11,11 +11,16 @@
 <?php
 $msg = $_POST['nachricht'];
 $email = $_POST['email'];
+$submit = $_POST['submit'];
 
+if(isset(submit)){
 
     mail("$email","My subject","$msg");
     echo $msg;
     echo $email;
+
+}
+
 
 
 ?>
