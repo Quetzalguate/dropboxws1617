@@ -50,7 +50,7 @@ Wir sehen uns auf der anderen Seite ;-)</textarea>
 <?php
 $nachricht = $_POST['nachricht'];
 $email = $_POST['email'];
-$headers = "From: dropbox@example.com";
+$headers = "From: Dropbox@example.com";
 if(isset($_POST['submit'])){
 
     mail("$email","Einladung zur Dropbox","$nachricht",$headers);
