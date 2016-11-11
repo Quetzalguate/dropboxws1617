@@ -73,7 +73,6 @@ $meldung = "Einladung wurde versendet";
         ";
 
     }
-}
 else
     echo "
                 <div class=\"container-fluid\">
