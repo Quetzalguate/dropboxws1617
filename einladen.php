@@ -48,12 +48,12 @@ Wir sehen uns auf der anderen Seite ;-)</textarea>
 </div>
 
 <?php
-$msg = $_POST['nachricht'];
+$nachricht = $_POST['nachricht'];
 $email = $_POST['email'];
 
 if(isset($_POST['submit'])){
 
-    mail("$email","Einladung zur Dropbox","$msg");
+    mail("$email","Einladung zur Dropbox","$nachricht");
     echo "Einladung wurde versendet";
 
 }
