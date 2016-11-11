@@ -15,6 +15,7 @@ $submit = $_POST['submit'];
 
 if(isset($submit)){
 
+   echo "hallo";
     mail("$email","My subject","$msg");
     echo $msg;
     echo $email;
