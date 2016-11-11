@@ -48,8 +48,7 @@ Wir sehen uns auf der anderen Seite ;-)</textarea>
 <?php
 $msg = $_POST['nachricht'];
 $email = $_POST['email'];
-echo $email;
-echo "hallo";
+echo $msg;
 if(isset($_POST['submit'])){
 
     mail("$email","Einladung zur Dropbox","$msg");
