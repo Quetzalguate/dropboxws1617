@@ -58,15 +58,17 @@ $meldung = "Einladung wurde versendet";
 if(isset($_POST['submit'])){
 
     mail("$email","Einladung zur Dropbox","$nachricht",$emailvon);
-    echo "<div class=\"alert alert-success\">
-    <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
-    <strong>hallo</strong>
+    echo "<div class=\"container-fluid\">
+    <div class=\"col-lg-4\">
+        <div class=\"alert alert-success\">
+            <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+            <strong>Du hast deinen Freund erfolgreich eingeladen!</strong>
+        </div>
+    </div>
 </div>";
 
 }
 ?>
-
-
 
 </body>
 </html>
