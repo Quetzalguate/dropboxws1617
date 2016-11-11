@@ -56,10 +56,12 @@ $nachricht = $_POST['nachricht'];
 $email = $_POST['email'];
 $emailvon = "From: Dropbox@example.com";
 $meldung = "Einladung wurde versendet";
-if(isset($_POST['submit'])){
 
-    mail("$email","Einladung zur Dropbox","$nachricht",$emailvon);
-    echo "
+
+    if (isset($_POST['submit']) && !empty($email) && !empty($nachricht)) {
+
+        mail("$email", "Einladung zur Dropbox", "$nachricht", $emailvon);
+        echo "
             <div class=\"container-fluid\">
                 <div class=\"col-lg-4\">
                     <div class=\"alert alert-success\">
@@ -70,6 +72,18 @@ if(isset($_POST['submit'])){
             </div>
         ";
 
+    }
 }
+else
+    echo "
+                <div class=\"container-fluid\">
+                <div class=\"col-lg-4\">
+                    <div class=\"alert alert-danger\">
+                        <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+                        <strong>Keines der Felder darf leer sein!</strong>
+                    </div>
+                </div>
+            </div>
+    ";
 ?>
 <!-- Ende Einladung -->
