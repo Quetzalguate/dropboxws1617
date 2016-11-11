@@ -14,6 +14,8 @@ $email = $_POST['email'];
 if(isset($submit)) {
 
     mail($email,"My subject",$msg);
+    echo $msg;
+    echo $email;
 }
 
 ?>
