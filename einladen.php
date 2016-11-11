@@ -48,10 +48,7 @@ Wir sehen uns auf der anderen Seite ;-)</textarea>
 </div>
 
 
-<div class="alert alert-success">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong><?php echo $meldung ?></strong>
-</div>
+
 
 <?php
 $nachricht = $_POST['nachricht'];
@@ -65,6 +62,11 @@ if(isset($_POST['submit'])){
 
 }
 ?>
+
+<div class="alert alert-success">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong><?php echo $meldung ?></strong>
+</div>
 
 </body>
 </html>
