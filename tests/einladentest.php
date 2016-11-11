@@ -12,11 +12,18 @@
 $nachricht = $_POST['nachricht'];
 $email = $_POST['email'];
 $msg = "$nachricht";
-// use wordwrap() if lines are longer than 70 characters
-$msg = wordwrap($msg,70);
+$submit = $_POST['submit'];
+
+if(isset($submit)) {
+
+    // use wordwrap() if lines are longer than 70 characters
+    $msg = wordwrap($msg,70);
 
 // send email
-mail("$email","My subject",$msg);
+    mail("$email","My subject",$msg);
+
+}
+
 ?>
 
 </body>
