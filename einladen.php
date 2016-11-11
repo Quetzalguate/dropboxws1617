@@ -27,14 +27,14 @@
 <div class="container-fluid">
     <div class="col-lg-4">
         <h3><u>Freund einladen</u></h3>
-        <form>
+        <form action="einladen.php" method="POST" role="form">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="email-deines-freundes@email.de">
             </div>
             <div class="form-group">
-                <label for="comment">Nachricht</label>
-                <textarea class="form-control" rows="5" id="comment">Hallo,
+                <label for="nachricht">Nachricht</label>
+                <textarea class="form-control" rows="5" id="nachricht">Hallo,
 Probier die neue Dropbox aus.
 Ich bin begeistert!
 Hier kannst du dich Registrieren: https://mars.iuk.hdm-stuttgart.de/~jv029/reg.php

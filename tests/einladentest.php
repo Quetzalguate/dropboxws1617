@@ -14,7 +14,7 @@ $email = $_POST['email'];
 
 if(isset($_POST['submit'])){
 
-    mail("$email","My subject","$msg");
+    mail("$email","Einladung zur Dropbox","$msg");
     echo "Einladung wurde versendet";
 
 }
