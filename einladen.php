@@ -61,6 +61,7 @@ $meldung = "Einladung wurde versendet";
     if (isset($_POST['submit'])) {
 
         if (!empty($email) && !empty($nachricht)) {
+
             mail("$email", "Einladung zur Dropbox", "$nachricht", $emailvon);
             echo "
             <div class=\"container-fluid\">
@@ -73,7 +74,8 @@ $meldung = "Einladung wurde versendet";
             </div>
         ";
 
-        } else
+        }
+        else
             echo "
                 <div class=\"container-fluid\">
                 <div class=\"col-lg-4\">
