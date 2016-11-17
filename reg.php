@@ -77,12 +77,8 @@
 
 <!-- Start Registrierung -->
 <?php
-session_start();
-$servername = "localhost";
-$username = "jv029";
-$password = "IeBu2chie3";
-
-$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+include("Registrierung/connection.php");
+$showFormular = true; // Registrierungsformular anzeigen?
 
 if(isset($_GET['register'])) {
     $error = false;
@@ -103,7 +99,7 @@ if(isset($_GET['register'])) {
         $error = true;
     }
 
-    //Überprüfe die E-Mail (einzigartig?)
+    //checkt ob die e-mail besteht
     if(!$error) {
         $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
         $result = $statement->execute(array('email' => $email));
@@ -115,7 +111,7 @@ if(isset($_GET['register'])) {
         }
     }
 
-    //Nutzer wird registriert
+    //nutzer wird eingetragen
     if(!$error) {
         $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
 
