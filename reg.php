@@ -88,15 +88,42 @@ if(isset($_GET['register'])) {
     $passwort2 = $_POST['passwort2'];
 
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
+        echo '
+                <div class="container-fluid">
+                    <div class="col-lg-4">
+                        <div class="alert alert-danger">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Bitte eine gültige E-Mail-Adresse eingeben<br></strong>
+                        </div>
+                    </div>
+                </div>
+        ';
         $error = true;
     }
     if(strlen($passwort) == 0) {
-        echo 'Bitte ein Passwort angeben<br>';
+        echo '
+                <div class="container-fluid">
+                    <div class="col-lg-4">
+                        <div class="alert alert-danger">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Bitte ein Passwort angeben<br></strong>
+                        </div>
+                    </div>
+                </div>
+        ';
         $error = true;
     }
     if($passwort != $passwort2) {
-        echo 'Die Passwörter müssen übereinstimmen<br>';
+        echo '
+                <div class="container-fluid">
+                    <div class="col-lg-4">
+                        <div class="alert alert-danger">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Die Passwörter müssen übereinstimmen<br></strong>
+                        </div>
+                    </div>
+                </div>
+        ';
         $error = true;
     }
 
@@ -107,7 +134,16 @@ if(isset($_GET['register'])) {
         $user = $statement->fetch();
 
         if($user !== false) {
-            echo 'Diese E-Mail-Adresse ist bereits vergeben<br>';
+            echo '
+                <div class="container-fluid">
+                    <div class="col-lg-4">
+                        <div class="alert alert-danger">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Diese E-Mail-Adresse ist bereits vergeben<br></strong>
+                        </div>
+                    </div>
+                </div>
+            ';
             $error = true;
         }
     }
@@ -132,7 +168,16 @@ if(isset($_GET['register'])) {
             ';
             //$showFormular = false;
         } else {
-            echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
+            echo '
+                <div class="container-fluid">
+                    <div class="col-lg-4">
+                        <div class="alert alert-danger">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Beim Abspeichern ist leider ein Fehler aufgetreten<br></strong>
+                        </div>
+                    </div>
+                </div>
+            ';
         }
     }
 }
