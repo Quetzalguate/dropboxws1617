@@ -1,16 +1,15 @@
 <!-- Start Include Dateien -->
 <?php include ("includes/bsfooter.php"); ?>
 <?php include ("includes/bseinbindung.php"); ?>
+<?php include("includes/connection.php"); ?>
 
 <!-- Ende Include Dateien -->
 
 
-<!-- Start Registrierung -->
-<?php ?>
-<!-- Ende Registrierung -->
 
 
-<!-- --------------------------------------------------- PHP -> HTML ----------------------------------------------- -->
+
+
 
 
 <!DOCTYPE html>
@@ -48,14 +47,14 @@
 
         <!-- Anfang Registrierungsformular -->
         <div class="col-lg-3">
-            <form>
+            <form action="?login=1" method="post" role="form">
                 <div class="form-group">
-                    <label for="username">Benutzername:</label>
-                    <input type="text" class="form-control" id="username">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group">
-                    <label for="pw1">Passwort:</label>
-                    <input type="password" class="form-control" id="pw1">
+                    <label for="passwort">Passwort:</label>
+                    <input type="password" class="form-control" id="passwort" name="passwort">
                 </div>
                 <button type="submit" class="btn btn-default">Login</button>
             </form>
@@ -67,3 +66,31 @@
 
 </body>
 </html>
+
+<!-- --------------------------------------------------- HTML -> PHP ----------------------------------------------- -->
+
+<!-- Start Login -->
+<?php
+if(isset($_GET['login'])) {
+    $email = $_POST['email'];
+    $passwort = $_POST['passwort'];
+
+    $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+    $result = $statement->execute(array('email' => $email));
+    $user = $statement->fetch();
+
+    //Überprüfung PW
+    if ($user !== false && password_verify($passwort, $user['passwort'])) {
+        $_SESSION['userid'] = $user['id'];
+        die('Login erfolgreich. Hier gelangen Sie zur <a href="geheim.php">Startseite!</a>');
+    } else {
+        $errorMessage = "E-Mail oder Passwort war ungültig<br>";
+    }
+
+}
+
+if(isset($errorMessage)) {
+    echo $errorMessage;
+}
+?>
+<!-- Ende Login -->
