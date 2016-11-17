@@ -44,18 +44,18 @@
 
         <!-- Anfang Registrierungsformular -->
         <div class="col-lg-3">
-            <form>
+            <form action="reg.php" method="GET" role="form">
                 <div class="form-group">
-                    <label for="username">Benutzername erstellen:</label>
-                    <input type="text" class="form-control" id="username">
+                    <label for="email">Email-Adresse:</label>
+                    <input type="text" class="form-control" id="email">
                 </div>
                 <div class="form-group">
-                    <label for="pw1">Passwort erstellen:</label>
-                    <input type="password" class="form-control" id="pw1">
+                    <label for="passwort">Passwort erstellen:</label>
+                    <input type="password" class="form-control" id="passwort">
                 </div>
                 <div class="form-group">
-                    <label for="pw2">Passwort wiederholen:</label>
-                    <input type="password" class="form-control" id="pw2">
+                    <label for="passwort2">Passwort wiederholen:</label>
+                    <input type="password" class="form-control" id="passwort2">
                 </div>
                 <button type="submit" class="btn btn-default">Kostenlos registrieren</button>
             </form>
@@ -84,7 +84,7 @@ $password = "IeBu2chie3";
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 
-if(isset($_GET['register'])) {
+if(isset($_GET['submit'])) {
     $error = false;
     $email = $_POST['email'];
     $passwort = $_POST['passwort'];
