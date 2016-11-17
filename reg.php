@@ -44,7 +44,7 @@
 
         <!-- Anfang Registrierungsformular -->
         <div class="col-lg-3">
-            <form action="reg.php" method="GET" role="form">
+            <form action="?register=1" method="POST" role="form">
                 <div class="form-group">
                     <label for="email">Email-Adresse:</label>
                     <input type="text" class="form-control" id="email">
