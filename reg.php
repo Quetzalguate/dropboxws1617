@@ -1,6 +1,7 @@
 <!-- Start Include Dateien -->
 <?php include ("includes/bsfooter.php"); ?>
 <?php include ("includes/bseinbindung.php"); ?>
+<?php include("includes/connection.php"); ?>
 
 <!-- Ende Include Dateien -->
 
@@ -77,8 +78,8 @@
 
 <!-- Start Registrierung -->
 <?php
-include("Registrierung/connection.php");
-$showFormular = true; // Registrierungsformular anzeigen?
+
+//$showFormular = true; // Registrierungsformular anzeigen?
 
 if(isset($_GET['register'])) {
     $error = false;
