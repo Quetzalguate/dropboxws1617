@@ -47,15 +47,15 @@
             <form action="?register=1" method="POST" role="form">
                 <div class="form-group">
                     <label for="email">Email-Adresse:</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group">
                     <label for="passwort">Passwort erstellen:</label>
-                    <input type="password" class="form-control" id="passwort">
+                    <input type="password" class="form-control" id="passwort" name="passwort">
                 </div>
                 <div class="form-group">
                     <label for="passwort2">Passwort wiederholen:</label>
-                    <input type="password" class="form-control" id="passwort2">
+                    <input type="password" class="form-control" id="passwort2" name="passwort2">
                 </div>
                 <button type="submit" class="btn btn-default">Kostenlos registrieren</button>
             </form>
