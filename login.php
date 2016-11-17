@@ -90,7 +90,18 @@ if(isset($_GET['login'])) {
 }
 
 if(isset($errorMessage)) {
-    echo $errorMessage;
+    echo "
+                    <div class=\"container-fluid\">
+                <div class=\"col-lg-4\">
+                    <div class=\"alert alert-danger\">
+                        <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+                        <strong>$errorMessage</strong>
+                    </div>
+                </div>
+            </div>
+    "
+
+    ;
 }
 ?>
 <!-- Ende Login -->
