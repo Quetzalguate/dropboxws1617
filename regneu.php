@@ -130,7 +130,7 @@ if(isset($_GET['register'])) {
     //checkt ob die e-mail besteht
     if(!$error) {
         $statement = $pdo->prepare("SELECT * FROM dbuser WHERE user = :email");
-        $result = $statement->execute(array('user' => $email));
+        $result = $statement->execute(array('email' => $email));
         $user = $statement->fetch();
 
         if($user !== false) {
@@ -153,7 +153,7 @@ if(isset($_GET['register'])) {
         $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
 
         $statement = $pdo->prepare("INSERT INTO dbuser (user, passwort) VALUES (:email, :passwort)");
-        $result = $statement->execute(array('user' => $email, 'passwort' => $passwort_hash));
+        $result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash));
 
         if($result) {
             echo '
