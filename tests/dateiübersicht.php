@@ -1,3 +1,8 @@
+<!-- Start Include Dateien -->
+<?php include ("includes/bsfixednavbar.php"); ?>
+<?php include ("includes/bsfooter.php"); ?>
+<?php include ("includes/bseinbindung.php"); ?>
+<!-- Ende Include Dateien -->
 <?php
 $servername = "localhost";
 $username = "jv029";
