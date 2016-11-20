@@ -12,7 +12,7 @@ $password = "IeBu2chie3";
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dateiname FROM dbzuordnung WHERE userid =1");
 $statement->execute();
-
+$erg = $statement->fetch()
 
 
 //var_dump($dateiname);
@@ -42,16 +42,11 @@ $statement->execute();
         </tr>
         </thead>
         <tbody>
+        <?php foreach ($erg as $dateiname): ?>
         <tr>
-
-<?php
-            while ($dateiname = $statement->fetch() ){
-            $hallo = $dateiname[0];
-            echo '
-
             <td>
                 <div class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> <?php $hallo ?>
+                    <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span><?php echo $dateiname['dateiname']; ?>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/umbenennen.php">Umbenennen</a></li>
@@ -61,11 +56,9 @@ $statement->execute();
                     </ul>
                 </div>
             </td>
-    ';
-}
-?>
             <td>Dateigröße-Variable</td>
         </tr>
+        <?php endforeach; ?>
         </tbody>
     </table>
 </div>
