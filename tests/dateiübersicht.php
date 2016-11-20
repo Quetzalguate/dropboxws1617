@@ -7,7 +7,6 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dateiname FROM dbzuordnung WHERE userid =1");
 $statement->execute();
 $dateiname = $statement->fetch();
-$dateiname = $statement->fetch();
 
 //var_dump($dateiname);
 echo $dateiname[0];
