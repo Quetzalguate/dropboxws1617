@@ -43,13 +43,15 @@ $statement->execute();
         </thead>
         <tbody>
         <tr>
-            <?php while ($dateiname = $statement->fetch() ){
+
+<?php
+            while ($dateiname = $statement->fetch() ){
 
             echo '
 
             <td>
                 <div class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> $dateiname[0]
+                    <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> <?php $dateiname[0]?>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/umbenennen.php">Umbenennen</a></li>
@@ -59,8 +61,9 @@ $statement->execute();
                     </ul>
                 </div>
             </td>
-    ';}
-            ?>
+    ';
+}
+?>
             <td>Dateigröße-Variable</td>
         </tr>
         </tbody>
