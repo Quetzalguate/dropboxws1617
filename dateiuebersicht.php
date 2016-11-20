@@ -5,9 +5,13 @@
 <!-- Ende Include Dateien -->
 
 
-<!-- Start Dateiübersicht -->
-<?php ?>
-<!-- Ende Dateiübersicht -->
+<!-- Start Datenbankabfrage für Dateianzeige -->
+<?php
+$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+$statement = $pdo->prepare("SELECT dateiname FROM dbzuordnung WHERE userid =1"); // User ID aus session in Variable speichern und hier eingeben
+$statement->execute();
+?>
+<!-- Ende Datenbankabfrage für Dateianzeige -->
 
 
 <!-- --------------------------------------------------- PHP -> HTML ----------------------------------------------- -->
@@ -24,6 +28,8 @@
 
 <body>
     </br></br>
+
+    <!-- Start Ergebnis der Datenbankabfrage per while Schleife in Tabelle ausgeben -->
     <div class="container-fluid">
         <h3><u>Dateiübersicht</u></h3>
         <table class="table table-hover">
@@ -34,10 +40,11 @@
                 </tr>
             </thead>
             <tbody>
+            <?php while ($dateiname = $statement->fetch()) {?>
                 <tr>
                     <td>
                         <div class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> Dateiname-Variable
+                            <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span><?php echo $dateiname[0]; ?>
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/umbenennen.php">Umbenennen</a></li>
@@ -49,8 +56,10 @@
                     </td>
                     <td>Dateigröße-Variable</td>
                 </tr>
+            <?php } ?>
             </tbody>
         </table>
     </div>
+    <!-- Ende Ergebnis der Datenbankabfrage per while Schleife in Tabelle ausgeben -->
 </body>
 </html>
