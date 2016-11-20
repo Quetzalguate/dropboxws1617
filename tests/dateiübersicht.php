@@ -1,7 +1,7 @@
 <!-- Start Include Dateien -->
-<?php include ("includes/bsfixednavbar.php"); ?>
-<?php include ("includes/bsfooter.php"); ?>
-<?php include ("includes/bseinbindung.php"); ?>
+<?php include ("home/includes/bsfixednavbar.php"); ?>
+<?php include ("home/includes/bsfooter.php"); ?>
+<?php include ("home/includes/bseinbindung.php"); ?>
 <!-- Ende Include Dateien -->
 <?php
 $servername = "localhost";
