@@ -8,5 +8,5 @@ $statement = $pdo->prepare("SELECT dateiname FROM dbdateien");
 $statement->execute();
 $dateiname = $statement->fetch();
 
-echo $dateiname;
+var_dump($dateiname);
 ?>
