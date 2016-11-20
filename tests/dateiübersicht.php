@@ -12,7 +12,7 @@ $password = "IeBu2chie3";
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dateiname FROM dbzuordnung WHERE userid =1");
 $statement->execute();
-$erg = $statement->fetch()
+
 
 
 //var_dump($dateiname);
@@ -42,7 +42,7 @@ $erg = $statement->fetch()
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($erg as $dateiname): ?>
+        <?php while ($dateiname = $statement->fetch()) {?>
         <tr>
             <td>
                 <div class="dropdown">
@@ -58,7 +58,7 @@ $erg = $statement->fetch()
             </td>
             <td>Dateigröße-Variable</td>
         </tr>
-        <?php endforeach; ?>
+        <?php } ?>
         </tbody>
     </table>
 </div>
