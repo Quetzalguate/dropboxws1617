@@ -1,18 +1,7 @@
-<!-- Start Include Dateien -->
-<?php include ("includes/bsfixednavbar.php"); ?>
-<?php include ("includes/bsfooter.php"); ?>
-<?php include ("includes/bseinbindung.php"); ?>
-<?php include ("includes/connection.php"); ?>
-<!-- Ende Include Dateien -->
 
 
-<!-- Start Datenbankabfrage für Dateianzeige -->
-<?php
-$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE userid =1"); // User ID aus session in Variable speichern und hier eingeben
-$statement->execute();
-?>
-<!-- Ende Datenbankabfrage für Dateianzeige -->
+
+
 
 
 <!-- --------------------------------------------------- PHP -> HTML ----------------------------------------------- -->
@@ -25,10 +14,25 @@ $statement->execute();
     <meta charset="UTF-8">
     <title>Dropbox - Dateiübersicht</title>
 
+    <!-- Start Include Dateien -->
+    <?php include ("includes/bsfixednavbar.php"); ?>
+    <?php include ("includes/bsfooter.php"); ?>
+    <?php include ("includes/bseinbindung.php"); ?>
+    <?php include ("includes/connection.php"); ?>
+    <!-- Ende Include Dateien -->
+
 </head>
 
 <body>
     </br></br>
+
+    <!-- Start Datenbankabfrage für Dateianzeige -->
+    <?php
+    $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+    $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE userid =1"); // User ID aus session in Variable speichern und hier eingeben
+    $statement->execute();
+    ?>
+    <!-- Ende Datenbankabfrage für Dateianzeige -->
 
     <!-- Start Ergebnis der Datenbankabfrage per while Schleife in Tabelle ausgeben -->
     <div class="container-fluid">
