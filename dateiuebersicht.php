@@ -9,7 +9,7 @@
 <!-- Start Datenbankabfrage für Dateianzeige -->
 <?php
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement = $pdo->prepare("SELECT dateiname FROM dbzuordnung WHERE userid =1"); // User ID aus session in Variable speichern und hier eingeben
+$statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE userid =1"); // User ID aus session in Variable speichern und hier eingeben
 $statement->execute();
 ?>
 <!-- Ende Datenbankabfrage für Dateianzeige -->
