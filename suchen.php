@@ -33,7 +33,6 @@ $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE
 $statement->execute();
 
 
-}
 
 ?>
 <!-- Ende Datenbankabfrage für Dateianzeige -->
