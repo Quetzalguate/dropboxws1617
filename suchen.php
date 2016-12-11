@@ -39,7 +39,6 @@ $suchbegriff = $_POST['suchbegriff'];
         $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '%$suchbegriff%'");
         $statement->execute();
     }
-    else
 
 ?>
 <!-- Ende Datenbankabfrage für Dateianzeige -->
