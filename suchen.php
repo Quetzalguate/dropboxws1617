@@ -61,7 +61,7 @@ $suchbegriff = $_POST['suchbegriff'];
             </tr>
             </thead>
             <tbody>
-            <?php while ($suchergebnis = $statement->fetch()){?>
+            <?php if(isset($_POST['suchen']) && !empty($suchbegriff) ) { while ($suchergebnis = $statement->fetch()){?>
             <tr>
                 <td>
                     <div class="dropdown">
@@ -76,7 +76,7 @@ $suchbegriff = $_POST['suchbegriff'];
                     </div>
                 </td>
             </tr>
-            <?php } ?>
+            <?php }} ?>
             </tbody>
         </table>
     </div>
