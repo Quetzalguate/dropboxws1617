@@ -36,7 +36,7 @@ $suchbegriff = $_POST['suchbegriff'];
     if(isset($_POST['suchen']) && !empty($suchbegriff) ) {
         //
         $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-        $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '%$suchbegriff%'");
+        $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '%$suchbegriff%' AND userid=1");
         $statement->execute();
     }
 
