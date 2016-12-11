@@ -30,15 +30,16 @@
 <?php
 $suchbegriff = $_POST['suchbegriff'];
 
-$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '$suchbegriff%'");
-$statement->execute();
+
 
 
     if(isset($_POST['suchen']) && !empty($suchbegriff) ) {
         //
-        echo "hallo";
+        $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+        $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '$suchbegriff%'");
+        $statement->execute();
     }
+    else
 
 ?>
 <!-- Ende Datenbankabfrage für Dateianzeige -->
