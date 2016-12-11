@@ -31,8 +31,8 @@
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE 'g%'");
 $statement->execute();
-while ($suchergebnis = $statement->fetch()){
-    echo $suchergebnis[0];
+
+
 }
 
 ?>
@@ -55,10 +55,11 @@ while ($suchergebnis = $statement->fetch()){
             </tr>
             </thead>
             <tbody>
+            <?php while ($suchergebnis = $statement->fetch()){?>
             <tr>
                 <td>
                     <div class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> Dateiname-Variable
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> <?php     echo $suchergebnis[0];?>
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/umbenennen.php">Umbenennen</a></li>
@@ -69,6 +70,7 @@ while ($suchergebnis = $statement->fetch()){
                     </div>
                 </td>
             </tr>
+            <?php } ?>
             </tbody>
         </table>
     </div>
