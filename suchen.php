@@ -32,7 +32,9 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE 'g%'");
 $statement->execute();
 
-
+if(isset($_POST['submit'])) {
+    echo "hallo";
+}
 
 ?>
 <!-- Ende Datenbankabfrage für Dateianzeige -->
@@ -40,7 +42,7 @@ $statement->execute();
 <div class="container-fluid">
     <div class="col-lg-12">
         <h3><u>Datei suchen</u></h3>
-        <form>
+        <form action = suchen.php method="post" role ="form">
             <div class="form-group">
                 <input type="text" class="from-control" placeholder="Suchen"
             </div>
