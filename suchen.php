@@ -35,8 +35,8 @@ $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE
 $statement->execute();
 
 
-    if(isset($_POST['suchen']) ) {
-        //&& !empty($suchbegriff)
+    if(isset($_POST['suchen']) && !empty($suchbegriff) ) {
+        //
         echo "hallo";
     }
 
