@@ -28,10 +28,12 @@
 
 <!-- Start Datenbankabfrage für Dateianzeige -->
 <?php
+$suchbegriff = $_POST['suchbegriff'];
+
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE 'g%'");
 $statement->execute();
-//$suchbegriff = $_POST['suchbegriff']
+
 
     if(isset($_POST['suchen']) ) {
         //&& !empty($suchbegriff)
