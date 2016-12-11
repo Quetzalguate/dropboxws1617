@@ -31,7 +31,7 @@
 $suchbegriff = $_POST['suchbegriff'];
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE 'g%'");
+$statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '$suchbegriff%'");
 $statement->execute();
 
 
