@@ -31,8 +31,10 @@
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE 'g%'");
 $statement->execute();
-$suche = $statement->fetch();
-echo $suche[0];
+while ($suchergebnis = $statement->fetch()){
+    echo $suchergebnis[0];
+}
+
 ?>
 <!-- Ende Datenbankabfrage für Dateianzeige -->
 
