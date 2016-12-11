@@ -31,8 +31,9 @@
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE 'g%'");
 $statement->execute();
+$suchbegriff = $_POST['suchbegriff']
 
-if(isset($_POST['suchen'])) {
+if(isset($_POST['suchen']) && !empty($suchbegriff)) {
     echo "hallo";
 }
 
@@ -44,7 +45,7 @@ if(isset($_POST['suchen'])) {
         <h3><u>Datei suchen</u></h3>
         <form action = suchen.php method="post" role ="form">
             <div class="form-group">
-                <input type="text" class="from-control" placeholder="Suchen"
+                <input type="text" class="from-control" name="suchbegriff" placeholder="Suchen"
             </div>
             <button type="submit" class="btn btn-default" name="suchen">Suchen</button>
         </form>
