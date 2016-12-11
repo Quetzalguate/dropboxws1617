@@ -2,6 +2,7 @@
 <?php include ("includes/bsfixednavbar.php"); ?>
 <?php include ("includes/bsfooter.php"); ?>
 <?php include ("includes/bseinbindung.php"); ?>
+<?php include ("includes/connection.php"); ?>
 <!-- Ende Include Dateien -->
 
 
@@ -24,6 +25,15 @@
 
 <body>
 </br></br>
+
+<!-- Start Datenbankabfrage für Dateianzeige -->
+<?php
+$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+$statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '%g%'"); // User ID aus session in Variable speichern und hier eingeben
+$statement->execute();
+?>
+<!-- Ende Datenbankabfrage für Dateianzeige -->
+
 <div class="container-fluid">
     <div class="col-lg-12">
         <h3><u>Datei suchen</u></h3>
@@ -60,13 +70,7 @@
     </div>
 </div>
 
-<!-- Start Datenbankabfrage für Dateianzeige -->
-<?php
-$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '%g%'"); // User ID aus session in Variable speichern und hier eingeben
-$statement->execute();
-?>
-<!-- Ende Datenbankabfrage für Dateianzeige -->
+
 
 
 </body>
