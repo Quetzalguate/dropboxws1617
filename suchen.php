@@ -32,7 +32,7 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE 'g%'");
 $statement->execute();
 
-if(isset($_POST['submit'])) {
+if(isset($_POST['suchen'])) {
     echo "hallo";
 }
 
@@ -46,7 +46,7 @@ if(isset($_POST['submit'])) {
             <div class="form-group">
                 <input type="text" class="from-control" placeholder="Suchen"
             </div>
-            <button type="submit" class="btn btn-default">Suchen</button>
+            <button type="submit" class="btn btn-default" name="suchen">Suchen</button>
         </form>
 
         <table class="table table-hover">
