@@ -31,6 +31,7 @@
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '%g%'"); // User ID aus session in Variable speichern und hier eingeben
 $statement->execute();
+$statement->fetch();
 ?>
 <!-- Ende Datenbankabfrage für Dateianzeige -->
 
