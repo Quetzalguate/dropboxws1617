@@ -11,7 +11,7 @@ $statement = $pdo->prepare("SELECT dbdateien.dateiname FROM dbdateien INNER JOIN
 $statement->execute();
 while ($result = $statement->fetch()){
     //var_dump($result);
-    echo $result[0];
+    echo $result[0] . "</br>";
 };
 
 
