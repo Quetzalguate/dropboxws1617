@@ -10,6 +10,7 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbdateien JOIN dbteilen 
                             ON dbdateien.dateiid = dbteilen.dateiid
+                            AND dbdateien.userid = dbteilen.userid
                             WHERE dbteilen.userid=1");
 $statement->execute();
 while ($result = $statement->fetch()){
