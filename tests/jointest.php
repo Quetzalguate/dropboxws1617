@@ -1,4 +1,4 @@
-<?php include ("includes/connection.php");
+<?php include ("home/includes/connection.php");
 
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
