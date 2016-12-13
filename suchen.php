@@ -37,6 +37,10 @@ $suchbegriff = $_POST['suchbegriff'];
         //
         $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
         $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '%$suchbegriff%' AND userid=1");
+        $statement->execute();
+
+
+        $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
         $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbdateien JOIN dbteilen 
                             ON dbdateien.dateiid = dbteilen.dateiid
