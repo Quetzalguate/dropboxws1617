@@ -9,7 +9,7 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 //$statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE userid =1");
 $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbteilen INNER JOIN dbdateien 
-                            ON dbdateien.dateiid = dbteilen.dateiid
+                            ON dbdateien.userid = dbteilen.userid
                             WHERE dbdateien.userid=1 OR dbteilen.userid=1");
 $statement->execute();
 while ($result = $statement->fetch()){
