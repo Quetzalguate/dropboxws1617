@@ -10,7 +10,7 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbteilen INNER JOIN dbdateien 
                             ON dbdateien.dateiid = dbteilen.dateiid
-                            WHERE dbteilen.userid=1");
+                            WHERE dbteilen.userid=2");
 $statement->execute();
 while ($result = $statement->fetch()){
     //var_dump($result);
