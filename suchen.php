@@ -36,15 +36,11 @@ $suchbegriff = $_POST['suchbegriff'];
     if(isset($_POST['suchen']) && !empty($suchbegriff) ) {
         //
         $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-        $statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '%$suchbegriff%' AND userid=1");
-        $statement->execute();
-
-
-        $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
         $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbzuweisung INNER JOIN dbdateien 
                             ON dbdateien.dateiid = dbzuweisung.dateiid
-                            WHERE dbzuweisung.userid=1");// User ID aus session in Variable speichern und hier eingeben
+                            WHERE dbdateien.dateiname LIKE '%$suchbegriff%' AND dbzuweisung.userid=1"); // User ID aus session in Variable speichern und hier eingeben
+        //("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '%$suchbegriff%' AND userid=1");
         $statement->execute();
     }
 
