@@ -42,9 +42,9 @@ $suchbegriff = $_POST['suchbegriff'];
 
         $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
         $statement = $pdo->prepare("SELECT dbdateien.dateiname
-                            FROM dbdateien JOIN dbteilen 
-                            ON dbdateien.dateiid = dbteilen.dateiid
-                            WHERE dbteilen.userid=1");
+                            FROM dbzuweisung INNER JOIN dbdateien 
+                            ON dbdateien.dateiid = dbzuweisung.dateiid
+                            WHERE dbzuweisung.userid=1");// User ID aus session in Variable speichern und hier eingeben
         $statement->execute();
     }
 
