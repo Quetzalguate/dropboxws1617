@@ -8,7 +8,7 @@ $password = "IeBu2chie3";
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 //$statement = $pdo->prepare("SELECT dateiname FROM dbdateien WHERE userid =1");
 $statement = $pdo->prepare("SELECT dbdateien.dateiname
-                            FROM dbteilen JOIN dbdateien 
+                            FROM dbteilen INNER JOIN dbdateien 
                             ON dbdateien.userid = dbteilen.userid
                             WHERE dbteilen.userid=1");
 $statement->execute();
