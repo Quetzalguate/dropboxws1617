@@ -40,7 +40,6 @@ $suchbegriff = $_POST['suchbegriff'];
                             FROM dbzuweisung INNER JOIN dbdateien 
                             ON dbdateien.dateiid = dbzuweisung.dateiid
                             WHERE dbdateien.dateiname LIKE '%$suchbegriff%' AND dbzuweisung.userid=1"); // User ID aus session in Variable speichern und hier eingeben
-        //("SELECT dateiname FROM dbdateien WHERE dateiname LIKE '%$suchbegriff%' AND userid=1");
         $statement->execute();
     }
 
