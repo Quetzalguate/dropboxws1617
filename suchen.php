@@ -78,7 +78,7 @@ $suchbegriff = $_POST['suchbegriff'];
                     </div>
                 </td>
             </tr>
-            <?php }?>
+            <?php }}?>
             </tbody>
         </table>
     </div>
