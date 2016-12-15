@@ -43,6 +43,16 @@ $suchbegriff = $_POST['suchbegriff'];
         $statement->execute();
     }
 
+
+    if(isset($_POST['suchen']) && !empty($suchbegriff) ) {
+        while ($suchergebnis = $statement->fetch() && $suchergebnis != 0){
+        $resultat = $suchergebnis[0];
+        }
+        else {
+            $resultat = "falsche suche";
+        }
+    }
+
 ?>
 <!-- Ende Datenbankabfrage für Dateianzeige -->
 
@@ -63,11 +73,11 @@ $suchbegriff = $_POST['suchbegriff'];
             </tr>
             </thead>
             <tbody>
-            <?php if(isset($_POST['suchen']) && !empty($suchbegriff) ) { while ($suchergebnis = $statement->fetch()){?>
+            <?php// if(isset($_POST['suchen']) && !empty($suchbegriff) ) { while ($suchergebnis = $statement->fetch()){?>
             <tr>
                 <td>
                     <div class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> <?php     echo $suchergebnis[0];?>
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> <?php  echo $resultat;   //echo $suchergebnis[0];?>
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/umbenennen.php">Umbenennen</a></li>
@@ -78,7 +88,7 @@ $suchbegriff = $_POST['suchbegriff'];
                     </div>
                 </td>
             </tr>
-            <?php }}?>
+            <?php// }}?>
             </tbody>
         </table>
     </div>
