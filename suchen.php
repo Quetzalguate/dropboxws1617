@@ -78,8 +78,8 @@ $suchbegriff = $_POST['suchbegriff'];
                     </div>
                 </td>
             </tr>
-            <?php } else
-            echo "nein";} ?>
+            <?php } else {echo "nein";}
+            } ?>
             </tbody>
         </table>
     </div>
