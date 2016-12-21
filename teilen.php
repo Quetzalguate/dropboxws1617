@@ -42,7 +42,7 @@
         <form>
             <div class="form-group">
                 <label for="username">Dateivariable mit Nutzer teilen:</label>
-                <input type="text" class="form-control" id="username">
+                <input type="text" class="form-control" id="username" placeholder="Email deines Freundes eingeben">
             </div>
             <button type="submit" class="btn btn-default">Teilen</button>
         </form>
