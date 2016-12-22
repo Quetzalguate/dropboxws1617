@@ -26,13 +26,23 @@
 <body>
 
 <?php
-
+//Zugehöriger Dateiname zur Datei-ID auslesen
 $dateiid = $_GET['var'];
-
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare ("SELECT dateiname FROM dbdateien WHERE dateiid= $dateiid");
 $statement->execute();
 $dateiname= $statement->fetch();
+
+//
+$email = $_POST['email'];
+if(isset($_POST['teilen']) && !empty($email) ) {
+    $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+    $statement2 = $pdo->prepare ("SELECT userid FROM dbuser WHERE email= $email");
+    $statement2->execute();
+    $uid= $statement->fetch();
+    echo $uid[0];
+}
+
 
 ?>
 
@@ -52,12 +62,12 @@ $dateiname= $statement->fetch();
                     </tr>
                 </tbody>
             </table>
-        <form>
+        <form action = teilen.php method="post" role ="form">
             <div class="form-group">
                 <label for="username">"<?php echo $dateiname[0];?>" mit Nutzer teilen:</label>
-                <input type="text" class="form-control" id="username" placeholder="Email deines Freundes eingeben">
+                <input type="text" class="form-control" id="email" name = "email" placeholder="Email deines Freundes eingeben">
             </div>
-            <button type="submit" class="btn btn-default">Teilen</button>
+            <button type="submit" class="btn btn-default" name="teilen">Teilen</button>
         </form>
     </div>
 </div>
