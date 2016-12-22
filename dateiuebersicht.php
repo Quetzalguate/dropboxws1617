@@ -30,7 +30,6 @@
     $statement2 = $pdo->prepare ("SELECT dateiid FROM dbzuweisung WHERE userid=1 AND besitzer=1");
     $statement2->execute();
     $dateiid= $statement2->fetch();
-    //echo $dateiid;
     ?>
     <!-- Ende Datenbankabfrage für Dateianzeige -->
 
