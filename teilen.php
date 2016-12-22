@@ -62,7 +62,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
                     </tr>
                 </tbody>
             </table>
-        <form action = teilen.php method="post" role ="form">
+        <form action = teilen.php?var=<?php echo $dateiid[0]; ?> method="post" role ="form">
             <div class="form-group">
                 <label for="username">"<?php echo $dateiname[0];?>" mit Nutzer teilen:</label>
                 <input type="text" class="form-control" id="email" name = "email" placeholder="Email deines Freundes eingeben">
