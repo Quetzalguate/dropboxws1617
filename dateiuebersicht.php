@@ -25,6 +25,10 @@
                             ON dbdateien.dateiid = dbzuweisung.dateiid
                             WHERE dbzuweisung.userid=1"); // User ID aus session in Variable speichern und hier eingeben
     $statement->execute();
+
+    $statement2 = $pdo->prepare ("SELECT dateiid FROM dbdateien WHERE userid=1");
+    $statement2->execute();
+    $dateiid= $statement2->fetch();
     ?>
     <!-- Ende Datenbankabfrage für Dateianzeige -->
 
@@ -48,7 +52,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/umbenennen.php">Umbenennen</a></li>
                                 <li><a href="#">Herunterladen</a></li>
-                                <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/teilen.php?var=<?php echo $dateiname[0]; ?>">Teilen</a></li>
+                                <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/teilen.php?var=<?php echo $dateiid[0]; ?>">Teilen</a></li>
                                 <li><a href="#">Löschen</a></li>
                             </ul>
                         </div>
