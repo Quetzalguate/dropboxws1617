@@ -52,7 +52,7 @@ $dateiname= $statement->fetch();
             </table>
         <form>
             <div class="form-group">
-                <label for="username">"<?php echo $dateiname[0]?>" mit Nutzer teilen:</label>
+                <label for="username">"<?php echo $dateiname[0];?>" mit Nutzer teilen:</label>
                 <input type="text" class="form-control" id="username" placeholder="Email deines Freundes eingeben">
             </div>
             <button type="submit" class="btn btn-default">Teilen</button>
