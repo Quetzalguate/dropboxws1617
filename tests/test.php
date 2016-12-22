@@ -10,6 +10,12 @@ $username = "jv029";
 $password = "IeBu2chie3";
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement3 = $pdo->prepare ("INSERT INTO dbzuweisung (userid,dateiid) VALUES ('2', '3')");
-$statement3->execute();
+$statement = $pdo->prepare("SELECT dbuser.email
+                            FROM dbuser INNER JOIN dbzuweisung 
+                            ON dbuser.useriid = dbzuweisung.userid
+                            WHERE dbzuweisung.dateiid = 1"); // User ID aus session in Variable speichern und hier eingeben
+$statement->execute();
+while ($result = $statement->fetch()){
+    //var_dump($result);
+    echo $result[0] . "</br>";
 ?>
