@@ -29,6 +29,7 @@
     $statement2 = $pdo->prepare ("SELECT dateiid FROM dbdateien WHERE userid=1");
     $statement2->execute();
     $dateiid= $statement2->fetch();
+    echo $dateiid;
     ?>
     <!-- Ende Datenbankabfrage für Dateianzeige -->
 
