@@ -10,6 +10,6 @@ $username = "jv029";
 $password = "IeBu2chie3";
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement3 = $pdo->prepare ("INSERT INTO dbzuweisung (userid,dateiid) VALUES ('3', '3')");
+$statement3 = $pdo->prepare ("INSERT INTO dbzuweisung (userid,dateiid) VALUES ('2', '3')");
 $statement3->execute();
 ?>
