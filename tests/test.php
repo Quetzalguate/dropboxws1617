@@ -15,7 +15,8 @@ $statement = $pdo->prepare("SELECT dbuser.email
                             ON dbuser.useriid = dbzuweisung.userid
                             WHERE dbzuweisung.dateiid = 1"); // User ID aus session in Variable speichern und hier eingeben
 $statement->execute();
-while ($result = $statement->fetch()){
+while ($result = $statement->fetch()) {
     //var_dump($result);
     echo $result[0] . "</br>";
+}
 ?>
