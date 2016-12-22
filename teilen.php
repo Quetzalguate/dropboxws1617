@@ -52,12 +52,6 @@ $dateiname= $statement->fetch();
 <!-- --------------------------------------------------- HTML -> PHP ----------------------------------------------- -->
 
 <?php
-//Zugehöriger Dateiname zur Datei-ID auslesen
-$dateiid = $_GET['var'];
-$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement = $pdo->prepare ("SELECT dateiname FROM dbdateien WHERE dateiid= $dateiid");
-$statement->execute();
-$dateiname= $statement->fetch();
 
 //
 $email = $_POST['email'];
@@ -66,7 +60,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     $statement2 = $pdo->prepare ("SELECT userid FROM dbuser WHERE email= $email");
     $statement2->execute();
     $uid= $statement2->fetch();
-    echo $uid[0];
+    echo "hallo". $uid[0];
 }
 
 
