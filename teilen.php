@@ -23,6 +23,11 @@
 </head>
 
 <body>
+
+<?php
+echo $_GET['var'];
+
+?>
 </br></br>
 <div class="container-fluid">
     <div class="col-lg-3">
