@@ -53,7 +53,7 @@ $dateiname= $statement->fetch();
 
 <?php
 
-//
+//User-ID von Nutzer mit dem die Datei geteilt werden soll wird ausgelesen
 $email = $_POST['email'];
 if(isset($_POST['teilen']) && !empty($email) ) {
     $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
@@ -61,7 +61,14 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     $statement2->execute();
     $uid= $statement2->fetch();
     echo $uid[0];
+
+    $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+    $statement3 = $pdo->prepare ("INSERT INTO dbzuweisung (userid,dateiid) VALUES ('$uid', '$dateiid')");
+    $statement3->execute();
 }
+
+//Dem User wird die Datei-ID zugeordnet - Datei wird geteilt
+
 
 
 ?>
