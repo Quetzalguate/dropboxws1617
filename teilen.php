@@ -15,7 +15,14 @@
 </head>
 
 <body>
-
+<?php
+//Zugehöriger Dateiname zur Datei-ID auslesen
+$dateiid = $_GET['var'];
+$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+$statement = $pdo->prepare ("SELECT dateiname FROM dbdateien WHERE dateiid= $dateiid");
+$statement->execute();
+$dateiname= $statement->fetch();
+?>
 </br></br>
 <div class="container-fluid">
     <div class="col-lg-3">
