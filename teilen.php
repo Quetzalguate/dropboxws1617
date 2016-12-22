@@ -42,7 +42,7 @@ $dateiname= $statement->fetch();
         <form action = teilen.php?var=<?php echo $dateiid[0]; ?> method="post" role ="form">
             <div class="form-group">
                 <label for="username">"<?php echo $dateiname[0];?>" mit Nutzer teilen:</label>
-                <input type="text" class="form-control" id="email" name = "email" placeholder="Email deines Freundes eingeben">
+                <input type="email" class="form-control" id="email" name = "email" placeholder="Email deines Freundes eingeben">
             </div>
             <button type="submit" class="btn btn-default" name="teilen">Teilen</button>
         </form>
@@ -60,7 +60,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     $statement2 = $pdo->prepare ("SELECT userid FROM dbuser WHERE email= $email");
     $statement2->execute();
     $uid= $statement2->fetch();
-    echo "hallo". $uid[0];
+    echo $uid[0];
 }
 
 
