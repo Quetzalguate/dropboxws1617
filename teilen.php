@@ -63,7 +63,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     echo $uid[0];
 
     $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-    $statement3 = $pdo->prepare ("INSERT INTO dbzuweisung (userid,dateiid) VALUES ('$uid', '$dateiid')");
+    $statement3 = $pdo->prepare ("INSERT INTO dbzuweisung (userid,dateiid) VALUES ($uid, $dateiid)");
     $statement3->execute();
 }
 
