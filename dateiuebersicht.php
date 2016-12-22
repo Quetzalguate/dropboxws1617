@@ -27,10 +27,10 @@
     $statement->execute();
 
     $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-    $statement2 = $pdo->prepare ("SELECT dateiid FROM dbdateien WHERE userid=1");
+    $statement2 = $pdo->prepare ("SELECT dateiid FROM dbzuweisung WHERE userid=1 AND besitzer=1");
     $statement2->execute();
     $dateiid= $statement2->fetch();
-    echo $dateiid;
+    //echo $dateiid;
     ?>
     <!-- Ende Datenbankabfrage für Dateianzeige -->
 
