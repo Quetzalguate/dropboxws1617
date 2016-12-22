@@ -26,14 +26,14 @@
 <body>
 
 <?php
-echo $_GET['var'];
+
 $dateiid = $_GET['var'];
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare ("SELECT dateiname FROM dbdateien WHERE dateiid= $dateiid");
 $statement->execute();
 $dateiname= $statement->fetch();
-//<?php echo $dateiname[0];?>
+
 ?>
 
 </br></br>
