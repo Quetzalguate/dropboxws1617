@@ -32,6 +32,7 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare ("SELECT dateiname FROM dbdateien WHERE dateiid= $dateiid");
 $statement->execute();
 $dateiname= $statement->fetch();
+//<?php echo $dateiname[0];?>
 ?>
 
 </br></br>
@@ -52,7 +53,7 @@ $dateiname= $statement->fetch();
             </table>
         <form>
             <div class="form-group">
-                <label for="username">"<?php echo $dateiname[0];?>" mit Nutzer teilen:</label>
+                <label for="username">"" mit Nutzer teilen:</label>
                 <input type="text" class="form-control" id="username" placeholder="Email deines Freundes eingeben">
             </div>
             <button type="submit" class="btn btn-default">Teilen</button>
