@@ -79,8 +79,28 @@ if(isset($_POST['teilen']) && !empty($email) ) {
 
     $count = $statement3->rowCount();
     if ($count !=0){
-        echo "hallo";
+        echo "
+            <div class=\"container-fluid\">
+                <div class=\"col-lg-4\">
+                    <div class=\"alert alert-success\">
+                        <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+                        <strong>Datei wurde erfolgreich geteilt!</strong>
+                    </div>
+                </div>
+            </div>
+        ";
     }
+    else
+        echo "
+                <div class=\"container-fluid\">
+                <div class=\"col-lg-4\">
+                    <div class=\"alert alert-danger\">
+                        <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+                        <strong>Datei konnte leider nicht geteilt werden!</strong>
+                    </div>
+                </div>
+            </div>
+    ";
 }
 
 
