@@ -12,11 +12,9 @@ $password = "IeBu2chie3";
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare("SELECT dbuser.email
                             FROM dbuser INNER JOIN dbzuweisung 
-                            ON dbuser.useriid = dbzuweisung.userid
-                            WHERE dbzuweisung.dateiid = 1"); // User ID aus session in Variable speichern und hier eingeben
+                            ON dbuser.userid = dbzuweisung.userid
+                            WHERE dbzuweisung.dateiid=1 AND dbzuweisung.besitzer =0");
 $statement->execute();
-while ($result = $statement->fetch()) {
-    //var_dump($result);
-    echo $result[0] . "</br>";
-}
+$useremail = $statement->fetch();
+echo $useremail[0];
 ?>
