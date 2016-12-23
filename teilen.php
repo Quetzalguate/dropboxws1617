@@ -72,12 +72,15 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     $uid= $statement2->fetch();
     echo $uid[0];
 
+    //Dem User wird die Datei-ID zugeordnet - Datei wird geteilt
     $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
     $statement3 = $pdo->prepare ("INSERT INTO dbzuweisung (userid,dateiid) VALUES ($uid[0], $dateiid[0])");
     $statement3->execute();
+
+    $count = $statement3->rowCount();
+    print("Deleted $count rows.\n");
 }
 
-//Dem User wird die Datei-ID zugeordnet - Datei wird geteilt
 
 
 
