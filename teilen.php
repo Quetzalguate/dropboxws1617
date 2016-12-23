@@ -78,7 +78,9 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     $statement3->execute();
 
     $count = $statement3->rowCount();
-    echo $count;
+    if ($count !=0){
+        echo "hallo";
+    }
 }
 
 
