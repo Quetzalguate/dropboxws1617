@@ -70,7 +70,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     $statement2 = $pdo->prepare ("SELECT userid FROM dbuser WHERE email= '$email'");
     $statement2->execute();
     $uid= $statement2->fetch();
-    echo $uid[0];
+    //echo $uid[0];
 
     //Dem User wird die Datei-ID zugeordnet - Datei wird geteilt
     $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
