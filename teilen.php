@@ -80,8 +80,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     //Überprüfung ob eine Zeile erfolgreich von SQL Statement betroffen ist
     $count = $statement3->rowCount();
     if ($count !=0){
-        header("Refresh:0");
-        sleep(5);
+
         echo "
             <div class=\"container-fluid\">
                 <div class=\"col-lg-4\">
@@ -92,6 +91,8 @@ if(isset($_POST['teilen']) && !empty($email) ) {
                 </div>
             </div>
         ";
+        sleep(5);
+        header("Refresh:0");
     }
     else
         echo "
