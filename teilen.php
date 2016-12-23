@@ -22,6 +22,14 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare ("SELECT dateiname FROM dbdateien WHERE dateiid= $dateiid");
 $statement->execute();
 $dateiname= $statement->fetch();
+
+//Nutzer-Email mit denen die Datei bereits geteilt wurde werden ausgelesen
+$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+$statement4 = $pdo->prepare("SELECT dbuser.email
+                            FROM dbuser INNER JOIN dbzuweisung 
+                            ON dbuser.userid = dbzuweisung.userid
+                            WHERE dbzuweisung.dateiid=1 AND dbzuweisung.besitzer =0");
+$statement4->execute();
 ?>
 </br></br>
 <div class="container-fluid">
@@ -34,9 +42,11 @@ $dateiname= $statement->fetch();
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>User-Variable</td>
-            </tr>
+            <?php while ($useremail = $statement4->fetch()) {?>
+                <tr>
+                    <td><?php echo $useremail[0]; ?></td>
+                </tr>
+            <?php } ?>
             </tbody>
         </table>
         <form action = teilen.php?var=<?php echo $dateiid[0]; ?> method="post" role ="form">
