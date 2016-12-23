@@ -78,7 +78,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     $statement3->execute();
 
     $count = $statement3->rowCount();
-    print("Deleted $count rows.\n");
+    echo $count;
 }
 
 
