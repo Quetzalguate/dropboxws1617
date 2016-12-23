@@ -81,6 +81,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     $count = $statement3->rowCount();
     if ($count !=0){
         header("Refresh:0");
+        sleep(5);
         echo "
             <div class=\"container-fluid\">
                 <div class=\"col-lg-4\">
