@@ -77,6 +77,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     $statement3 = $pdo->prepare ("INSERT INTO dbzuweisung (userid,dateiid) VALUES ($uid[0], $dateiid[0])");
     $statement3->execute();
 
+    //Überprüfung ob eine Zeile erfolgreich von SQL Statement betroffen ist
     $count = $statement3->rowCount();
     if ($count !=0){
         echo "
