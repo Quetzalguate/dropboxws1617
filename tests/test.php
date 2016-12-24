@@ -19,6 +19,6 @@ $useremail = $statement->fetch();
 echo $useremail[0];*/
 
 
-echo readfile("gandalf.jpg",'public_html/upload/');
+echo readfile("gandalf.jpg",'/home/jv029/public_html/upload');
 
 ?>
