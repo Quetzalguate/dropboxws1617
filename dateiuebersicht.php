@@ -48,7 +48,7 @@
                 <tr>
                     <td>
                         <div class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> <?php echo $dateiname[0]; ?>
+                            <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> <?php echo $dateiname; ?>
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/umbenennen.php">Umbenennen</a></li>
