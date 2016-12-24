@@ -22,14 +22,14 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare ("SELECT dateiid FROM dbdateien WHERE dateiname= '$dateiname'");
 $statement->execute();
 $dateiid= $statement->fetch();
-echo $dateiid[0];
+
 
 //Nutzer-Email mit denen die Datei bereits geteilt wurde werden ausgelesen
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement4 = $pdo->prepare("SELECT dbuser.email
                             FROM dbuser INNER JOIN dbzuweisung 
                             ON dbuser.userid = dbzuweisung.userid
-                            WHERE dbzuweisung.dateiid=$dateiid AND dbzuweisung.besitzer =0");
+                            WHERE dbzuweisung.dateiid='$dateiid[0]' AND dbzuweisung.besitzer =0");
 $statement4->execute();
 ?>
 </br></br>
