@@ -19,6 +19,14 @@ $useremail = $statement->fetch();
 echo $useremail[0];*/
 
 
-echo readfile("gandalf.jpg",'~jv029/upload/');
+$_file = 'gandalf.jpg';
+
+header("Content-Type: image/jpg; ");
+header('Content-Disposition: attachment; filename="gandalf.jpg"');
+header("Content-Transfer-Encoding: binary");
+header("Content-Length: " . filesize($_file) ."; ");
+header("filename=\"".$_file."\"; ");
+
+readfile($_file);
 
 ?>
