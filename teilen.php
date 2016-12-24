@@ -19,7 +19,7 @@
 //Zugehöriger Dateiname zur Datei-ID auslesen
 $dateiname = $_GET['var'];
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement = $pdo->prepare ("SELECT dateiid FROM dbdateien WHERE dateiname= $dateiname");
+$statement = $pdo->prepare ("SELECT dateiid FROM dbdateien WHERE dateiname= '$dateiname'");
 $statement->execute();
 $dateiid= $statement->fetch();
 echo $dateiid[0];
