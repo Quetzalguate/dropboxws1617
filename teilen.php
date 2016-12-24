@@ -22,6 +22,7 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $statement = $pdo->prepare ("SELECT dateiid FROM dbdateien WHERE dateiname= $dateiname");
 $statement->execute();
 $dateiid= $statement->fetch();
+echo $dateiid;
 
 //Nutzer-Email mit denen die Datei bereits geteilt wurde werden ausgelesen
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
