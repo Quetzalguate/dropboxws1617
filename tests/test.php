@@ -5,7 +5,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Ende Bootstrap Einbindung -->
 <?php
-$servername = "localhost";
+/*$servername = "localhost";
 $username = "jv029";
 $password = "IeBu2chie3";
 
@@ -16,5 +16,9 @@ $statement = $pdo->prepare("SELECT dbuser.email
                             WHERE dbzuweisung.dateiid=1 AND dbzuweisung.besitzer =0");
 $statement->execute();
 $useremail = $statement->fetch();
-echo $useremail[0];
+echo $useremail[0];*/
+
+
+echo readfile("hashwertgollum1.jpg",upload/);
+
 ?>
