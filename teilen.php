@@ -17,11 +17,11 @@
 <body>
 <?php
 //Zugehöriger Dateiname zur Datei-ID auslesen
-$dateiid = $_GET['var'];
+$dateiname = $_GET['var'];
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement = $pdo->prepare ("SELECT dateiname FROM dbdateien WHERE dateiid= $dateiid");
+$statement = $pdo->prepare ("SELECT dateiid FROM dbdateien WHERE dateiname= $dateiname");
 $statement->execute();
-$dateiname= $statement->fetch();
+$dateiid= $statement->fetch();
 
 //Nutzer-Email mit denen die Datei bereits geteilt wurde werden ausgelesen
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
@@ -49,7 +49,7 @@ $statement4->execute();
             <?php } ?>
             </tbody>
         </table>
-        <form action = teilen.php?var=<?php echo $dateiid[0]; ?> method="post" role ="form">
+        <form action = teilen.php?var=<?php echo $dateiname[0]; ?> method="post" role ="form">
             <div class="form-group">
                 <label for="username">"<?php echo $dateiname[0];?>" mit Nutzer teilen:</label>
                 <input type="email" class="form-control" id="email" name = "email" placeholder="Email deines Freundes eingeben">
