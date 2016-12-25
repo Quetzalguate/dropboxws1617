@@ -20,15 +20,11 @@ echo $useremail[0];*/
 
 
 
-$_GET['file']="hashwertgollum1.jpg";
+
 $dir = '/home/upload/';
 $file = "hashwertgollum1.jpg";
 $type = 'image/jpg';
 
-if(!empty($_GET['file']) && !preg_match('=/=', $_GET['file'])) {
-    if(file_exists ($dir.$_GET['file']))     {
-        makeDownload($_GET['file'], $dir, $type);
-    }
 
 }
 function makeDownload($file, $dir, $type) {
