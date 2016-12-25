@@ -26,7 +26,7 @@ $file = "hashwertgollum1.jpg";
 $type = 'image/jpg';
 
 
-}
+
 function makeDownload($file, $dir, $type) {
 
     header("Content-Type: $type");
