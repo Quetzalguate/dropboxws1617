@@ -38,17 +38,19 @@ if (!$filename) {
         header('Content-Type: image/png');
         header('Content-Length: '.$size);
         header('Content-Disposition: attachment; filename='.$filename);
-        header('Content-Transfer-Encoding: binary');
+        //header('Content-Transfer-Encoding: binary');
         // open the file in binary read-only mode
         // display the error message if file can't be opened
-        $file = @ fopen($path, 'rb');
+
+        readfile($path.$filename);
+        /*$file = @ fopen($path, 'rb');
         if ($file) {
             // stream the file and exit the script when complete
             fpassthru($file);
             exit;
         } else {
             echo $err ."nein1";
-        }
+        }*/
     } else {
         echo $err."nein2";
     }
