@@ -20,7 +20,7 @@ echo $useremail[0];*/
 
 
 
-
+/*
 $dir = '/home/upload/';
 $file = "hashwertgollum1.jpg";
 $type = 'image/jpg';
@@ -34,6 +34,28 @@ function makeDownload($file, $dir, $type) {
     header("Content-Disposition: attachment; filename=\"$file\"");
 
     readfile($dir.$file);
+
+}*/
+
+$dir = '/home/upload/';
+
+function makeDownload($file, $dir)
+{
+    switch(strtolower(end(explode(".", $file)))) {
+        //case "jpg": $type = "image/jpg"; break;
+        //case "rar": $type = "application/x-rar-compressed"; break;
+        default: $type = "image/jpg";
+    }
+    header("Content-Type: $type");
+    header("Content-Disposition: attachment; filename=\"$file\"");
+    readfile($dir.$file);
+    exit; // you should exit here to prevent the file from becoming corrupted if anything else gets echo'd after this function was called.
+}
+
+if(!empty($_GET['file']) && !preg_match('=/=', $_GET['file'])) {
+    if(file_exists ($dir.$_GET['file']))     {
+        makeDownload($_GET['file'], $dir);
+    }
 
 }
 ?>
