@@ -13,11 +13,13 @@ $err = '<p style="color:#990000">Sorry, the file you are requesting is unavailab
 if (!$filename) {
     // if variable $filename is NULL or false display the message
     echo $err;
+    echo " filename NULL";
 } else {
     // define the path to your download folder plus assign the file name
     $path = 'public_html/upload/'.$filename;
     // check that file exists and is readable
     if (file_exists($path) && is_readable($path)) {
+        echo "file exists";
         // get the file size and send the http headers
         $size = filesize($path);
         header('Content-Type: application/octet-stream');
