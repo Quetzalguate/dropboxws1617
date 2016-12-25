@@ -20,7 +20,7 @@ echo $useremail[0];*/
 
 header("Content-disposition: attachment; filename=hashwertgollum1.jpg");
 header("Content-type: image/jpeg");
-readfile("public_html/hashwertgollum1.jpg/");
+readfile("/hashwertgollum1.jpg/");
 
 
 /*$dir = '/public_html/';
