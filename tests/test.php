@@ -21,6 +21,9 @@ if (!$filename) {
     if (is_readable($path)) {
         echo "path readable";
     }
+    else {
+        echo "path not readable";
+    }
     // check that file exists and is readable
     if (file_exists($path) && is_readable($path)) {
         echo "file exists";
