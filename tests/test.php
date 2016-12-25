@@ -7,7 +7,7 @@
 <?php
 
 $filename = "hashwertgollum1.jpg";
-
+echo $filename;
 // define error message
 $err = '<p style="color:#990000">Sorry, the file you are requesting is unavailable.</p>';
 if (!$filename) {
