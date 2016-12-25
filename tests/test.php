@@ -19,7 +19,9 @@ $dir = '/public_html/upload/';
 $type = 'image/jpeg';
 
 if(!empty($_GET['file']) && !preg_match('=/=', $_GET['file'])) {
+    echo "juhu";
     if(file_exists ($dir.$_GET['file']))     {
+        echo "hallo";
         makeDownload($_GET['file'], $dir, $type);
     }
 
