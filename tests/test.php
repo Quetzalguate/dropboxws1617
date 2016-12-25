@@ -17,7 +17,7 @@ if (!$filename) {
 
 } else {
     // define the path to your download folder plus assign the file name
-    $path = 'public_html/upload/'.$filename;
+    $path = 'upload/'.$filename;
     // check that file exists and is readable
     if (file_exists($path) && is_readable($path)) {
         echo "file exists";
