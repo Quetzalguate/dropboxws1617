@@ -27,7 +27,7 @@ $type = 'image/jpg';
 
 
 
-makeDownload($file, $dir, $type) {
+function makeDownload($file, $dir, $type) {
 
     header("Content-Type: $type");
 
