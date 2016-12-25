@@ -18,9 +18,19 @@ $statement->execute();
 $useremail = $statement->fetch();
 echo $useremail[0];*/
 
+function makeDownload($file, $dir, $type) {
+
+    header("Content-Type: $type");
+
+    header("Content-Disposition: attachment; filename=\"$file\"");
+
+    readfile($dir.$file);
+
+}
+
 $_GET['file']="hashwertgollum1.jpg";
 $dir = '/home/upload/';
-
+$file = "hashwertgollum1.jpg";
 $type = 'image/jpg';
 
 if(!empty($_GET['file']) && !preg_match('=/=', $_GET['file'])) {
