@@ -35,10 +35,10 @@ if (!$filename) {
             fpassthru($file);
             exit;
         } else {
-            echo $err;
+            echo $err ."nein1";
         }
     } else {
-        echo $err;
+        echo $err."nein2";
     }
 }
 
