@@ -5,30 +5,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Ende Bootstrap Einbindung -->
 <?php
-/*$servername = "localhost";
-$username = "jv029";
-$password = "IeBu2chie3";
-
-$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$statement = $pdo->prepare("SELECT dbuser.email
-                            FROM dbuser INNER JOIN dbzuweisung 
-                            ON dbuser.userid = dbzuweisung.userid
-                            WHERE dbzuweisung.dateiid=1 AND dbzuweisung.besitzer =0");
-$statement->execute();
-$useremail = $statement->fetch();
-echo $useremail[0];*/
-
-header("Content-disposition: attachment; filename=hashwertgollum1.jpg");
-header("Content-type: image/jpeg");
-readfile("/hashwertgollum1.jpg/");
-
-
-/*$dir = '/public_html/';
-$file = "hashwertgollum1.jpg";
-$type = 'image/jpg';
-
-
-
 function makeDownload($file, $dir, $type) {
 
     header("Content-Type: $type");
@@ -37,24 +13,16 @@ function makeDownload($file, $dir, $type) {
 
     readfile($dir.$file);
 
-}*/
-
-/*$dir = '/public_html/upload/';
-$file = "hashwertgollum1.jpg";
-function makeDownload($file, $dir)
-{
-    switch(strtolower(end(explode(".", $file)))) {
-        //case "jpg": $type = "image/jpg"; break;
-        //case "rar": $type = "application/x-rar-compressed"; break;
-        default: $type = "image/jpg";
-    }
-    header("Content-Type: $type");
-    header("Content-Disposition: attachment; filename=\"$file\"");
-    readfile($dir.$file);
-    exit; // you should exit here to prevent the file from becoming corrupted if anything else gets echo'd after this function was called.
 }
+$dir = '/public_html/upload/';
 
+$type = 'image/jpeg';
 
-makeDownload($file, $dir);*/
+if(!empty($_GET['file']) && !preg_match('=/=', $_GET['file'])) {
+    if(file_exists ($dir.$_GET['file']))     {
+        makeDownload($_GET['file'], $dir, $type);
+    }
+
+}
 
 ?>
