@@ -53,6 +53,6 @@ function makeDownload($file, $dir)
 }
 
 
-makeDownload($_GET['file'], $dir);
+makeDownload($file], $dir);
 
 ?>
