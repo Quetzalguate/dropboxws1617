@@ -26,5 +26,7 @@ if(!empty($_GET['file']) && !preg_match('=/=', $_GET['file'])) {
     }
 
 }
+else
+    echo" nein";
 
 ?>
