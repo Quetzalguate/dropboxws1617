@@ -20,14 +20,14 @@ echo $useremail[0];*/
 
 
 
-/*
+
 $dir = '/home/upload/';
 $file = "hashwertgollum1.jpg";
 $type = 'image/jpg';
 
 
 
-function makeDownload($file, $dir, $type) {
+makeDownload($file, $dir, $type) {
 
     header("Content-Type: $type");
 
@@ -35,9 +35,9 @@ function makeDownload($file, $dir, $type) {
 
     readfile($dir.$file);
 
-}*/
+}
 
-$dir = '/public_html/upload/';
+/*$dir = '/public_html/upload/';
 $file = "hashwertgollum1.jpg";
 function makeDownload($file, $dir)
 {
@@ -53,6 +53,6 @@ function makeDownload($file, $dir)
 }
 
 
-makeDownload($file, $dir);
+makeDownload($file, $dir);*/
 
 ?>
