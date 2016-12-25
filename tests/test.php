@@ -25,7 +25,7 @@ if (!$filename) {
         echo "path not readable";
     }
     // check that file exists and is readable
-    if (file_exists($path) && is_readable($path)) {
+    /*if (file_exists($path) && is_readable($path)) {
         echo "file exists";
         // get the file size and send the http headers
         $size = filesize($path);
@@ -45,7 +45,7 @@ if (!$filename) {
         }
     } else {
         echo $err."nein2";
-    }
+    }*/
 }
 
 
