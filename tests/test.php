@@ -53,6 +53,6 @@ function makeDownload($file, $dir)
 }
 
 
-makeDownload($file], $dir);
+makeDownload($file, $dir);
 
 ?>
