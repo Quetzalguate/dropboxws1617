@@ -18,15 +18,15 @@ $statement->execute();
 $useremail = $statement->fetch();
 echo $useremail[0];*/
 
+$_GET['file']="hashwertgollum1.jpg";
+$dir = '/home/upload/';
 
-$_file = 'gandalf.jpg';
+$type = 'image/jpg';
 
-header("Content-Type: image/jpg; ");
-header('Content-Disposition: attachment; filename="gandalf.jpg"');
-header("Content-Transfer-Encoding: binary");
-header("Content-Length: " . filesize($_file) ."; ");
-header("filename=\"".$_file."\"; ");
+if(!empty($_GET['file']) && !preg_match('=/=', $_GET['file'])) {
+    if(file_exists ($dir.$_GET['file']))     {
+        makeDownload($_GET['file'], $dir, $type);
+    }
 
-readfile($_file);
-
+}
 ?>
