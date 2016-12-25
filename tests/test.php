@@ -21,7 +21,7 @@ echo $useremail[0];*/
 
 
 
-$dir = '/home/upload/';
+$dir = '/public_html/';
 $file = "hashwertgollum1.jpg";
 $type = 'image/jpg';
 
