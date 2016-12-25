@@ -37,7 +37,7 @@ function makeDownload($file, $dir, $type) {
 
 }*/
 
-$dir = '/home/upload/';
+$dir = '/public_html/upload/';
 $file = "hashwertgollum1.jpg";
 function makeDownload($file, $dir)
 {
