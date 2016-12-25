@@ -24,7 +24,7 @@ if (!$filename) {
     else {
         echo "path not readable";
     }
-    if (file_exists($path){
+    if (file_exists($path)){
         echo "file exists";
     }
     else {
