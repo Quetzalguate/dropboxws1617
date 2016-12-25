@@ -38,7 +38,7 @@ function makeDownload($file, $dir, $type) {
 }*/
 
 $dir = '/home/upload/';
-
+$file = "hashwertgollum1.jpg";
 function makeDownload($file, $dir)
 {
     switch(strtolower(end(explode(".", $file)))) {
@@ -52,10 +52,7 @@ function makeDownload($file, $dir)
     exit; // you should exit here to prevent the file from becoming corrupted if anything else gets echo'd after this function was called.
 }
 
-if(!empty($_GET['file']) && !preg_match('=/=', $_GET['file'])) {
-    if(file_exists ($dir.$_GET['file']))     {
-        makeDownload($_GET['file'], $dir);
-    }
 
-}
+makeDownload($_GET['file'], $dir);
+
 ?>
