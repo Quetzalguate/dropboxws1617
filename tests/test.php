@@ -24,6 +24,12 @@ if (!$filename) {
     else {
         echo "path not readable";
     }
+    if (file_exists($path){
+        echo "file exists";
+    }
+    else {
+        echo "file doesnt exist";
+    }
     // check that file exists and is readable
     /*if (file_exists($path) && is_readable($path)) {
         echo "file exists";
