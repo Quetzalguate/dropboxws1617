@@ -12,8 +12,9 @@ $filename = "hashwertgollum1.jpg";
 $err = '<p style="color:#990000">Sorry, the file you are requesting is unavailable.</p>';
 if (!$filename) {
     // if variable $filename is NULL or false display the message
-    echo $err;
     echo " filename NULL";
+    echo $err;
+
 } else {
     // define the path to your download folder plus assign the file name
     $path = 'public_html/upload/'.$filename;
