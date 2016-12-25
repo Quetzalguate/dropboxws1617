@@ -18,10 +18,12 @@ $statement->execute();
 $useremail = $statement->fetch();
 echo $useremail[0];*/
 
+header("Content-disposition: attachment; filename=hashwertgollum1.jpg");
+header("Content-type: image/jpg");
+readfile("hashwertgollum1.jpg");
 
 
-
-$dir = '/public_html/';
+/*$dir = '/public_html/';
 $file = "hashwertgollum1.jpg";
 $type = 'image/jpg';
 
@@ -35,7 +37,7 @@ function makeDownload($file, $dir, $type) {
 
     readfile($dir.$file);
 
-}
+}*/
 
 /*$dir = '/public_html/upload/';
 $file = "hashwertgollum1.jpg";
