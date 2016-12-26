@@ -6,7 +6,7 @@
 <!-- Ende Bootstrap Einbindung -->
 <?php
 
-$filename = 'gandalf.jpg';
+$filename = 'gollum.jpg';
 $dir = "upload/".$filename;
 
 if (file_exists($dir)) {
