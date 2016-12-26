@@ -8,7 +8,7 @@
 
 $filename = 'gollum.jpg';
 $dir = "upload/".$filename;
-$dateiname = __DIR__ . '/gollum.jpg';
+
 //sftp://jv029@mars.iuk.hdm-stuttgart.de/home/jv029/public_html/tests/upload/gollum.jpg
 
 if (file_exists($dir)) {
@@ -22,7 +22,7 @@ if (file_exists($dir)) {
     header('Content-Length: ' . filesize($filename));
     ob_clean();
     flush();
-    readfile($dateiname);
+    readfile($filename,$dir);
     exit;
 }
 else
