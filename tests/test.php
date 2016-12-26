@@ -6,7 +6,14 @@
 <!-- Ende Bootstrap Einbindung -->
 <?php
 
-$filename = 'gollum.jpg';
+$filename='gollum.jpg';
+@header("Content-type: image/jpg");
+@header("Content-Disposition: attachment; filename=$filename");
+echo file_get_contents('gollum.jpg');
+
+//-------------------------------------------------------------------------------------------------
+
+/*$filename = 'gollum.jpg';
 $dir = "upload/".$filename;
 
 //sftp://jv029@mars.iuk.hdm-stuttgart.de/home/jv029/public_html/tests/upload/gollum.jpg
@@ -26,7 +33,9 @@ if (file_exists($dir)) {
     exit;
 }
 else
-    echo " file doesnt exist";
+    echo " file doesnt exist";*/
+
+//-------------------------------------------------------------------------------------------------
 
 /*$file = "gandalf.jpg";
 $dir = "upload/".$filename;
