@@ -20,6 +20,7 @@ if (file_exists($dir)) {
     header('Pragma: public');
     header('Content-Length: ' . filesize($filename));
     ob_clean();
+    flush();
     readfile($filename,$dir);
     exit;
 }
