@@ -20,7 +20,7 @@
     $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
     $stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
     $stmt->execute();
-    $dateiid= $statement->fetch();
+    $dateiid= $stmt->fetch();
     echo $dateiid[0];
     echo "hallo";
     //Auslesen ob Besitzer gleich 0 oder 1
