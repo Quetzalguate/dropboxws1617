@@ -9,6 +9,11 @@
 
 $file = "gandalf.jpg";
 $dir = "upload/".$filename;
+if( !file_exists($file) ){
+    echo "file exists";
+}
+else
+    echo "file doesnt exist";
 // Quick check to verify that the file exists
 if( !file_exists($file) ) die("File not found");
 // Force the download
