@@ -7,7 +7,7 @@
 <?php
 
 $filename = 'gollum.jpg';
-$dir = "upload/".$filename;
+$dir = "/home/public_html/tests/upload/".$filename;
 //sftp://jv029@mars.iuk.hdm-stuttgart.de/home/jv029/public_html/tests/upload/gollum.jpg
 
 if (file_exists($dir)) {
