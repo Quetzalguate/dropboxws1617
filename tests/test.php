@@ -9,7 +9,7 @@
 $filename = 'monkey.gif';
 $dir = "upload/".$filename;
 
-if (file_exists($filename)) {
+if (file_exists($dir)) {
     header('Content-Description: File Transfer');
     header('Content-Type: application/octet-stream');
     header('Content-Disposition: attachment; filename="'.basename($filename).'"');
@@ -17,7 +17,7 @@ if (file_exists($filename)) {
     header('Cache-Control: must-revalidate');
     header('Pragma: public');
     header('Content-Length: ' . filesize($filename));
-    readfile($filename);
+    readfile($filename, $dir);
     exit;
 }
 
