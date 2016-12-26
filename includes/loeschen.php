@@ -32,18 +32,20 @@
     $stmt->execute();
     $besitzer= $stmt->fetch();
     echo $besitzer[0];
+    $besitzerzw = $besitzer[0];
 
     //Wenn Besitzer = 1 dürfen die DB-Einträge und die Datei gelöscht werden
-    /*if ($besitzer=1){
+    if ($besitzerzw=1){
+        echo "besitzer gleich 1!";
         //DB-Eintrag aus dbdateien löschen --> Zeile löschen wo dateiname = xy
         //DB-Eintrag aus dbzuweisung löschen --> Zeile löschen wo dateiid = xy
 
-        $datei = "../upload/gollum.jpg";
-        unlink($datei);
+        /*$datei = "../upload/gollum.jpg";
+        unlink($datei);*/
     }
     else {
         echo "Die fehlen die Rechte um die Datei zu löschen!";
-    }*/
+    }
 
     ?>
 </body>
