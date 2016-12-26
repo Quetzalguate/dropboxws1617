@@ -9,7 +9,7 @@
 
 $file = "gandalf.jpg";
 $dir = "upload/".$filename;
-if( !file_exists($file) ){
+if( file_exists($file) ){
     echo "file exists";
 }
 else
