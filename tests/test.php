@@ -5,7 +5,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Ende Bootstrap Einbindung -->
 <?php
+//DELETE FILE
 
+
+
+//DOWNLOAD FILE
+//-------------------------------------------------------------------------------------------------
 $filename='gollum.jpg';
 @header("Content-type: image/jpg");
 @header("Content-Disposition: attachment; filename=$filename");
