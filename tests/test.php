@@ -12,7 +12,7 @@ $dir = "/home/jv029/public_html/tests/upload/".$filename;
 if (file_exists($dir)) {
     echo "file exists";
     header('Content-Description: File Transfer');
-    header('Content-Type: application/octet-stream');
+    header('Content-Type: image/jpg');
     header('Content-Disposition: attachment; filename="'.basename($filename).'"');
     header('Expires: 0');
     header('Cache-Control: must-revalidate');
