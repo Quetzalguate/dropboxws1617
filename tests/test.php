@@ -12,7 +12,7 @@ $dir = "home/jv029/public_html/tests/upload/".$filename;
 
 if (file_exists($dir)) {
     echo "file exists";
-    header('Content-Description: File Transfer');
+    /*header('Content-Description: File Transfer');
     header('Content-Type: image/jpg');
     header('Content-Disposition: attachment; filename="'.basename($filename).'"');
     header('Expires: 0');
@@ -21,7 +21,7 @@ if (file_exists($dir)) {
     header('Content-Length: ' . filesize($filename));
     ob_clean();
     readfile($filename,$dir);
-    exit;
+    exit;*/
 }
 else
     echo " file doesnt exist";
