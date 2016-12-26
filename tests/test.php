@@ -6,7 +6,20 @@
 <!-- Ende Bootstrap Einbindung -->
 <?php
 
-$filename = "gandalf.jpg";
+
+$file = "gandalf.jpg";
+$dir = "upload/";
+// Quick check to verify that the file exists
+if( !file_exists($file) ) die("File not found");
+// Force the download
+header("Content-Disposition: attachment; filename="gandalf.jpg" . basename($file) . """);
+header("Content-Length: " . filesize($file));
+header("Content-Type: application/octet-stream;");
+readfile($file,$dir);
+
+
+
+/*$filename = "gandalf.jpg";
 echo $filename;
 // define error message
 $err = '<p style="color:#990000">Sorry, the file you are requesting is unavailable.</p>';
@@ -31,7 +44,7 @@ if (!$filename) {
         echo " file doesnt exist";
     }*/
     // check that file exists and is readable
-    if (file_exists($path) && is_readable($path)) {
+    /*if (file_exists($path) && is_readable($path)) {
         echo "file exists";
         // get the file size and send the http headers
         $size = filesize($path);
@@ -50,11 +63,11 @@ if (!$filename) {
             exit;
         } else {
             echo $err ."nein1";
-        }*/
+        }
     } else {
         echo $err."nein2";
     }
-}
+}*/
 
 
 ?>
