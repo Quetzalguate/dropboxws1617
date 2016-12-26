@@ -9,7 +9,7 @@
 $filename='gollum.jpg';
 @header("Content-type: image/jpg");
 @header("Content-Disposition: attachment; filename=$filename");
-echo file_get_contents('gollum.jpg');
+echo file_get_contents('upload/gollum.jpg');
 
 //-------------------------------------------------------------------------------------------------
 
