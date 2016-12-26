@@ -14,17 +14,24 @@
 <body>
     <?php
     $userid="1";
-    $useridparam=":userid";
     $dateiname = $_GET['var'];
+
     //Ausgeben welche dateiid der dateiname hat, der von user xy hochgeladen wurde
-    $stmt = $pdo->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname ");
+    $stmt = $pdo->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname "); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
     $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
     //$stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
     $stmt->execute();
     $dateiid= $stmt->fetch();
     echo $dateiid[0];
-    echo "hallo";
+    $dateiidzw = $dateiid[0];
+
     //Auslesen ob Besitzer gleich 0 oder 1
+    $stmt = $pdo->prepare("SELECT besitzer FROM dbzuweisung WHERE dateiid=:dateiidzw AND userid=:userid"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+    $stmt->bindParam(':dateiidzw', $dateiidzw, PDO::PARAM_STR);
+    $stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
+    $stmt->execute();
+    $besitzer= $stmt->fetch();
+    echo $besitzer[0];
 
     //Wenn Besitzer = 1 dürfen die DB-Einträge und die Datei gelöscht werden
     /*if ($besitzer=1){
