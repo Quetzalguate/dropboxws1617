@@ -41,7 +41,7 @@ readfile($file,$dir);
 */
 
 
-$filename = "gandalf.jpg";
+$filename = "gollum.jpg";
 echo $filename;
 // define error message
 $err = '<p style="color:#990000">Sorry, the file you are requesting is unavailable.</p>';
