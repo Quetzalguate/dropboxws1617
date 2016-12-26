@@ -8,6 +8,7 @@
 
 $filename = 'gollum.jpg';
 $dir = "/home/jv029/public_html/tests/upload/".$filename;
+//sftp://jv029@mars.iuk.hdm-stuttgart.de/home/jv029/public_html/tests/upload/gollum.jpg
 
 if (file_exists($dir)) {
     echo "file exists";
