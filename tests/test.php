@@ -21,6 +21,8 @@ if (file_exists($dir)) {
     readfile($filename, $dir);
     exit;
 }
+else
+    echo " file doesnt exist";
 
 /*$file = "gandalf.jpg";
 $dir = "upload/".$filename;
