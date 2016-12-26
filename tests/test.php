@@ -7,7 +7,7 @@
 <?php
 
 $filename = 'gollum.jpg';
-$dir = "upload/".$filename;
+$dir = "/upload/".$filename;
 
 if (file_exists($dir)) {
     echo "file exists";
