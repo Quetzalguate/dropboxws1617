@@ -19,8 +19,9 @@
     $stmt = $pdo->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname AND userid=:userid ");
     $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
     $stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
-    $dateiid=$stmt->execute();
-    echo $dateiid;
+    $stmt->execute();
+    $dateiid= $statement->fetch();
+    echo $dateiid[0];
     echo "hallo";
     //Auslesen ob Besitzer gleich 0 oder 1
 
