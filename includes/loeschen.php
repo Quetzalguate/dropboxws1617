@@ -15,7 +15,7 @@
     <?php
     $dateiname = $_GET['var'];
     //Ausgeben welche dateiid der dateiname hat, der von user xy hochgeladen wurde
-    $stmt = $verbindung->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname AND userid=:userid ");
+    $stmt = $pdo->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname AND userid=:userid ");
     $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
     $stmt->bindParam(':userid', "1", PDO::PARAM_STR);
     $dateiid=$stmt->execute();
