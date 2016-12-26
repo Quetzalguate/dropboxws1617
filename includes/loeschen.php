@@ -13,11 +13,12 @@
 
 <body>
     <?php
+    $userid="1";
     $dateiname = $_GET['var'];
     //Ausgeben welche dateiid der dateiname hat, der von user xy hochgeladen wurde
     $stmt = $pdo->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname AND userid=:userid ");
     $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
-    $stmt->bindParam(':userid', 1, PDO::PARAM_STR);
+    $stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
     $dateiid=$stmt->execute();
     echo $dateiid[0];
     //Auslesen ob Besitzer gleich 0 oder 1
