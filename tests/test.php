@@ -10,6 +10,7 @@ $filename = 'monkey.gif';
 $dir = "upload/".$filename;
 
 if (file_exists($dir)) {
+    echo "file exists";
     header('Content-Description: File Transfer');
     header('Content-Type: application/octet-stream');
     header('Content-Disposition: attachment; filename="'.basename($filename).'"');
