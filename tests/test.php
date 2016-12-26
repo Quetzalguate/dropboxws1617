@@ -6,7 +6,7 @@
 <!-- Ende Bootstrap Einbindung -->
 <?php
 
-/*$filename = 'gollum.jpg';
+$filename = 'gollum.jpg';
 $dir = "upload/".$filename;
 
 if (file_exists($dir)) {
@@ -22,7 +22,7 @@ if (file_exists($dir)) {
     exit;
 }
 else
-    echo " file doesnt exist";*/
+    echo " file doesnt exist";
 
 /*$file = "gandalf.jpg";
 $dir = "upload/".$filename;
@@ -41,7 +41,7 @@ readfile($file,$dir);
 */
 
 
-$filename = "gollum.jpg";
+/*$filename = "gollum.jpg";
 echo $filename;
 // define error message
 $err = '<p style="color:#990000">Sorry, the file you are requesting is unavailable.</p>';
@@ -90,6 +90,6 @@ if (!$filename) {
         echo $err."nein2";
     }
 }
-
+*/
 
 ?>
