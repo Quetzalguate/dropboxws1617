@@ -18,6 +18,7 @@ if (file_exists($dir)) {
     header('Cache-Control: must-revalidate');
     header('Pragma: public');
     header('Content-Length: ' . filesize($filename));
+    ob_clean();
     readfile($dir);
     exit;
 }
