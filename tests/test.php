@@ -6,8 +6,22 @@
 <!-- Ende Bootstrap Einbindung -->
 <?php
 
+$filename = 'monkey.gif';
+$dir = "upload/".$filename;
 
-$file = "gandalf.jpg";
+if (file_exists($filename)) {
+    header('Content-Description: File Transfer');
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename="'.basename($filename).'"');
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate');
+    header('Pragma: public');
+    header('Content-Length: ' . filesize($filename));
+    readfile($filename);
+    exit;
+}
+
+/*$file = "gandalf.jpg";
 $dir = "upload/".$filename;
 if( file_exists($dir) ){
     echo "file exists";
@@ -21,7 +35,7 @@ header("Content-Disposition: attachment; filename=$file ");
 header("Content-Length: " . filesize($file));
 header("Content-Type: application/octet-stream;");
 readfile($file,$dir);
-
+*/
 
 
 /*$filename = "gandalf.jpg";
