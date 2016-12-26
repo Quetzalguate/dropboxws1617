@@ -15,7 +15,7 @@ if( file_exists($dir) ){
 else
     echo "file doesnt exist";
 // Quick check to verify that the file exists
-if( !file_exists($file) ) die("File not found");
+if( !file_exists($dir) ) die("File not found");
 // Force the download
 header("Content-Disposition: attachment; filename=$file ");
 header("Content-Length: " . filesize($file));
