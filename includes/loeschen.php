@@ -21,6 +21,7 @@
     $stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
     $dateiid=$stmt->execute();
     echo $dateiid;
+    echo "hallo";
     //Auslesen ob Besitzer gleich 0 oder 1
 
     //Wenn Besitzer = 1 dürfen die DB-Einträge und die Datei gelöscht werden
