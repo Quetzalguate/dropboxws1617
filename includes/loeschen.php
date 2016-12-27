@@ -38,7 +38,7 @@
     if ($besitzerzw=1){
         echo "berechtigt datei zu löschen!";
         //DB-Eintrag aus dbdateien löschen --> Zeile löschen wo dateiname = xy
-        $stmt3 = $pdo->prepare("DELETE FROM dbdateien WHERE dateiname=:dateiname"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+        $stmt3 = $pdo->prepare("DELETE * FROM dbdateien WHERE dateiname=:dateiname"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
         $stmt3->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
         //$stmt3->bindParam(':userid', $userid, PDO::PARAM_STR);
         $stmt3->execute();
