@@ -5,16 +5,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Ende Bootstrap Einbindung -->
 <?php
-//DELETE FILE
+//RENAME FILE
+$oldname = "upload/gollum.jpg";
+$newname = "upload/smeagol.jpg";
+rename($oldname.$newname,);
 
-
-
-//DOWNLOAD FILE
 //-------------------------------------------------------------------------------------------------
+//DOWNLOAD FILE
+/*
 $filename='gollum.jpg';
 @header("Content-type: image/jpg");
 @header("Content-Disposition: attachment; filename=$filename");
 echo file_get_contents('upload/gollum.jpg');
+*/
 
 //-------------------------------------------------------------------------------------------------
 
