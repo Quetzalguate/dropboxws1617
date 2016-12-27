@@ -80,6 +80,7 @@
                 </div>
             </div>
         ";
+        header( "refresh:5;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
     }
 
     ?>
