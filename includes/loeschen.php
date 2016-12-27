@@ -51,7 +51,7 @@
         $stmt4->execute();
 
 
-
+        //Datei wird im Uploadverzeichnis gelöscht
         $datei = "../upload/".$dateiname;
         unlink($datei);
     }
