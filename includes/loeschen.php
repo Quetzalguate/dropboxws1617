@@ -25,7 +25,7 @@
     //$stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
     $stmt->execute();
     $dateihash= $stmt->fetch();
-    echo $dateihash[0];
+    //echo $dateihash[0];
     $dateihasherg = $dateihash[0];
 
     //Ausgeben welche dateiid der dateiname hat, der von user xy hochgeladen wurde
@@ -34,7 +34,7 @@
     //$stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
     $stmt1->execute();
     $dateiid= $stmt1->fetch();
-    echo $dateiid[0];
+    //echo $dateiid[0];
     $dateiidzw = $dateiid[0];
 
     //Auslesen ob Besitzer gleich 0 oder 1
@@ -47,7 +47,7 @@
     echo "Berechtigung: ".$besitzerzw." !";
     //Wenn Besitzer = 1 dürfen die DB-Einträge und die Datei gelöscht werden
     if ($besitzerzw !='0'){
-        echo "berechtigt datei zu löschen!";
+        //echo "berechtigt datei zu löschen!";
 
         /*//DB-Eintrag aus dbzuweisung löschen --> Zeile löschen wo dateiid = xy
         $stmt3 = $pdo->prepare("DELETE FROM dbzuweisung WHERE dateiid=:dateiidzw AND userid=:userid"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
@@ -79,7 +79,7 @@
                 </div>
             </div>
         ";
-        header( "refresh:5;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
+        header( "refresh:3;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
     }
 
     ?>
