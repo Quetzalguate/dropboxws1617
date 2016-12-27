@@ -17,11 +17,20 @@
     $dateiname = $_GET['var'];
 
     //Ausgeben welche dateiid der dateiname hat, der von user xy hochgeladen wurde
-    $stmt = $pdo->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname "); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+    $stmt = $pdo->prepare("SELECT dateihash FROM dbdateien WHERE dateiname=:dateiname "); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
     $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
     //$stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
     $stmt->execute();
-    $dateiid= $stmt->fetch();
+    $dateihash= $stmt->fetch();
+    echo $dateihash[0];
+    $dateihasherg = $dateihash[0];
+
+    //Ausgeben welche dateiid der dateiname hat, der von user xy hochgeladen wurde
+    $stmt1 = $pdo->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname "); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+    $stmt1->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
+    //$stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
+    $stmt1->execute();
+    $dateiid= $stmt1->fetch();
     echo $dateiid[0];
     $dateiidzw = $dateiid[0];
 
@@ -52,7 +61,7 @@
 
 
         //Datei wird im Uploadverzeichnis gelöscht
-        $datei = "../upload/".$dateiname;
+        $datei = "../upload/".$dateihasherg;//hier muss als variable der dateihash hin anstatt $dateiname
         unlink($datei);
     }
     else {
