@@ -39,7 +39,7 @@
         echo "berechtigt datei zu löschen!";
 
         //DB-Eintrag aus dbzuweisung löschen --> Zeile löschen wo dateiid = xy
-        $stmt3 = $pdo->prepare("DELETE FROM dbzuweisung WHERE dateiid=:dateiid AND userid=:userid AND besitzer=1"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+        $stmt3 = $pdo->prepare("DELETE FROM dbzuweisung WHERE dateiid=:dateiid AND userid=:userid AND besitzer='1'"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
         $stmt3->bindParam(':dateiid', $dateiid, PDO::PARAM_STR);
         $stmt3->bindParam(':userid', $userid, PDO::PARAM_STR);
         $stmt3->execute();
