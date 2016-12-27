@@ -12,7 +12,7 @@ $password = "IeBu2chie3";
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 
 
-$erg=strrchr(gollum.jpg,.);
+$erg=strrchr("gollum.jpg",".");
 echo $erg;
 /*//RENAME FILE
 $userid="1";
