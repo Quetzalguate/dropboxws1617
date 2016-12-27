@@ -1,16 +1,6 @@
-<!-- Start Include Dateien -->
-<?php include ("includes/bsfixednavbar.php"); ?>
-<?php include ("includes/bsfooter.php"); ?>
-<?php include ("includes/bseinbindung.php"); ?>
-<!-- Ende Include Dateien -->
 
 
-<!-- Start Dateiübersicht -->
-<?php ?>
-<!-- Ende Dateiübersicht -->
 
-
-<!-- --------------------------------------------------- PHP -> HTML ----------------------------------------------- -->
 
 
 <!DOCTYPE html>
@@ -18,8 +8,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dropbox - Umbenennen</title>
+    <title>Minimalbox - Umbenennen</title>
 
+    <!-- Start Include Dateien -->
+    <?php include ("includes/bsfixednavbar.php"); ?>
+    <?php include ("includes/bsfooter.php"); ?>
+    <?php include ("includes/bseinbindung.php"); ?>
+    <!-- Ende Include Dateien -->
 </head>
 
 <body>
@@ -36,5 +31,16 @@
         </form>
     </div>
 </div>
+
+<!-- --------------------------------------------------- HTML -> PHP ----------------------------------------------- -->
+
+<?php
+
+//aus neu vergebenen Dateinamen einen neuen hashwert erzeugen
+//neuen hashwert in dbdateien speichern --> userid und extension hinten dran hängen
+//der Datei selbst auf dem Server, wird umbenannt zu dem neuen hashwert
+
+?>
+
 </body>
 </html>
