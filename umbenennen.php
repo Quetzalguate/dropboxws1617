@@ -66,7 +66,7 @@ if ($besitzer !='0'){
 
         //2.0 DATEI UMBENENNEN
         //2.1 Alten Dateihash auslesen und in Variable speichern $alterdateihash
-        $stmt3 = $verbindung->prepare("SELCET dateihash FROM dbdateien WHERE dateiname= :dateiname");// Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+        $stmt3 = $pdo->prepare("SELECT dateihash FROM dbdateien WHERE dateiname= :dateiname");// Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
         $stmt3->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
         $stmt3->execute();
         $erg= $stmt3->fetch();
@@ -78,7 +78,8 @@ if ($besitzer !='0'){
         $neuerdateihash = $md5.$userid.$extension;
 
         //2.3 Neuer Dateihash wird in dbdateien gespeichert
-        $stmt4 = $verbindung->prepare("UPDATE dateihash FROM dbdateien WHERE dateiname= :dateiname");// Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+        $stmt4 = $pdo->prepare("UPDATE dbdateien SET dateihash=:neuerdateihash WHERE dateiname= :dateiname");// Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+        $stmt4->bindParam(':neuerdateihash', $neuerdateihash, PDO::PARAM_STR);
         $stmt4->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
         $stmt4->execute();
 
