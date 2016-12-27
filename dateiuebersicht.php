@@ -14,7 +14,8 @@
 
     <style>
         body {
-            background-color: yellow;
+            background-color: black;
+            opacity: 0.6;
         }
     </style>
 </head>
