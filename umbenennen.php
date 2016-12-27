@@ -83,7 +83,13 @@ if ($besitzer !='0'){
         $stmt4->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
         $stmt4->execute();
 
-        //2.4 Datei auf dem Server wird umbenannt
+        //2.4 Neuer Dateiname wird in dbdateien gespeichert
+        $stmt5 = $pdo->prepare("UPDATE dbdateien SET dateiname=:neuerdateiname WHERE dateihash= :neuerdateihash");
+        $stmt5->bindParam(':neuerdateiname', $neuerdateiname, PDO::PARAM_STR);
+        $stmt5->bindParam(':neuerdateihash', $neuerdateihash, PDO::PARAM_STR);
+        $stmt5->execute();
+
+        //2.5 Datei auf dem Server wird umbenannt
         $alterdateihashpfad = "upload/".$alterdateihash;
         $neuerdateihashpfad = "upload/".$neuerdateihash;
         rename($alterdateihashpfad,$neuerdateihashpfad);
