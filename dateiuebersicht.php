@@ -38,8 +38,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6" class="text-centered">
-            <h3>Deine Dateien</h3>
+            <div class="col-md-6" >
+            <h3 class="text-center">Deine Dateien</h3>
                 <table class="table table-hover">
                     <thead>
                         <tr>
