@@ -12,7 +12,11 @@
     <?php include ("includes/connection.php"); ?>
     <!-- Ende Include Dateien -->
 
-
+    <style>
+        body {
+            background-color: yellow;
+        }
+    </style>
 </head>
 
 <body>
