@@ -52,8 +52,8 @@
 
 
 
-        /*$datei = "../upload/gollum.jpg";
-        unlink($datei);*/
+        $datei = "../upload/".$dateiname;
+        unlink($datei);
     }
     else {
         echo "Die fehlen die Rechte um die Datei zu löschen!";
