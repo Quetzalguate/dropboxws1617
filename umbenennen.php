@@ -28,7 +28,7 @@
             <div class="form-group">
                 <input type="text" class="from-control" name="neuerdateiname" placeholder=" Name.Dateiendung"
             </div>
-            <button type="submit" class="btn btn-default" name="umbenennen">Umbenennen</button>
+            <button type="submit" class="btn btn-default" name="submit">Umbenennen</button>
         </form>
     </div>
 </div>
@@ -62,7 +62,7 @@ echo $besitzer;
 
 if ($besitzer !='0'){
 
-    if (isset($_POST['umbenennen']) && !empty($neuerdateiname)){
+    if (isset($_POST['submit']) && !empty($neuerdateiname)){
 
         //2.0 DATEI UMBENENNEN
         //2.1 Alten Dateihash auslesen und in Variable speichern $alterdateihash
