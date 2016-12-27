@@ -61,8 +61,10 @@
 
 
         //Datei wird im Uploadverzeichnis gelöscht
-        $datei = "../upload/".$dateihasherg;//hier muss als variable der dateihash hin anstatt $dateiname
+        $datei = "../upload/".$dateihasherg;
         unlink($datei);
+        header("Location: https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php");
+        exit;
     }
     else {
         echo "Die fehlen die Rechte um die Datei zu löschen!";
