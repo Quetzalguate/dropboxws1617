@@ -8,7 +8,7 @@
 //RENAME FILE
 $oldname = "upload/gollum.jpg";
 $newname = "upload/smeagol.jpg";
-rename($oldname.$newname,);
+rename($oldname,$newname);
 
 //-------------------------------------------------------------------------------------------------
 //DOWNLOAD FILE
