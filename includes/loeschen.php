@@ -7,6 +7,9 @@
 
     <!-- Start Include Dateien -->
     <?php include ("connection.php"); ?>
+    <?php include ("bsfixednavbar.php"); ?>
+    <?php include ("bsfooter.php"); ?>
+    <?php include ("bseinbindung.php"); ?>
     <!-- Ende Include Dateien -->
 
 </head>
@@ -67,7 +70,16 @@
         exit;
     }
     else {
-        echo "Die fehlen die Rechte um die Datei zu löschen!";
+        echo "
+        <div class=\"container-fluid\">
+                <div class=\"col-lg-4\">
+                    <div class=\"alert alert-danger\">
+                        <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+                        <strong>Du bist nicht dazu berechtigt diese Datei zu löschen!</strong>
+                    </div>
+                </div>
+            </div>
+        ";
     }
 
     ?>
