@@ -23,7 +23,7 @@
 </br></br>
 <div class="container-fluid">
     <div class="col-lg-12">
-        <h3><u>Datei <?php $dateiname ?> umbenennen</u></h3>
+        <h3><u>Datei <?php echo $dateiname; ?> umbenennen</u></h3>
         <form action = suchen.php method="post" role ="form">
             <div class="form-group">
                 <label for="text">Datei: <?php $dateiname ?></label>
