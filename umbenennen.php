@@ -26,7 +26,7 @@
         <form action = suchen.php method="post" role ="form">
             <div class="form-group">
                 <label for="text">Datei: <?php $dateiname ?></label>
-                <input type="text" class="from-control" name="neuerdateiname" placeholder="Namen.Dateiendung"
+                <input type="text" class="from-control" name="neuerdateiname" placeholder=" Name.Dateiendung"
             </div>
             <button type="submit" class="btn btn-default" name="umbenennen">Umbenennen</button>
         </form>
