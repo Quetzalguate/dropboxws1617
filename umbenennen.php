@@ -22,9 +22,9 @@
 <div class="container-fluid">
     <div class="col-lg-12">
         <h3><u>Datei Umbenennen</u></h3>
-        <form>
+        <form action = suchen.php method="post" role ="form">
             <div class="form-group">
-                <label for="text">Datei: Dateinamenvariable</label>
+                <label for="text">Datei: <?php $dateiname ?></label>
                 <input type="text" class="from-control" name="neuerdateiname" placeholder="Neuen Namen eingeben"
             </div>
             <button type="submit" class="btn btn-default" name="umbenennen">Umbenennen</button>
