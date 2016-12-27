@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dropbox - Datei-Teilen</title>
+    <title>MinimalBox - Datei-Teilen</title>
 
     <!-- Start Include Dateien -->
     <?php include ("includes/bsfixednavbar.php"); ?>

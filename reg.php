@@ -1,21 +1,15 @@
-<!-- Start Include Dateien -->
-<?php include ("includes/bsfooter.php"); ?>
-<?php include ("includes/bseinbindung.php"); ?>
-<?php include("includes/connection.php"); ?>
-
-<!-- Ende Include Dateien -->
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
     <meta charset="UTF-8">
-    <title>Dropbox - Registrierung</title>
+    <title>MinimalBox - Registrierung</title>
+
+    <!-- Start Include Dateien -->
+    <?php include ("includes/bsfooter.php"); ?>
+    <?php include ("includes/bseinbindung.php"); ?>
+    <?php include("includes/connection.php"); ?>
+    <!-- Ende Include Dateien -->
 
 </head>
 
@@ -68,14 +62,7 @@
     </div>
 </div>
 
-
-</body>
-</html>
-
 <!-- --------------------------------------------------- HTML -> PHP ----------------------------------------------- -->
-
-
-
 <!-- Start Registrierung -->
 <?php
 
@@ -183,3 +170,11 @@ if(isset($_GET['register'])) {
 }
 ?>
 <!-- Ende Registrierung -->
+
+</body>
+</html>
+
+
+
+
+
