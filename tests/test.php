@@ -12,15 +12,35 @@ $password = "IeBu2chie3";
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 
 
-$erg=strrchr("gollum.jpg",".");
-echo $erg;
-/*//RENAME FILE
+
+//RENAME FILE
 $userid="1";
 $dateiname = $_GET['var'];
 $neuerdateiname = $_POST['neuerdateiname'];
 
+//
+//Ausgeben welche dateiid der dateiname hat, der von user xy hochgeladen wurde
+$stmt1 = $pdo->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname "); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+$stmt1->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
+//$stmt->bindParam(':userid', $userid, PDO::PARAM_STR);
+$stmt1->execute();
+$erg2= $stmt1->fetch();
+//echo $dateiid[0];
+$dateiid = $erg2[0];
+
+//Auslesen ob Besitzer gleich 0 oder 1
+$stmt2 = $pdo->prepare("SELECT besitzer FROM dbzuweisung WHERE dateiid=:dateiid AND userid=:userid"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+$stmt2->bindParam(':dateiid', $dateiid, PDO::PARAM_STR);
+$stmt2->bindParam(':userid', $userid, PDO::PARAM_STR);
+$stmt2->execute();
+$besitzer= $stmt2->fetch();
+$besitzerzw = $besitzer[0];
+//echo "Berechtigung: ".$besitzerzw." !";
+
+//Überprüfen ob User berechtigt ist die Datei umzunennen
+
 //Alten Dateihash auslesen und in Variable speichern $alterdateihash
-$stmt = $verbindung->prepare("SELCET dateihash FROM dbdateien WHERE dateiname= :dateiname");
+$stmt = $verbindung->prepare("SELCET dateihash FROM dbdateien WHERE dateiname= :dateiname");// Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
 $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
 $stmt->execute();
 $erg= $stmt->fetch();
@@ -28,13 +48,19 @@ $alterdateihash=$erg[0];
 
 //Neuen Dateihash erstellen
 $md5 = md5($neuerdateiname);
-$neuerdateihash = $md5.$userid".".;
+$extension=strrchr($dateiname,".");
+$neuerdateihash = $md5.$userid.$extension;
 
+//Neuer Dateihash wird in dbdateien gespeichert
+$stmt2 = $verbindung->prepare("UPDATE dateihash FROM dbdateien WHERE dateiname= :dateiname");// Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+$stmt2->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
+$stmt2->execute();
 
+//Datei auf dem Server wird umbenannt
 $alterdateihashpfad = "upload/".$alterdateihash;
-$neuerdateihashpfad = "upload/smeagol.jpg";
+$neuerdateihashpfad = "upload/".$neuerdateihash;
 rename($alterdateihashpfad,$neuerdateihashpfad);
-*/
+
 //-------------------------------------------------------------------------------------------------
 //DOWNLOAD FILE
 /*
