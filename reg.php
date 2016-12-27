@@ -44,7 +44,7 @@
         <!-- Ende Features -->
 
         <!-- Anfang Registrierungsformular -->
-        <div class="col-lg-3">
+        <div class="col-md-3">
             <form action="?register=1" method="POST" role="form">
                 <div class="form-group">
                     <label for="email">Email-Adresse:</label>
@@ -63,7 +63,7 @@
         </div>
         <!-- Ende Registrierungsformular -->
         <div class="col-lg-12">
-            <p class="text-center">Kostenlos deine Daten banane online sichern!</p>
+            <p class="text-center">Kostenlos deine Daten online sichern!</p>
         </div>
     </div>
 </div>
