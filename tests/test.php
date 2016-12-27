@@ -5,11 +5,36 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Ende Bootstrap Einbindung -->
 <?php
-//RENAME FILE
-$oldname = "upload/gollum.jpg";
-$newname = "upload/smeagol.jpg";
-rename($oldname,$newname);
+//connection
+$servername = "localhost";
+$username = "jv029";
+$password = "IeBu2chie3";
+$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 
+
+$erg=strrchr(gollum.jpg,.);
+echo $erg;
+/*//RENAME FILE
+$userid="1";
+$dateiname = $_GET['var'];
+$neuerdateiname = $_POST['neuerdateiname'];
+
+//Alten Dateihash auslesen und in Variable speichern $alterdateihash
+$stmt = $verbindung->prepare("SELCET dateihash FROM dbdateien WHERE dateiname= :dateiname");
+$stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
+$stmt->execute();
+$erg= $stmt->fetch();
+$alterdateihash=$erg[0];
+
+//Neuen Dateihash erstellen
+$md5 = md5($neuerdateiname);
+$neuerdateihash = $md5.$userid".".;
+
+
+$alterdateihashpfad = "upload/".$alterdateihash;
+$neuerdateihashpfad = "upload/smeagol.jpg";
+rename($alterdateihashpfad,$neuerdateihashpfad);
+*/
 //-------------------------------------------------------------------------------------------------
 //DOWNLOAD FILE
 /*
