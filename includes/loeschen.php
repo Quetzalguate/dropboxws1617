@@ -44,11 +44,11 @@
         $stmt3->bindParam(':userid', $userid, PDO::PARAM_STR);
         $stmt3->execute();
 
-        /*//DB-Eintrag aus dbdateien löschen --> Zeile löschen wo dateiname = xy
+        //DB-Eintrag aus dbdateien löschen --> Zeile löschen wo dateiname = xy
         $stmt4 = $pdo->prepare("DELETE FROM dbdateien WHERE dateiname=:dateiname"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
         $stmt4->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
         //$stmt4->bindParam(':userid', $userid, PDO::PARAM_STR);
-        $stmt4->execute();*/
+        $stmt4->execute();
 
 
 
