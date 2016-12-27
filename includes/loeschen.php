@@ -43,9 +43,8 @@
     $stmt2->bindParam(':userid', $userid, PDO::PARAM_STR);
     $stmt2->execute();
     $besitzer= $stmt2->fetch();
-    echo "Berechtigung: ".$besitzer[0]." !";
     $besitzerzw = $besitzer[0];
-
+    echo "Berechtigung: ".$besitzerzw." !";
     //Wenn Besitzer = 1 dürfen die DB-Einträge und die Datei gelöscht werden
     if ($besitzerzw='1'){
         echo "berechtigt datei zu löschen!";
