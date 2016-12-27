@@ -37,13 +37,20 @@
     //Wenn Besitzer = 1 dürfen die DB-Einträge und die Datei gelöscht werden
     if ($besitzerzw=1){
         echo "berechtigt datei zu löschen!";
-        //DB-Eintrag aus dbdateien löschen --> Zeile löschen wo dateiname = xy
-        $stmt3 = $pdo->prepare("DELETE * FROM dbdateien WHERE dateiname=:dateiname"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
-        $stmt3->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
-        //$stmt3->bindParam(':userid', $userid, PDO::PARAM_STR);
-        $stmt3->execute();
 
         //DB-Eintrag aus dbzuweisung löschen --> Zeile löschen wo dateiid = xy
+        $stmt3 = $pdo->prepare("DELETE * FROM dbzuweisung WHERE dateiid=:dateiid AND userid=:userid AND besitzer=1"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+        $stmt3->bindParam(':dateiid', $dateiid, PDO::PARAM_STR);
+        $stmt3->bindParam(':userid', $userid, PDO::PARAM_STR);
+        $stmt3->execute();
+
+        //DB-Eintrag aus dbdateien löschen --> Zeile löschen wo dateiname = xy
+        $stmt4 = $pdo->prepare("DELETE * FROM dbdateien WHERE dateiname=:dateiname"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+        $stmt4->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
+        //$stmt4->bindParam(':userid', $userid, PDO::PARAM_STR);
+        $stmt4->execute();
+
+
 
         /*$datei = "../upload/gollum.jpg";
         unlink($datei);*/
