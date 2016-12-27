@@ -44,7 +44,8 @@
     $stmt2->execute();
     $besitzer= $stmt2->fetch();
     $besitzerzw = $besitzer[0];
-    echo "Berechtigung: ".$besitzerzw." !";
+    //echo "Berechtigung: ".$besitzerzw." !";
+
     //Wenn Besitzer = 1 dürfen die DB-Einträge und die Datei gelöscht werden
     if ($besitzerzw !='0'){
         //echo "berechtigt datei zu löschen!";
