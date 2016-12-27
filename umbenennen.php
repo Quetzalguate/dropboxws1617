@@ -24,7 +24,7 @@
 <div class="container-fluid">
     <div class="col-lg-12">
         <h3><u>Datei "<?php echo $dateiname; ?>" umbenennen</u></h3>
-        <form action = suchen.php method="post" role ="form">
+        <form action = umbenennen.php method="post" role ="form">
             <div class="form-group">
                 <input type="text" class="from-control" name="neuerdateiname" placeholder=" Name.Dateiendung"
             </div>
