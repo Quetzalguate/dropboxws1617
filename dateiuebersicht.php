@@ -36,7 +36,6 @@
 
     <!-- Start Ergebnis der Datenbankabfrage per while Schleife in Tabelle ausgeben -->
     <div class="container-fluid">
-        <div class="col-md-3"><div>
         <div class="col-md-6">
         <h3><u>Dateiübersicht</u></h3>
         <table class="table table-hover">
