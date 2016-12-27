@@ -46,7 +46,7 @@
     $besitzerzw = $besitzer[0];
     echo "Berechtigung: ".$besitzerzw." !";
     //Wenn Besitzer = 1 dürfen die DB-Einträge und die Datei gelöscht werden
-    if ($besitzerzw='1'){
+    if ($besitzerzw !='0'){
         echo "berechtigt datei zu löschen!";
 
         /*//DB-Eintrag aus dbzuweisung löschen --> Zeile löschen wo dateiid = xy
