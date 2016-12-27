@@ -48,7 +48,7 @@
 
     //Wenn Besitzer = 1 dürfen die DB-Einträge und die Datei gelöscht werden
     if ($besitzerzw !='0'){
-        //echo "berechtigt datei zu löschen!";
+        echo "berechtigt datei zu löschen!";
 
         /*//DB-Eintrag aus dbzuweisung löschen --> Zeile löschen wo dateiid = xy
         $stmt3 = $pdo->prepare("DELETE FROM dbzuweisung WHERE dateiid=:dateiidzw AND userid=:userid"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
