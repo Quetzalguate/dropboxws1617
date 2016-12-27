@@ -68,6 +68,17 @@
         unlink($datei);
         header("Location: https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php");
         exit;*/
+        echo "
+            <div class=\"container-fluid\">
+                <div class=\"col-lg-4\">
+                    <div class=\"alert alert-success\">
+                        <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+                        <strong>Datei wurde erfolgreich gelöscht!</strong>
+                    </div>
+                </div>
+            </div>
+        ";
+        header( "refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
     }
     else {
         echo "
