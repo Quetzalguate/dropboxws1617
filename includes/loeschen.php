@@ -43,7 +43,7 @@
     $stmt2->bindParam(':userid', $userid, PDO::PARAM_STR);
     $stmt2->execute();
     $besitzer= $stmt2->fetch();
-    echo $besitzer[0];
+    echo "Berechtigung: ".$besitzer[0]." !";
     $besitzerzw = $besitzer[0];
 
     //Wenn Besitzer = 1 dürfen die DB-Einträge und die Datei gelöscht werden
