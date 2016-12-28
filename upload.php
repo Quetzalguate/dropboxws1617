@@ -8,7 +8,6 @@
         <?php include ("includes/bsfixednavbar.php"); ?>
         <?php include ("includes/bsfooter.php"); ?>
         <?php include ("includes/bseinbindung.php"); ?>
-        <?php include ("includes/preloader.php"); ?>
         <!-- Ende Include Dateien -->
 
     </head>
