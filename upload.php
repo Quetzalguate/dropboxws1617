@@ -18,14 +18,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dropbox - Profil</title>
+    <title>MinimalBox - Profil</title>
 
 </head>
 </br></br>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-12">
-            <h3><u>Datei hochladen</u></h3>
+        <div class="col-lg-12" class="text-center">
+            <h3>Lade eine Datei hoch</h3>
             <label class="control-label">Datei auswählen</label>
             <form>
                 <input id="input-1" type="file" class="file">
