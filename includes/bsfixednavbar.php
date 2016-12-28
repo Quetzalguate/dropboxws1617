@@ -33,7 +33,7 @@
 </nav>
 
 <?php
-if(isset('licht')){
+if(isset($_POST['licht'])){
     echo "hallo";
 }
 
