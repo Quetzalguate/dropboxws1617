@@ -4,6 +4,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Ende Bootstrap Einbindung -->
+
+<div class="row">
+    <div class="text-right">
+        <form action="bsfixednavbar.php" method="POST" role="form">
+            <div class="form-check" class="text-right">
+                <input type="checkbox" name="licht" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
+            </div>
+        </form>
+    </div>
+</div>
 <?php
 //connection
 $servername = "localhost";
@@ -12,10 +22,13 @@ $password = "IeBu2chie3";
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 
 
+//toggle test
 
+
+//------------------------------------------------------------------------------------------------------------------
 //RENAME FILE
 //Variablen deklarieren
-$userid="1";
+/*$userid="1";
 $dateiname = $_GET['var'];
 $neuerdateiname = $_POST['neuerdateiname'];
 
@@ -100,7 +113,7 @@ else {
                 </div>
             </div>
         ";
-}
+}*/
 //-------------------------------------------------------------------------------------------------
 //DOWNLOAD FILE
 /*
