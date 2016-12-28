@@ -24,11 +24,11 @@
 </br></br>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-12" >
+        <div class="col-lg-12 col-centered" >
 
             <div class="text-center">
                 <h3>Lade eine Datei hoch</h3>
-                <form class="text-center">
+                <form >
                     <input id="input-1" type="file" class="file">
                     </br>
                     <button type="submit" class="btn btn-default">Datei hochladen</button>
