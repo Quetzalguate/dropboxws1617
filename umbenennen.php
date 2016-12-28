@@ -17,8 +17,8 @@
 <?php $dateiname = $_GET['var']; ?>
 </br></br>
 <div class="container-fluid">
-    <div class="col-lg-12">
-        <h3><u>Datei "<?php echo $dateiname; ?>" umbenennen</u></h3>
+    <div class="col-lg-12" align="center">
+        <h3>Datei "<?php echo $dateiname; ?>" umbenennen</h3>
         <form action = umbenennen.php?var=<?php echo $dateiname; ?> method="POST" role ="form">
             <div class="form-group">
                 <input type="text" class="from-control" name="neuerdateiname" placeholder=" Name.Dateiendung"
