@@ -13,10 +13,15 @@
     <div align="center">
         <form action="bsfixednavbar.php" method="POST" role="form">
             <div class="form-check" class="text-right">
-                <input type="checkbox" name="licht" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
+                <input type="checkbox" name="licht" value="an" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
             </div>
         </form>
     </div>
+</div>
+
+<div class="btn-group">
+    <a href="#" class="btn btn-primary">Download</a>
+    <a href="#" class="btn btn-default">Mirror</a>
 </div>
 <?php
 //connection
