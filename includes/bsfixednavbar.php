@@ -15,8 +15,7 @@
             </div>
         </div>
         <div class="row">
-
-            <div class="col-lg-12">
+            <div class="col-lg-12" class="text-right">
                 <form action="bsfixednavbar.php" method="POST" role="form">
                     <div class="form-check" class="text-right">
                         <input type="checkbox" name="licht" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
