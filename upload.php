@@ -26,8 +26,8 @@
     <div class="row">
         <div class="col-lg-12" align="center">
                 <h3>Lade eine Datei hoch</h3>
-                <form align="center">
-                    <input id="input-1" type="file" class="file">
+                <form>
+                    <input id="input-1" type="file" class="file" align="center">
                     </br>
                     <button type="submit" class="btn btn-default">Datei hochladen</button>
                 </form>
