@@ -17,6 +17,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="text-left">
+                    <span class="label label-default">Freier Speicher: x mb</span>
                     <label >Freier Speicher: x mb</label>
                 </div>
             </div>
