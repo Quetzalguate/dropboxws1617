@@ -13,16 +13,17 @@
                     <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
             </div>
-            <div class="row">
-                <div class="col-lg-11">
-                    <label>Freier Speicher: x mb</label>
-
-                <div class="col-lg-1">
-                    <div class="text-right">
-                        <input type="checkbox" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </nav>
+<div class="row">
+    <div class="col-lg-11">
+        <label>Freier Speicher: x mb</label>
+
+        <div class="col-lg-1">
+            <div class="text-right">
+                <input type="checkbox" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
+            </div>
+        </div>
+    </div>
+</div>
