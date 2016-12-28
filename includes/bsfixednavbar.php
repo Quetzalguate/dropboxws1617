@@ -22,10 +22,17 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="text-right">
-                    <input type="checkbox" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
-                </div>
+                <form action="bsfixednavbar.php" method="POST" role="form">
+                    <div class="form-check" class="text-right">
+                        <input type="checkbox" name="licht" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </nav>
+
+<?php
+$licht = $_POST['licht'];
+echo $licht;
+?>
