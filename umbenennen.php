@@ -102,6 +102,7 @@ if ($besitzer !='0'){
     else {
         echo "
         <div class=\"container-fluid\">
+                <div class='col-lg-4'></div>
                 <div class=\"col-lg-4\" align=\"center\">
                     <div class=\"alert alert-danger\">
                         <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
