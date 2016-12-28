@@ -1,11 +1,3 @@
-<?php
-session_start();
-$servername = "localhost";
-$username = "jv029";
-$password = "IeBu2chie3";
-
-$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +6,7 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 <body>
 
 <?php
+include("connection.php");
 $showFormular = true; // Registrierungsformular anzeigen?
 
 if(isset($_GET['register'])) {
@@ -35,9 +28,9 @@ if(isset($_GET['register'])) {
         $error = true;
     }
 
-    //Überprüfe die E-Mail (einzigartig?)
+    //checkt ob die e-mail besteht
     if(!$error) {
-        $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+        $statement = $pdo->prepare("SELECT * FROM dbuser WHERE email = :email");
         $result = $statement->execute(array('email' => $email));
         $user = $statement->fetch();
 
@@ -47,11 +40,11 @@ if(isset($_GET['register'])) {
         }
     }
 
-    //Nutzer wird registriert
+    //nutzer wird eingetragen
     if(!$error) {
         $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
 
-        $statement = $pdo->prepare("INSERT INTO users (email, passwort) VALUES (:email, :passwort)");
+        $statement = $pdo->prepare("INSERT INTO dbuser (email, passwort) VALUES (:email, :passwort)");
         $result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash));
 
         if($result) {
@@ -80,7 +73,7 @@ if($showFormular) {
     </form>
 
     <?php
-} //Ende von if($showFormular)
+}
 ?>
 
 </body>

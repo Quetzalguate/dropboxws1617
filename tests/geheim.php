@@ -7,5 +7,5 @@ if(!isset($_SESSION['userid'])) {
 //Abfrage der Nutzer ID vom Login
 $userid = $_SESSION['userid'];
 
-echo "Hallo du Lappen: ".$userid;
+echo "Willkommen zur Cloud9. Ihre Nutzer ID ist die ".$userid;
 ?>

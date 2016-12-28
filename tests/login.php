@@ -1,25 +1,20 @@
 <?php
-session_start();
-$servername = "localhost";
-$username = "jv029";
-$password = "IeBu2chie3";
-
-$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+include("connection.php");
 
 if(isset($_GET['login'])) {
     $email = $_POST['email'];
     $passwort = $_POST['passwort'];
 
-    $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+    $statement = $pdo->prepare("SELECT * FROM dbuser WHERE email = :email");
     $result = $statement->execute(array('email' => $email));
     $user = $statement->fetch();
 
-    //Überprüfung des Passworts
+    //Überprüfung PW
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
-        $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Weiter zu <a href="geheim.php">internen Bereich</a>');
+        $_SESSION['userid'] = $user['userid'];
+        die('Login erfolgreich. Hier gelangen Sie zur <a href="session.php">Startseite!</a>');
     } else {
-        $errorMessage = "E-Mail oder Passwort war ungültig<br>";
+        $errorMessage = "E-Mail oder Passwort ist ungültig<br>";
     }
 
 }
