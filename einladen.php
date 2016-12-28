@@ -18,8 +18,9 @@
 <body>
 </br></br>
 <div class="container-fluid">
-    <div class="col-lg-4">
-        <h3><u>Freund einladen</u></h3>
+    <div class='col-lg-4'></div>
+    <div class="col-lg-4" align="center">
+        <h3>Lade einen Freund ein</h3>
 
         <form action="einladen.php" method="POST" role="form">
             <div class="form-group">
@@ -65,6 +66,7 @@ $meldung = "Einladung wurde versendet";
             mail("$email", "Einladung zur Dropbox", "$nachricht", $emailvon);
             echo "
             <div class=\"container-fluid\">
+            <div class='col-lg-4'></div>
                 <div class=\"col-lg-4\">
                     <div class=\"alert alert-success\">
                         <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
@@ -78,6 +80,7 @@ $meldung = "Einladung wurde versendet";
         else
             echo "
                 <div class=\"container-fluid\">
+                <div class='col-lg-4'></div>
                 <div class=\"col-lg-4\">
                     <div class=\"alert alert-danger\">
                         <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
