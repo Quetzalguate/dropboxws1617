@@ -50,7 +50,7 @@ $suchbegriff = $_POST['suchbegriff'];
 
 <div class="container-fluid">
     <div class="col-md-3"></div>
-    <div class="col-lg-6">
+    <div class="col-lg-6" align="center">
         <h3>Durchsuche deine Dateien</h3>
         <form action = suchen.php method="post" role ="form">
             <div class="form-group">
