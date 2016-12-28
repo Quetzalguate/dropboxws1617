@@ -16,7 +16,7 @@
         </div>
         <div class="row">
             <div class="col-lg-11">
-                <label>Freier Speicher: x mb</label>
+                <label class="text-left">Freier Speicher: x mb</label>
 
                 <div class="col-lg-1">
                     <div class="text-right">
