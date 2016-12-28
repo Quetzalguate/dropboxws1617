@@ -11,18 +11,19 @@
     <?php include ("includes/bseinbindung.php"); ?>
     <?php include ("includes/connection.php"); ?>
     <!-- Ende Include Dateien -->
+    <!-- Licht aus Filter
+        <style>
+            body {
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+        </style>
+        -->
+    </head>
 
-    <style>
-        body {
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-    </style>
-</head>
+    <body>
+        </br></br>
 
-<body>
-    </br></br>
-
-    <!-- Start Datenbankabfrage für Dateianzeige -->
+        <!-- Start Datenbankabfrage für Dateianzeige -->
     <?php
     $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
     $statement = $pdo->prepare("SELECT dbdateien.dateiname
