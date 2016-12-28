@@ -9,9 +9,16 @@
                     <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/einladen.php">Einladen</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><input type="checkbox" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini"></li>
                     <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/profil.php"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <ul class="nav navbar-nav">
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><input type="checkbox" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini"></li>
                 </ul>
             </div>
         </div>
