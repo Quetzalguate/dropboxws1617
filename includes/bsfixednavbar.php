@@ -15,13 +15,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-11">
-                <div class="text-left">
-                    <span class="label label-default">Freier Speicher: x mb</span>
-                    <label >Freier Speicher: x mb</label>
-                </div>
-            </div>
-            <div class="col-lg-1">
+
+            <div class="col-lg-12">
                 <form action="bsfixednavbar.php" method="POST" role="form">
                     <div class="form-check" class="text-right">
                         <input type="checkbox" name="licht" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
