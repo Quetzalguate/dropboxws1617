@@ -14,7 +14,6 @@
                 </ul>
             </div>
         </div>
-        <?php echo"hallihallo"; ?>
         <div class="row">
             <div class="col-lg-11">
                 <div class="text-left">
@@ -34,7 +33,7 @@
 </nav>
 
 <?php
-if(isset($_POST['licht'])){
+if($_POST['licht']== 'Licht aus'){
     echo "hallo";
     header( "refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
 }
