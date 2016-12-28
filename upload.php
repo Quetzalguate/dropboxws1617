@@ -24,7 +24,7 @@
 </br></br>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-12 col-centered" >
+        <div class="col-lg-2 col-centered" >
 
             <div class="text-center">
                 <h3>Lade eine Datei hoch</h3>
