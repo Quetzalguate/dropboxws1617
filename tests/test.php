@@ -20,8 +20,8 @@
 </div>
 
 <div class="btn-group">
-    <a href="#" class="btn btn-primary">Download</a>
-    <a href="#" class="btn btn-default">Mirror</a>
+    <a href="#" class="btn btn-primary">aus</a>
+    <a href="#" class="btn btn-default">an</a>
 </div>
 <?php
 //connection
