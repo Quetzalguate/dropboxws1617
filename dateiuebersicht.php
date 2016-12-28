@@ -55,13 +55,6 @@
 
     <body>
 
-    <!-- Preloader Start -->
-    <div class="content">
-        <h1>
-            If you like this check other pens !
-        </h1>
-    </div>
-    <!-- Preloader Ende -->
 
 
         </br></br>
