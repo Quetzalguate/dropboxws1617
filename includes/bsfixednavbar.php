@@ -33,6 +33,8 @@
 </nav>
 
 <?php
-$licht = $_POST['licht'];
-echo $licht;
+if(isset('licht')){
+    echo "hallo";
+}
+
 ?>
