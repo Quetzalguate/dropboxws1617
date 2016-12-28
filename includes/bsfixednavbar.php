@@ -16,8 +16,9 @@
             <div class="col-lg-12">
                 <ul class="nav navbar-nav">
                     <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%">
-                            Freier Speicher
+                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                             aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                            70%
                         </div>
                     </div>
                 </ul>
