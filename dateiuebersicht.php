@@ -10,6 +10,7 @@
     <?php include ("includes/bsfooter.php"); ?>
     <?php include ("includes/bseinbindung.php"); ?>
     <?php include ("includes/connection.php"); ?>
+    <?php include ("includes/preloader.php"); ?>
     <!-- Ende Include Dateien -->
     <!-- Licht aus Filter
         <style>
