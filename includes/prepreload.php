@@ -20,7 +20,7 @@
 <body>
 
 <div class="preload">
-    <?php include ("/preloader.php"); ?>
+    <?php include ("preloader.php"); ?>
 </div>
 
 <script>
