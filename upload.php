@@ -28,7 +28,7 @@
 
             <div class="text-center">
                 <h3>Lade eine Datei hoch</h3>
-                <form>
+                <form class="text-center">
                     <input id="input-1" type="file" class="file">
                     </br>
                     <button type="submit" class="btn btn-default">Datei hochladen</button>
