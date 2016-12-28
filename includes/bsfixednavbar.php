@@ -15,17 +15,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-2">
-                    <label>Belegter Speicher: </label>
-                </div>
-                <div class="col-lg-9">
+                    <label>Freier Speicher: x mb</label>
 
-                    <div class="progress" class="text-left">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                             aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                            70%
-                        </div>
-                    </div>
-                </div>
                 <div class="col-lg-1">
                     <div class="text-right">
                         <input type="checkbox" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
