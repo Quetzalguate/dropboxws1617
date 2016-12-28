@@ -25,8 +25,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12" >
-            <h3>Lade eine Datei hoch</h3>
+
             <div class="text-center">
+                <h3>Lade eine Datei hoch</h3>
                 <form>
                     <input id="input-1" type="file" class="file">
                     </br>
