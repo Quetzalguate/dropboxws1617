@@ -27,7 +27,9 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 
 
 //toggle test
-
+if (isset($_POST["Licht an"])){
+    echo "hallo";
+}
 
 //------------------------------------------------------------------------------------------------------------------
 //RENAME FILE
