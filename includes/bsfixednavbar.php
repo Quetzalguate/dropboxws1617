@@ -14,7 +14,7 @@
                 </ul>
             </div>
             <div class="row">
-                <div class="col-lg-2">
+                <div class="col-lg-11">
                     <label>Freier Speicher: x mb</label>
 
                 <div class="col-lg-1">
