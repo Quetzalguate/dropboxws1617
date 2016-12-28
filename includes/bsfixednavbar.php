@@ -15,7 +15,11 @@
             </div>
             <div class="col-lg-12">
                 <ul class="nav navbar-nav">
-
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%">
+                            Freier Speicher
+                        </div>
+                    </div>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><input type="checkbox" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini"></li>
