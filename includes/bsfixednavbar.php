@@ -14,10 +14,10 @@
                 </ul>
             </div>
             <div class="row">
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     <label>Belegter Speicher: </label>
                 </div>
-                <div class="col-lg-10">
+                <div class="col-lg-9">
 
                     <div class="progress" class="text-left">
                         <div class="progress-bar" role="progressbar" aria-valuenow="70"
