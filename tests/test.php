@@ -23,6 +23,15 @@
     <a href="#" class="btn btn-primary">aus</a>
     <a href="#" class="btn btn-default">an</a>
 </div>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Licht <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a href="#">An</a></li>
+        <li><a href="#">Aus</a></li>
+    </ul>
+</div>
 <?php
 //connection
 $servername = "localhost";
