@@ -49,8 +49,9 @@ $suchbegriff = $_POST['suchbegriff'];
 <!-- Ende Datenbankabfrage für Dateianzeige -->
 
 <div class="container-fluid">
-    <div class="col-lg-12">
-        <h3>Durchsuche deine Datei</h3>
+    <div class="col-md-3"></div>
+    <div class="col-lg-6">
+        <h3>Durchsuche deine Dateien</h3>
         <form action = suchen.php method="post" role ="form">
             <div class="form-group">
                 <input type="text" class="from-control" name="suchbegriff" placeholder="Suchen"
