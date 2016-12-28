@@ -35,7 +35,7 @@ $statement4->execute();
 </br></br>
 <div class="container-fluid">
     <div class='col-lg-4'></div>
-    <div class="col-lg-4">
+    <div class="col-lg-4" align="center">
         <h3>Teile eine Datei</h3>
         <table class="table table-bordered">
             <thead>
