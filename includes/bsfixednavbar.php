@@ -13,8 +13,8 @@
                     <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
             </div>
-            <div class="col-lg-12">
-                <div class="row">
+            <div class="row">
+                <div class="col-lg-11">
                     <label>Belegter Speicher: </label>
                     <div class="progress" class="text-left">
                         <div class="progress-bar" role="progressbar" aria-valuenow="70"
@@ -22,6 +22,8 @@
                             70%
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-1">
                     <div class="text-right">
                         <input type="checkbox" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
                     </div>
