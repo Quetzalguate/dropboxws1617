@@ -10,7 +10,7 @@
 <!-- Ende Bootstrap Einbindung -->
 
 <div class="row">
-    <div class="text-right">
+    <div align="center">
         <form action="bsfixednavbar.php" method="POST" role="form">
             <div class="form-check" class="text-right">
                 <input type="checkbox" name="licht" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
