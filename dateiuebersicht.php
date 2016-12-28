@@ -18,7 +18,11 @@
             }
         </style>
         -->
-
+<style>
+    body {
+        background-image: url("images/minimalboxbackgroundtrans.jpg");
+    }
+</style>
 
 
     </head>
