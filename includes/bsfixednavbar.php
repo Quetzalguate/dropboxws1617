@@ -14,7 +14,7 @@
                 </ul>
             </div>
             <div class="col-lg-12">
-                <ul class="nav navbar-nav">
+                <div class="row">
                     <div class="progress">
                         <label>Belegter Speicher: </label>
                         <div class="progress-bar" role="progressbar" aria-valuenow="70"
@@ -22,10 +22,10 @@
                             70%
                         </div>
                     </div>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
+
                     <li><input type="checkbox" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini"></li>
-                </ul>
+
+                </div>
             </div>
         </div>
     </div>
