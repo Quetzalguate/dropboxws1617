@@ -37,7 +37,7 @@
 <!-- Preloader Ende -->
 
 <body>
-<?php header( "refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" ); ?>
+<?php header( "refresh:1;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" ); ?>
 <script>
     function loaderSpinner() {
         $(window).load(function() {
