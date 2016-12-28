@@ -84,6 +84,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
 
         echo "
             <div class=\"container-fluid\">
+            <div class='col-lg-4'></div>
                 <div class=\"col-lg-4\">
                     <div class=\"alert alert-success\">
                         <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
@@ -98,6 +99,7 @@ if(isset($_POST['teilen']) && !empty($email) ) {
     else
         echo "
                 <div class=\"container-fluid\">
+                <div class='col-lg-4'></div>
                 <div class=\"col-lg-4\">
                     <div class=\"alert alert-danger\">
                         <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
