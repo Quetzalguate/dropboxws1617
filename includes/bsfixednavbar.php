@@ -15,13 +15,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-11">
+            <div class="col-lg-1">
                 <div class="text-left">
                     <label >Freier Speicher: x mb</label>
                 </div>
 
 
-                <div class="col-lg-12">
+                <div class="col-lg-11">
                     <div class="text-right">
                         <input type="checkbox" checked data-toggle="toggle" data-on="Licht an" data-off="Licht aus" data-onstyle="default" data-offstyle="default" data-size="mini">
                     </div>
