@@ -67,6 +67,7 @@
 
 <!-- Start Login -->
 <?php
+session_start();
 $_SESSION['email'];
 if(isset($_GET['login'])) {
     $email = $_POST['email'];
