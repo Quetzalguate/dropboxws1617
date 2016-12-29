@@ -67,15 +67,7 @@ if(isset($_POST['aus'])){
     setcookie("background",$background);
     echo"<meta http-equiv=\"refresh\" content=\"1\">";
 }
-/*else {
-    $background= "<style>
-        body {
-            background-color: rgba(255, 255, 255, 0.9);
-            }
-        </style>";
-    setcookie("background",$background);
-}
-*/
+
 if(isset($_POST['an'])){
 
     $background= "<style>
