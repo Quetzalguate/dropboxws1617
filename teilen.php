@@ -119,6 +119,7 @@
 <!-- --------------------------------------------------- PHP -> HTML ----------------------------------------------- -->
 
     </br></br>
+    <!-- FORMULAR WIRD NUR ANGEZEIGT WENN USER BERECHTIGT ZUM TEILEN -->
     <?php if ($besitzer !='0') {?>
     <div class="container-fluid">
         <div class='col-lg-4'></div>
