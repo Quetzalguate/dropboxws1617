@@ -60,10 +60,12 @@
 <!-- Start Login -->
 <?php
 session_start();
-$emailsession= $_SESSION['email'];
+$email = $_POST['email'];
+$passwort = $_POST['passwort'];
+$_SESSION['email'] = $email;
 if(isset($_GET['login'])) {
-    $email = $_POST['email'];
-    $passwort = $_POST['passwort'];
+    //$email = $_POST['email'];
+    //$passwort = $_POST['passwort'];
 
     $statement = $pdo->prepare("SELECT * FROM dbuser WHERE email = :email");
     $result = $statement->execute(array('email' => $email));
