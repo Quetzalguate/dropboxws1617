@@ -50,8 +50,8 @@
 
     <form action = test.php method="post" role ="form">
         <div class="btn-group">
-            <button type="button" class="btn btn-default btn-xs" name="an">An wie Apfel</button>
-            <button type="button" class="btn btn-default btn-xs" name="aus">Aus wie Affe</button>
+            <button type="submit" class="btn btn-default btn-xs" name="an">An wie Apfel</button>
+            <button type="submit" class="btn btn-default btn-xs" name="aus">Aus wie Affe</button>
         </div>
     </form>
 
