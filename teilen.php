@@ -95,8 +95,11 @@ if(isset($_POST['teilen']) && !empty($email) ) {
                 </div>
             </div>
         ";
-        sleep(5);
-        header("Refresh:0");
+        //sleep(5);
+        echo "
+            <meta http-equiv=\"refresh\" content=\"5; url=https://mars.iuk.hdm-stuttgart.de/~jv029/teilen.php?var=$dateiname\">
+        ";
+        //header("Refresh:0");
     }
     else
         echo "
