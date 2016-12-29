@@ -24,10 +24,12 @@
 
 <div class="btn-group btn-xs">
     <form action = test.php method="post" role ="form">
-        <button type="submit" class="btn btn-default btn-xs" name="aus">Licht aus</button>
-        <button type="submit" class="btn btn-default btn-xs" name="an">Licht an</button>
+        <button type="submit" class="btn btn-default btn-xs" name="aufgs">Licht aus</button>
+        <button type="submit" class="btn btn-default btn-xs" name="afgn">Licht an</button>
     </form>
 </div>
+
+
 
 
 
@@ -41,10 +43,17 @@
 </div>
 </head>
 <body>
-<form action = test.php method="post" role ="form">
+<!--<form action = test.php method="post" role ="form">
     <button type="submit" class="btn btn-default btn-xs" name="aus">Licht aus</button>
     <button type="submit" class="btn btn-default btn-xs" name="an">Licht an</button>
-</form>
+</form>-->
+<div class="btn-group">
+    <form action = test.php method="post" role ="form">
+        <button type="button" class="btn btn-primary" name="an">An wie Apfel</button>
+        <button type="button" class="btn btn-primary" name="aus">Aus wie Affe</button>
+    </form>
+</div>
+
 <?php
 if(isset($_POST['aus'])){
 
