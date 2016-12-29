@@ -20,8 +20,8 @@
 </div>
 
 <div class="btn-group btn-xs">
-    <a href="#" class="btn btn-primary btn-xs">aus</a>
-    <a href="#" class="btn btn-default">an</a>
+    Licht: <a href="#" class="btn btn-primary btn-xs">aus</a>
+    <a href="#" class="btn btn-default btn-xs">an</a>
 </div>
 
 <div class="btn-group">
