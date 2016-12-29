@@ -1,3 +1,1 @@
-<?php
-echo $_COOKIE["background"];
-?>
+<?php echo $_COOKIE["background"]; ?>

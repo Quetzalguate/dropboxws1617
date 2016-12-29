@@ -7,32 +7,16 @@
 
     <!-- Start Include Dateien -->
     <?php include ("includes/coockie.php"); ?>
-    <?php include ("includes/background1.php"); ?>
     <?php include ("includes/bsfixednavbar.php"); ?>
     <?php include ("includes/bsfooter.php"); ?>
     <?php include ("includes/bseinbindung.php"); ?>
     <?php include ("includes/connection.php"); ?>
-
-
     <!-- Ende Include Dateien -->
-    <!-- Licht aus Filter
-        <style>
-            body {
-                background-color: rgba(0, 0, 0, 0.6);
-            }
-        </style>
-        -->
-<!--<style>
-    body {
-        background-image: url("images/minimalboxbackgroundtrans.jpg");
-    }
-</style>-->
-
 
     </head>
 
     <body>
-
+    <?php echo $_COOKIE["background"]; ?>
 
 
 
