@@ -121,7 +121,7 @@
                 </tbody>
             </table>
             <?php echo $tabelle;?>
-            <form action = teilen.php?var=<?php echo $dateiname; ?> method=\"post\" role =\"form\">
+            <form action = teilen.php?var= <?phpecho $dateiname;?> method=\"post\" role =\"form\">
                 <div class=\"form-group\">
                     <label for=\"username\">\"<?php echo $dateiname;?>\" mit Nutzer teilen:</label>
                     <input type=\"email\" class=\"form-control\" id=\"email\" name = \"email\" placeholder=\"Email deines Freundes eingeben\">
