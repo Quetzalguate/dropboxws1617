@@ -14,10 +14,10 @@ if(!isset($_SESSION['email'])) {
     die('Bitte zuerst <a href="login.php">einloggen</a>');
 }
 else {
-    $email = $_SESSION['email'];
+    $emailsession = $_SESSION['email'];
 
-    $stmt = $pdo->prepare("SELECT userid FROM dbuser WHERE email=:email");
-    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+    $stmt = $pdo->prepare("SELECT userid FROM dbuser WHERE email=:emailsession");
+    $stmt->bindParam(':emailsession', $emailsession, PDO::PARAM_STR);
     $stmt->execute();
     $erg= $stmt->fetch();
     $userid = $erg[0];
