@@ -42,7 +42,7 @@
     $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbzuweisung INNER JOIN dbdateien 
                             ON dbdateien.dateiid = dbzuweisung.dateiid
-                            WHERE dbzuweisung.userid=1"); // User ID aus session in Variable speichern und hier eingeben
+                            WHERE dbzuweisung.userid=$userid"); // User ID aus session in Variable speichern und hier eingeben
     $statement->execute();
 
     /*$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
