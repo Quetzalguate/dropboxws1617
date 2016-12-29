@@ -19,5 +19,5 @@ else {
     }
 </style>
     ";
-    header("refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php");
+    header("refresh:0;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php");
 }
