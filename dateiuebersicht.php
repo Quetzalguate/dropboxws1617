@@ -39,7 +39,7 @@
 
         <!-- Start Datenbankabfrage für Dateianzeige -->
     <?php
-    echo $_COOKIE["background"];
+
     $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
     $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbzuweisung INNER JOIN dbdateien 
