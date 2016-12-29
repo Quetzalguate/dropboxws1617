@@ -23,6 +23,7 @@ if(isset($_GET['login'])) {
 <html>
 <head>
     <title>Login</title>
+    <?php include ("/home/jv029/public_html/includes/coockie.php"); ?>
 </head>
 <body>
 
