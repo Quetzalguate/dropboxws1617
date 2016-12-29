@@ -8,7 +8,7 @@ else {
     echo "
     <style>
     body {
-        background-image: url(\"public_html/images/minimalboxbackgroundtrans.jpg\");
+        background-image: url(\"home/images/minimalboxbackgroundtrans.jpg\");
     }
 </style>
     ";
