@@ -99,7 +99,7 @@
         }
     }
     else {
-        echo "
+        $echo1 = "
                         <div class=\"container-fluid\">
                         <div class='col-lg-4'></div>
                         <div class=\"col-lg-4\">
@@ -144,5 +144,9 @@
         </div>
     </div>
 
+<?php
+// ECHOS Damit sie unter HTML Code ausgegeben werden
+    echo = $echo1;
+?>
 </body>
 </html>
