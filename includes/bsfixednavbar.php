@@ -28,11 +28,3 @@
         </div>
     </div>
 </nav>
-
-<?php
-/*if($_POST['licht']=='0'){
-    echo "hallo";
-    header( "refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
-}
-*/
-?>
