@@ -2,7 +2,14 @@
 $anaus=$_GET['var'];
 
 if($anaus==1){
-    echo "licht an";
+    echo "
+    <style>
+    body {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+</style>
+    ";
+    header( "refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
 }
 else {
     echo "
@@ -12,4 +19,5 @@ else {
     }
 </style>
     ";
+    header( \"refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php\" );
 }
