@@ -10,7 +10,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/profil.php"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
             </div>
         </div>
