@@ -146,7 +146,7 @@
 
 <?php
 // ECHOS Damit sie unter HTML Code ausgegeben werden
-    echo = $echo1;
+    echo $echo1;
 ?>
 </body>
 </html>
