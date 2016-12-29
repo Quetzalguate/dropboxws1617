@@ -21,7 +21,7 @@
 
 <div class="btn-group btn-xs">
     Licht: <a href="#" class="btn btn-primary btn-xs">aus</a>
-    <a href="#" class="btn btn-default btn-xs">an</a>
+    <a href="#" class="btn btn-default btn-xs">an-</a>
 </div>
 
 <div class="btn-group">
