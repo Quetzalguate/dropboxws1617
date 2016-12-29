@@ -1,31 +1,42 @@
-<?php
-echo $_COOKIE["background"];
-if(isset($_POST['aus'])){
+<!DOCTYPE html>
+<html lang="de">
 
-    $background= "<style>
+<head>
+    <meta charset="UTF-8">
+    <title>MinimalBox - Dateiübersicht</title>
+    <?php
+    echo $_COOKIE["background"];
+    if(isset($_POST['aus'])){
+
+        $background= "<style>
         body {
             background-color: rgba(0, 0, 0, 0.6);
             }
         </style>";
-    setcookie("background",$background);
-    echo"<meta http-equiv=\"refresh\" content=\"1\">";
-}
+        setcookie("background",$background);
+        echo"<meta http-equiv=\"refresh\" content=\"1\">";
+    }
 
-if(isset($_POST['an'])){
+    if(isset($_POST['an'])){
 
-    $background= "<style>
+        $background= "<style>
         body {
             background-color: rgba(255, 255, 255, 0.9);
             }
         </style>";
-    setcookie("background",$background);
+        setcookie("background",$background);
 
-    echo"<meta http-equiv=\"refresh\" content=\"1\">";
-    //echo "<meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/tests/test.php";
-}
+        echo"<meta http-equiv=\"refresh\" content=\"1\">";
+        //echo "<meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/tests/test.php";
+    }
 
 
-?>
+    ?>
+
+</head>
+
+<body>
+
 <nav class="navbar"> <!-- "<nav class="navbar navbar-fixed-top">" -->
     <div class="container-fluid">
         <div class="row">
@@ -64,4 +75,5 @@ if(isset($_POST['an'])){
     </div>
 </nav>
 
-
+</body>
+</html>
