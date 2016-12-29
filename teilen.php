@@ -17,34 +17,7 @@
 
 <body>
 
-</br></br>
-<div class="container-fluid">
-    <div class='col-lg-4'></div>
-    <div class="col-lg-4" align="center">
-        <h3>Teile eine Datei</h3>
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>Bereits geteilt mit:</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php while ($useremail = $statement4->fetch()) {?>
-                <tr>
-                    <td><?php echo $useremail[0]; ?></td>
-                </tr>
-            <?php } ?>
-            </tbody>
-        </table>
-        <form action = teilen.php?var=<?php echo $dateiname; ?> method="post" role ="form">
-            <div class="form-group">
-                <label for="username">"<?php echo $dateiname;?>" mit Nutzer teilen:</label>
-                <input type="email" class="form-control" id="email" name = "email" placeholder="Email deines Freundes eingeben">
-            </div>
-            <button type="submit" class="btn btn-default" name="teilen">Teilen</button>
-        </form>
-    </div>
-</div>
+
 
 <!-- --------------------------------------------------- HTML -> PHP ----------------------------------------------- -->
 
@@ -64,6 +37,8 @@ $statement4 = $pdo->prepare("SELECT dbuser.email
                             ON dbuser.userid = dbzuweisung.userid
                             WHERE dbzuweisung.dateiid='$dateiid[0]' AND dbzuweisung.besitzer =0");
 $statement4->execute();
+
+
 
 //User-ID von Nutzer mit dem die Datei geteilt werden soll wird ausgelesen
 $email = $_POST['email'];
@@ -115,6 +90,35 @@ if(isset($_POST['teilen']) && !empty($email) ) {
 }
 
 ?>
+
+</br></br>
+<div class="container-fluid">
+    <div class='col-lg-4'></div>
+    <div class="col-lg-4" align="center">
+        <h3>Teile eine Datei</h3>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Bereits geteilt mit:</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php while ($useremail = $statement4->fetch()) {?>
+                <tr>
+                    <td><?php echo $useremail[0]; ?></td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
+        <form action = teilen.php?var=<?php echo $dateiname; ?> method="post" role ="form">
+            <div class="form-group">
+                <label for="username">"<?php echo $dateiname;?>" mit Nutzer teilen:</label>
+                <input type="email" class="form-control" id="email" name = "email" placeholder="Email deines Freundes eingeben">
+            </div>
+            <button type="submit" class="btn btn-default" name="teilen">Teilen</button>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
