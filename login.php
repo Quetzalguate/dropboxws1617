@@ -77,8 +77,9 @@ if(isset($_GET['login'])) {
 
     //Überprüfung PW
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
-        $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Hier gelangen Sie zur <a href="geheim.php">Startseite!</a>');
+        //$_SESSION['userid'] = $user['id'];
+        //die('Login erfolgreich. Hier gelangen Sie zur <a href="geheim.php">Startseite!</a>');
+        header( "url=https://mars.iuk.hdm-stuttgart.de/~jv029/preloader.php" );
     } else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";
     }
