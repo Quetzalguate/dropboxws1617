@@ -9,7 +9,6 @@
 </head>
 <body>
 <?php
-echo $_COOKIE["background"];
 session_start();
 if(!isset($_SESSION['email'])) {
     die('Bitte zuerst <a href="login.php">einloggen</a>');
