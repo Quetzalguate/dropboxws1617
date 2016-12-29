@@ -1,3 +1,31 @@
+<?php
+echo $_COOKIE["background"];
+if(isset($_POST['aus'])){
+
+    $background= "<style>
+        body {
+            background-color: rgba(0, 0, 0, 0.6);
+            }
+        </style>";
+    setcookie("background",$background);
+    echo"<meta http-equiv=\"refresh\" content=\"1\">";
+}
+
+if(isset($_POST['an'])){
+
+    $background= "<style>
+        body {
+            background-color: rgba(255, 255, 255, 0.9);
+            }
+        </style>";
+    setcookie("background",$background);
+
+    echo"<meta http-equiv=\"refresh\" content=\"1\">";
+    //echo "<meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/tests/test.php";
+}
+
+
+?>
 <nav class="navbar"> <!-- "<nav class="navbar navbar-fixed-top">" -->
     <div class="container-fluid">
         <div class="row">
@@ -36,31 +64,4 @@
     </div>
 </nav>
 
-<?php
-echo $_COOKIE["background"];
-if(isset($_POST['aus'])){
 
-    $background= "<style>
-        body {
-            background-color: rgba(0, 0, 0, 0.6);
-            }
-        </style>";
-    setcookie("background",$background);
-    echo"<meta http-equiv=\"refresh\" content=\"1\">";
-}
-
-if(isset($_POST['an'])){
-
-    $background= "<style>
-        body {
-            background-color: rgba(255, 255, 255, 0.9);
-            }
-        </style>";
-    setcookie("background",$background);
-
-    echo"<meta http-equiv=\"refresh\" content=\"1\">";
-    //echo "<meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/tests/test.php";
-}
-
-
-?>
