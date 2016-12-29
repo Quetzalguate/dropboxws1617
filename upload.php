@@ -8,6 +8,7 @@
         <?php include ("includes/bsfixednavbar.php"); ?>
         <?php include ("includes/bsfooter.php"); ?>
         <?php include ("includes/bseinbindung.php"); ?>
+        <?php echo $_COOKIE["background"]; ?>
         <!-- Ende Include Dateien -->
 
     </head>
