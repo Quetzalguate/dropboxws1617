@@ -52,6 +52,9 @@ if(isset($_POST['aus'])){
             }
         </style>";
     setcookie("background",$background);
+    echo"<script>
+        location.reload();
+</script>";
 }
 /*else {
     $background= "<style>
@@ -71,14 +74,15 @@ if(isset($_POST['an'])){
         </style>";
     setcookie("background",$background);
 
+    echo"<script>
+        location.reload();
+</script>";
     //echo "<meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/tests/test.php";
 }
 
 echo $_COOKIE["background"];
 ?>
-<script>
-        location.reload();
-</script>
+
 
 </body>
 
