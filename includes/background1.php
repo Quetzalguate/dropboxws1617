@@ -1,7 +1,7 @@
 <?php
 $anaus=$_GET['var'];
 
-if($anaus='1'){
+if($anaus==1){
     echo "licht an";
 }
 else {
