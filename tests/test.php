@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<div class="btn-group">
+<div class="btn-group btn-xs">
     <a href="#" class="btn btn-primary">aus</a>
     <a href="#" class="btn btn-default">an</a>
 </div>
