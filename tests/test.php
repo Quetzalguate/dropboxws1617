@@ -24,6 +24,15 @@
     <a href="#" class="btn btn-default btn-xs">an </a>
 </div>
 
+
+<button type="submit" class="btn btn-default btn-xs" name="aus">Licht aus</button>
+
+<?php
+    if(isset('aus')){
+    echo"hallo";
+}
+?>
+
 <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
         Licht <span class="caret"></span></button>
