@@ -55,6 +55,8 @@ if(isset($_POST['an'])){
         </style>";
     setcookie("background",$background);
 }
+
+echo $_COOKIE["background"];
 ?>
 
 <div class="btn-group">
