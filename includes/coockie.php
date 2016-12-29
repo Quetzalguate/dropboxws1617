@@ -26,6 +26,7 @@ else {
     $stmt->execute();
     $erg= $stmt->fetch();
     $userid = $erg[0];
+    echo $userid;
 }
 
 ?>
