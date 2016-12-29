@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
 <!-- Start Bootstrap Einbindung -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -9,7 +12,7 @@
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <!-- Ende Bootstrap Einbindung -->
 
-<div class="row">
+<!--<div class="row">
     <div align="center">
         <form action="bsfixednavbar.php" method="POST" role="form">
             <div class="form-check" class="text-right">
@@ -24,19 +27,31 @@
     <a href="#" class="btn btn-default btn-xs">an </a>
 </div>
 
+
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+        Licht <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=1">An</a></li>
+        <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=0">Aus</a></li>
+    </ul>
+</div>-->
+</head>
+<body>
 <form action = test.php method="post" role ="form">
     <button type="submit" class="btn btn-default btn-xs" name="aus">Licht aus</button>
     <button type="submit" class="btn btn-default btn-xs" name="an">Licht an</button>
 </form>
 <?php
-    if(isset($_POST['aus'])){
+if(isset($_POST['aus'])){
 
-        $background= "<style>
+    $background= "<style>
         body {
             background-color: rgba(0, 0, 0, 0.6);
             }
         </style>";
-        setcookie("background",$background);
+    setcookie("background",$background);
 }
 /*else {
     $background= "<style>
@@ -61,17 +76,14 @@ if(isset($_POST['an'])){
 
 echo $_COOKIE["background"];
 ?>
+<script>
+        location.reload();
+</script>
 
-<div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
-        Licht <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu">
-        <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=1">An</a></li>
-        <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=0">Aus</a></li>
-    </ul>
-</div>
+</body>
+
 <?php
-//connection
+/*//connection
 $servername = "localhost";
 $username = "jv029";
 $password = "IeBu2chie3";
@@ -81,7 +93,7 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 //toggle test
 if (isset($_POST["Licht aus"])){
     echo "hallo";
-}
+}*/
 
 //------------------------------------------------------------------------------------------------------------------
 //RENAME FILE
@@ -275,4 +287,4 @@ if (!$filename) {
 }
 */
 
-?>
+
