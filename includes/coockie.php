@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <title>MinimalBox - Coockie</title>
-
     <!-- Start Include Dateien -->
     <?php include ("/home/jv029/public_html/includes/connection.php"); ?>
     <!-- Ende Include Dateien -->
-
 </head>
-
 <body>
 <?php
 session_start();
@@ -27,6 +23,5 @@ else {
     $userid = $erg[0];
     echo $userid;
 }
-
 ?>
 </body>
