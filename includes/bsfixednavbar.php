@@ -25,7 +25,7 @@
                 <!--</ul>
             </div> -->
 
-                <form action = /includes/bsfixednavbar.php method="post" role ="form">
+                <form action = "/home/jv029/public_html/includes/bsfixednavbar.php" method="post" role ="form">
                     <div class="btn-group">
                         <button type="submit" class="btn btn-default btn-xs" name="an">An wie Apfel</button>
                         <button type="submit" class="btn btn-default btn-xs" name="aus">Aus wie Affe</button>
