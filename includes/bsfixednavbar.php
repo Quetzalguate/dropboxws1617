@@ -25,7 +25,7 @@
                 <!--</ul>
             </div> -->
 
-                <form action = "https://mars.iuk.hdm-stuttgart.de/~jv029/includes/bsfixednavbar.php" method="post" role ="form">
+                <form action = "<?=$_SERVER['PHP_SELF'];?>" method="post" role ="form">
                     <div class="btn-group">
                         <button type="submit" class="btn btn-default btn-xs" name="an">An wie Apfel</button>
                         <button type="submit" class="btn btn-default btn-xs" name="aus">Aus wie Affe</button>
