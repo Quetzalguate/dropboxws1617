@@ -6,7 +6,6 @@
     <title>MinimalBox - Navbar</title>
 
     <?php
-    echo $_COOKIE["background"];
     if(isset($_POST['aus'])){
 
         $background= "<style>
