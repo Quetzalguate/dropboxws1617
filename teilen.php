@@ -97,30 +97,16 @@
                     </div>
             ";
         }
-    }
-    else {
+
+        //FORMULAR WIRD NUR AUSGEGEBEN WENN USER BERECHTIGT ZUM TEILEN
         echo "
-                        <div class=\"container-fluid\">
-                        <div class='col-lg-4'></div>
-                        <div class=\"col-lg-4\">
-                            <div class=\"alert alert-danger\">
-                                <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
-                                <strong>Du bist leider nicht dazu berechtigt diese Datei zu teilen!</strong>
-                            </div>
-                        </div>
-                    </div>
-            ";
-    }
-        ?>
-
-<!-- --------------------------------------------------- PHP -> HTML ----------------------------------------------- -->
-
+    
     </br></br>
-    <div class="container-fluid">
+    <div class=\"container-fluid\">
         <div class='col-lg-4'></div>
-        <div class="col-lg-4" align="center">
+        <div class=\"col-lg-4\" align=\"center\">
             <h3>Teile eine Datei</h3>
-            <table class="table table-bordered">
+            <table class=\"table table-bordered\">
                 <thead>
                 <tr>
                     <th>Bereits geteilt mit:</th>
@@ -135,15 +121,35 @@
                 </tbody>
             </table>
             <?php echo $tabelle;?>
-            <form action = teilen.php?var=<?php echo $dateiname; ?> method="post" role ="form">
-                <div class="form-group">
-                    <label for="username">"<?php echo $dateiname;?>" mit Nutzer teilen:</label>
-                    <input type="email" class="form-control" id="email" name = "email" placeholder="Email deines Freundes eingeben">
+            <form action = teilen.php?var=<?php echo $dateiname; ?> method=\"post\" role =\"form\">
+                <div class=\"form-group\">
+                    <label for=\"username\">\"<?php echo $dateiname;?>\" mit Nutzer teilen:</label>
+                    <input type=\"email\" class=\"form-control\" id=\"email\" name = \"email\" placeholder=\"Email deines Freundes eingeben\">
                 </div>
-                <button type="submit" class="btn btn-default" name="teilen">Teilen</button>
+                <button type=\"submit\" class=\"btn btn-default\" name=\"teilen\">Teilen</button>
             </form>
         </div>
     </div>
 
 </body>
 </html>
+    ";
+
+    }
+    else {
+        echo "
+                        <div class=\"container-fluid\">
+                        <div class='col-lg-4'></div>
+                        <div class=\"col-lg-4\">
+                            <div class=\"alert alert-danger\">
+                                <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+                                <strong>Du bist leider nicht dazu berechtigt diese Datei zu teilen!</strong>
+                            </div>
+                        </div>
+                    </div>
+            ";
+    }
+
+        ?>
+
+<!-- --------------------------------------------------- PHP -> HTML ----------------------------------------------- -->
