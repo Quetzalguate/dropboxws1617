@@ -65,8 +65,8 @@
 
                 <form action = "<?=$_SERVER['PHP_SELF'];?>" method="post" role ="form">
                     <div class="btn-group">
-                        <button type="submit" class="btn btn-default btn-xs" name="an">An wie Apfel</button>
-                        <button type="submit" class="btn btn-default btn-xs" name="aus">Aus wie Affe</button>
+                        <button type="submit" class="btn btn-default btn-xs" name="an">Licht An</button>
+                        <button type="submit" class="btn btn-default btn-xs" name="aus">Aus</button>
                     </div>
                 </form>
             </div>
