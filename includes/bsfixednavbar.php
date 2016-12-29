@@ -14,7 +14,7 @@
             }
         </style>";
         setcookie("background",$background);
-        echo"<meta http-equiv=\"refresh\" content=\"1\">";
+        echo"<meta http-equiv=\"refresh\" content=\"0\">";
     }
 
     if(isset($_POST['an'])){
@@ -26,7 +26,7 @@
         </style>";
         setcookie("background",$background);
 
-        echo"<meta http-equiv=\"refresh\" content=\"1\">";
+        echo"<meta http-equiv=\"refresh\" content=\"0\">";
         //echo "<meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/tests/test.php";
     }
 
