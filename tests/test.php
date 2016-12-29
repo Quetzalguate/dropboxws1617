@@ -20,7 +20,7 @@
 </div>
 
 <div class="btn-group btn-xs">
-    Licht: <a href="#" class="btn btn-primary btn-xs">aus</a>
+    Licht: <a href="#" onclick="document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';" class="btn btn-primary btn-xs">aus</a>
     <a href="#" class="btn btn-default btn-xs">an </a>
 </div>
 
