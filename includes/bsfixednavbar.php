@@ -20,8 +20,8 @@
                     <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
                         Licht <span class="caret"></span></button>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#" onclick="document.body.style.backgroundColor = 'green';">an</a></li><!-- https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=1-->
-                        <li><button onclick="document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';">aus</button></li><!-- <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=0">Aus</a></li>-->
+                        <li><a href="#" onclick="document.body.style.backgroundColor = 'white';">an</a></li><!-- https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=1-->
+                        <li><a href="#" onclick="document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';">aus</a></li><!-- <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=0">Aus</a></li>-->
                     </ul>
                 </div>
             </div>
