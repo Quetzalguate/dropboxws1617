@@ -6,6 +6,7 @@
     <title>Minimalbox - loeschen</title>
 
     <!-- Start Include Dateien -->
+    <?php include ("includes/coockie.php"); ?>
     <?php include ("connection.php"); ?>
     <?php include ("bsfixednavbar.php"); ?>
     <?php include ("bsfooter.php"); ?>
@@ -16,7 +17,6 @@
 
 <body>
     <?php
-    $userid="1";
     $dateiname = $_GET['var'];
 
     //Ausgeben welchen dateihash der dateiname hat, der von user xy hochgeladen wurde

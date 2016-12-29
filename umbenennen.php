@@ -6,6 +6,7 @@
     <title>Minimalbox - Umbenennen</title>
 
     <!-- Start Include Dateien -->
+    <?php include ("includes/coockie.php"); ?>
     <?php include ("includes/bsfixednavbar.php"); ?>
     <?php include ("includes/bsfooter.php"); ?>
     <?php include ("includes/bseinbindung.php"); ?>
@@ -33,7 +34,6 @@
 <?php
 
 //Variablen deklarieren
-$userid="1";
 $dateiname = $_GET['var'];
 $neuerdateiname = $_POST['neuerdateiname'];
 

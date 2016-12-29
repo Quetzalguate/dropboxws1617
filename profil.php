@@ -1,4 +1,5 @@
 <!-- Start Include Dateien -->
+<?php include ("includes/coockie.php"); ?>
 <?php include ("includes/bsfixednavbar.php"); ?>
 <?php include ("includes/bsfooter.php"); ?>
 <?php include ("includes/bseinbindung.php"); ?>

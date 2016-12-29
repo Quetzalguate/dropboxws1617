@@ -1,25 +1,17 @@
-<!-- Start Include Dateien -->
-<?php include ("includes/bsfixednavbar.php"); ?>
-<?php include ("includes/bsfooter.php"); ?>
-<?php include ("includes/bseinbindung.php"); ?>
-<?php include ("includes/connection.php"); ?>
-<!-- Ende Include Dateien -->
-
-
-<!-- Start Dateiübersicht -->
-<?php ?>
-<!-- Ende Dateiübersicht -->
-
-
-<!-- --------------------------------------------------- PHP -> HTML ----------------------------------------------- -->
-
-
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <title>Dropbox - Suchen</title>
+
+    <!-- Start Include Dateien -->
+    <?php include ("includes/coockie.php"); ?>
+    <?php include ("includes/bsfixednavbar.php"); ?>
+    <?php include ("includes/bsfooter.php"); ?>
+    <?php include ("includes/bseinbindung.php"); ?>
+    <?php include ("includes/connection.php"); ?>
+    <!-- Ende Include Dateien -->
 
 </head>
 
@@ -39,7 +31,7 @@ $suchbegriff = $_POST['suchbegriff'];
         $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbzuweisung INNER JOIN dbdateien 
                             ON dbdateien.dateiid = dbzuweisung.dateiid
-                            WHERE dbdateien.dateiname LIKE '%$suchbegriff%' AND dbzuweisung.userid=1"); // User ID aus session in Variable speichern und hier eingeben
+                            WHERE dbdateien.dateiname LIKE '%$suchbegriff%' AND dbzuweisung.userid=$userid"); // User ID aus session in Variable speichern und hier eingeben
         $statement->execute();
     }
 
