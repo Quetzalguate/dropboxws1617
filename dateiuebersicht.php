@@ -10,6 +10,7 @@
     <?php include ("includes/bsfooter.php"); ?>
     <?php include ("includes/bseinbindung.php"); ?>
     <?php include ("includes/connection.php"); ?>
+    <?php include ("includes/background1.php"); ?>
     <!-- Ende Include Dateien -->
     <!-- Licht aus Filter
         <style>
@@ -18,11 +19,11 @@
             }
         </style>
         -->
-<style>
+<!--<style>
     body {
         background-image: url("images/minimalboxbackgroundtrans.jpg");
     }
-</style>
+</style>-->
 
 
     </head>
