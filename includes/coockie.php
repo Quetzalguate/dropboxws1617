@@ -24,6 +24,6 @@ else {
     //echo $userid;
 }
 
-echo $_COOKIE["background"];
+
 ?>
 </body>
