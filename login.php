@@ -1,21 +1,16 @@
-<!-- Start Include Dateien -->
-<?php include ("includes/coockie.php"); ?>
-<?php include ("includes/bsfooter.php"); ?>
-<?php include ("includes/bseinbindung.php"); ?>
-<?php include("includes/connection.php"); ?>
-
-<!-- Ende Include Dateien -->
-
-
-
-
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
     <meta charset="UTF-8">
-    <title>Dropbox - Login</title>
+    <title>MinimalBox - Login</title>
 
+    <!-- Start Include Dateien -->
+    <?php include ("includes/bsfooter.php"); ?>
+    <?php include ("includes/bseinbindung.php"); ?>
+    <?php include("includes/connection.php"); ?>
+
+    <!-- Ende Include Dateien -->
 </head>
 
 <body>
@@ -60,10 +55,6 @@
     </div>
 </div>
 
-
-</body>
-</html>
-
 <!-- --------------------------------------------------- HTML -> PHP ----------------------------------------------- -->
 
 <!-- Start Login -->
@@ -105,3 +96,7 @@ if(isset($errorMessage)) {
 }
 ?>
 <!-- Ende Login -->
+
+</body>
+</html>
+
