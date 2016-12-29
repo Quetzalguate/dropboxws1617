@@ -23,5 +23,7 @@ else {
     $userid = $erg[0];
     //echo $userid;
 }
+
+echo $_COOKIE["background"];
 ?>
 </body>
