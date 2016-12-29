@@ -37,6 +37,9 @@
             }
         </style>";
         setcookie("background",$background);
+        echo "
+                    <meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/tests/test.php
+                ";
 }
 /*else {
     $background= "<style>
@@ -55,6 +58,10 @@ if(isset($_POST['an'])){
             }
         </style>";
     setcookie("background",$background);
+
+    echo "
+                    <meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/tests/test.php
+                ";
 }
 
 echo $_COOKIE["background"];
