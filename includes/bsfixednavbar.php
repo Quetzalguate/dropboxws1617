@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MinimalBox - Navbar</title>
-
+    <?php include ("includes/coockie.php"); ?>
     <?php
     if(isset($_POST['aus'])){
 
