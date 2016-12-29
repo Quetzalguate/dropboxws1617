@@ -78,7 +78,10 @@
                 </div>
             </div>
         ";
-        header( "refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
+        //header( "refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
+        echo "
+                    <meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php
+                ";
     }
     else {
         echo "
@@ -92,7 +95,10 @@
                 </div>
             </div>
         ";
-        header( "refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
+        //header( "refresh:2;url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php" );
+        echo "
+                    <meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php
+                ";
     }
 
     ?>
