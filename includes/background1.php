@@ -5,5 +5,11 @@ if($anaus==1){
     echo "licht an";
 }
 else {
-    echo "licht aus";
+    echo "
+    <style>
+    body {
+        background-image: url(\"public_html/images/minimalboxbackgroundtrans.jpg\");
+    }
+</style>
+    ";
 }
