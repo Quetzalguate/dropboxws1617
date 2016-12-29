@@ -25,16 +25,35 @@
 </div>
 
 <form action = test.php method="post" role ="form">
-<button type="submit" class="btn btn-default btn-xs" name="aus">Licht aus</button>
+    <button type="submit" class="btn btn-default btn-xs" name="aus">Licht aus</button>
+    <button type="submit" class="btn btn-default btn-xs" name="an">Licht an</button>
 </form>
 <?php
     if(isset($_POST['aus'])){
-    echo"
-        <style>
+
+        $background= "<style>
         body {
             background-color: rgba(0, 0, 0, 0.6);
             }
         </style>";
+        setcookie("background",$background);
+}
+else {
+    $background= "<style>
+        body {
+            background-color: rgba(255, 255, 255, 0.9);
+            }
+        </style>";
+    setcookie("background",$background);
+}
+if(isset($_POST['an'])){
+
+    $background= "<style>
+        body {
+            background-color: rgba(255, 255, 255, 0.9);
+            }
+        </style>";
+    setcookie("background",$background);
 }
 ?>
 
