@@ -12,7 +12,7 @@
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <!-- Ende Bootstrap Einbindung -->
 
-<!--<div class="row">
+<div class="row">
     <div align="center">
         <form action="bsfixednavbar.php" method="POST" role="form">
             <div class="form-check" class="text-right">
@@ -36,7 +36,7 @@
         <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=1">An</a></li>
         <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=0">Aus</a></li>
     </ul>
-</div>-->
+</div>
 </head>
 <body>
 <form action = test.php method="post" role ="form">
