@@ -43,7 +43,7 @@
 
         <!-- Anfang Registrierungsformular -->
         <div class="col-lg-3">
-            <form action="login.php" method="post" role="form">
+            <form action="?login=1" method="post" role="form">
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" name="email">
