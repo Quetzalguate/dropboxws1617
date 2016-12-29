@@ -12,4 +12,5 @@ else {
     }
 </style>
     ";
+    echo "<a href=\"javascript:history.go(-1)\">GO BACK</a>";
 }
