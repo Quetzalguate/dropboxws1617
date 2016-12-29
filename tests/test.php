@@ -38,7 +38,7 @@
         </style>";
         setcookie("background",$background);
 }
-else {
+/*else {
     $background= "<style>
         body {
             background-color: rgba(255, 255, 255, 0.9);
@@ -46,6 +46,7 @@ else {
         </style>";
     setcookie("background",$background);
 }
+*/
 if(isset($_POST['an'])){
 
     $background= "<style>
