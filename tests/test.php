@@ -28,8 +28,8 @@
     <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
         Licht <span class="caret"></span></button>
     <ul class="dropdown-menu" role="menu">
-        <li><a href="#">An</a></li>
-        <li><a href="#">Aus</a></li>
+        <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=1">An</a></li>
+        <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/background1.php?var=0">Aus</a></li>
     </ul>
 </div>
 <?php
