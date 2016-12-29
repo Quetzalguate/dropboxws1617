@@ -24,11 +24,11 @@
     <a href="#" class="btn btn-default btn-xs">an </a>
 </div>
 
-
+<form action = test.php method="post" role ="form">
 <button type="submit" class="btn btn-default btn-xs" name="aus">Licht aus</button>
-
+</form>
 <?php
-    if(isset('aus')){
+    if(isset($_POST['aus'])){
     echo"hallo";
 }
 ?>
