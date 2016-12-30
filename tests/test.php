@@ -16,7 +16,7 @@
 <body>
 
 <?php
-$file = "/upload/Homer_Simpson_2006.jpg";
+$file = "Homer_Simpson_2006.jpg";
 echo filesize($file);
 ?>
 
