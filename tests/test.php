@@ -16,7 +16,7 @@
 <body>
 
 <?php
-$file = "Homer_Simpson_2006.jpg";
+$file = "smeagol.jpg";
 echo filesize($file);
 ?>
 
