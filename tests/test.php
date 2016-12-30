@@ -20,7 +20,7 @@ $file = "smeagol.jpg";
 $file2= "upload/hashwert1.jpg";
 $filesize = filesize($file2);
 
-$erg = 1 + 1;
+$erg = $filesize / 1024;
 echo $erg;
 
 
