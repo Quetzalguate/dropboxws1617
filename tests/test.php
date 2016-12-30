@@ -45,7 +45,7 @@ $stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse FROM dbzuweisung INNER JOI
 $stmt3->execute();
 $result= $stmt3->fetchAll(PDO::FETCH_ASSOC);
 
-foreach($result as $show){
+$output= foreach($result as $show){
 
     foreach($show as $display){
         echo '<br />Value: ' . $display;
@@ -54,7 +54,9 @@ foreach($result as $show){
 echo "<br /><br /><br />";
 var_dump($result);
 
+echo "<br /><br /><br />";
 
+echo $output;
 
 //echo "</br>".$erg[2];
 
