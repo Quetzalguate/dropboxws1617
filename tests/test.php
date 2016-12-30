@@ -40,7 +40,7 @@ $username = "jv029";
 $password = "IeBu2chie3";
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$stmt3 = $pdo->prepare("SELECT dateigroesse FROM dbdateien ");
+$stmt3 = $pdo->prepare("SELECT  * FROM dbdateien WHERE dateigroesse");
 $stmt3->execute();
 $erg= $stmt3->fetch();
 echo "</br>";
