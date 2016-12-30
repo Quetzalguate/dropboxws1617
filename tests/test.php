@@ -38,9 +38,13 @@ echo "</br>".$gerundeteserg;
 $servername = "localhost";
 $username = "jv029";
 $password = "IeBu2chie3";
+$userid = "8";
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$stmt3 = $pdo->prepare("SELECT dateigroesse FROM dbdateien");
+$stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse
+                            FROM dbzuweisung INNER JOIN dbdateien 
+                            ON dbdateien.dateiid = dbzuweisung.dateiid
+                            WHERE dbzuweisung.userid=$userid");
 $stmt3->execute();
 $erg= $stmt3->fetch();
 echo "</br>";
