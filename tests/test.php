@@ -44,12 +44,12 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $stmt3 = $pdo->prepare("SELECT dateigroesse FROM dbdateien");
 //JOIN: SELECT dbdateien.dateigroesse FROM dbzuweisung INNER JOIN dbdateien ON dbdateien.dateiid = dbzuweisung.dateiid WHERE dbzuweisung.userid=$userid
 $stmt3->execute();
-$erg= $stmt3->fetchAll();
+$result= $stmt3->fetchAll();
 
-foreach($erg as $ausgabe){
+foreach($result as $show){
 
-    foreach($ausgabe as $anzeigen){
-        echo('<br />Wert: ' . $anzeigen);
+    foreach($show as $display){
+        echo('<br />Value: ' . $anzeigen);
     }
 }
 
