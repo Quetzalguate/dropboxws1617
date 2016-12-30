@@ -51,7 +51,7 @@ echo "</br>";
 //var_dump($erg);
 
 while($erg= $stmt3->fetch()){
-    echo $erg.", ";
+    echo $erg[0].", ";
 }
 /*
 foreach($erg AS $name) {
