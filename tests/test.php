@@ -55,9 +55,11 @@ foreach($result as $show){
 //2.3 Das letzte "+" des strings loeschen
 $summe = substr($ergforeach, 0, -1);
 echo "</br>".$summe;
+$rechnung = 2.29+4.5+1.2+3.567;
+echo "</br>".$rechnung;
 //2.4 Die Summe der Dateigroessen vom verfügbaren Speicher abziehen und freien Speicher ausgeben
 $freierspeicher = 20 - $summe;
-echo "Du hast noch: ".$freierspeicher ." mb frei!";
+echo "</br>Du hast noch: ".$freierspeicher ." mb frei!";
 
 
 //echo "</br>".$erg[2];
