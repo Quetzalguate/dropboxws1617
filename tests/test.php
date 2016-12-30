@@ -50,6 +50,8 @@ $erg= $stmt3->fetchAll();
 print_r($erg);
 
 echo "</br>";
+
+echo $erg[2];
 //var_dump($erg);
 
 /*while($erg= $stmt3->fetch()){
