@@ -49,9 +49,14 @@ $erg= $stmt3->fetchAll();
 //echo "</br>";
 
 
-var_dump($erg);
-$anzahl = count($erg);
-echo "</br>".$anzahl;
+//var_dump($erg);
+foreach($erg as $ausgabe){
+
+    foreach($ausgabe as $anzeigen){
+        echo('<br />Wert: ' . $anzeigen);
+    }
+}
+
 
 //echo "</br>".$erg[2];
 
