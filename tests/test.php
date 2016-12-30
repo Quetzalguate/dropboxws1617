@@ -18,7 +18,11 @@
 <?php
 $file = "smeagol.jpg";
 $file2= "upload/hashwert1.jpg";
-echo filesize($file2);
+$filesize = filesize($file2);
+
+$erg = 1 + 1;
+echo $erg;
+
 
 ?>
 
