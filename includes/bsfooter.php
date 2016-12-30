@@ -6,7 +6,7 @@
     <title>MinimalBox - Datei-Teilen</title>
 
     <!-- Start Include Dateien -->
-    <?php include ("includes/coockie.php"); ?>
+    //<?php include ("includes/coockie.php"); ?>
     <?php include ("includes/bseinbindung.php"); ?>
     <?php include ("includes/connection.php"); ?>
     <!-- Ende Include Dateien -->
@@ -20,7 +20,7 @@
 //$servername = "localhost";
 //$username = "jv029";
 //$password = "IeBu2chie3";
-//$userid = "8";
+$userid = "8";
 //2.1 Dateigroessen in einem assoziativem Array speichern
 //$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse FROM dbzuweisung INNER JOIN dbdateien ON dbdateien.dateiid = dbzuweisung.dateiid WHERE dbzuweisung.userid=$userid");
