@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MinimalBox - Datei-Teilen</title>
+    <title>MinimalBox - BSfooter</title>
 
     <!-- Start Include Dateien -->
     <?php //include ("includes/coockie.php"); ?>
     <?php include ("includes/bseinbindung.php"); ?>
     <?php include ("includes/connection.php"); ?>
-    <?php include ("includes/userid.php"); ?>
+    <?php include ("includes/coockie.php"); ?>
     <!-- Ende Include Dateien -->
 
 </head>
