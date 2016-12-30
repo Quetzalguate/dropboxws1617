@@ -41,25 +41,16 @@ $password = "IeBu2chie3";
 $userid = "8";
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse
-                            FROM dbzuweisung INNER JOIN dbdateien 
-                            ON dbdateien.dateiid = dbzuweisung.dateiid
-                            WHERE dbzuweisung.userid=$userid");
+$stmt3 = $pdo->prepare("SELECT dateiname FROM dbdateien");
+//JOIN: SELECT dbdateien.dateigroesse FROM dbzuweisung INNER JOIN dbdateien ON dbdateien.dateiid = dbzuweisung.dateiid WHERE dbzuweisung.userid=$userid
 $stmt3->execute();
-//$erg= $stmt3->fetchAll();
+$erg= $stmt3->fetchAll();
 
 //echo "</br>";
 
 
-//var_dump($erg);
+var_dump($erg);
 
-
-$nids = array();
-
-while (  $row  =  db_fetch_array($stmt3) )  {
-    $nids[] = $row['dateigroesse'];
-}
-return $nids;
 //echo "</br>".$erg[2];
 
 /*while($erg= $stmt3->fetch()){
