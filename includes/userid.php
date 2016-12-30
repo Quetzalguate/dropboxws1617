@@ -1,3 +1,3 @@
 <?php
-include ("coockie.php");
+//include ("coockie.php");
 ?>
