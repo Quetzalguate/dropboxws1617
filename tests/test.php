@@ -34,6 +34,18 @@ $gerundeteserg = round($erginmb,4);
 echo "</br>".$gerundeteserg;
 
 
+//2.0 DATEIGROESSE AUS DB AUSLESEN
+$servername = "localhost";
+$username = "jv029";
+$password = "IeBu2chie3";
+
+$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+$stmt3 = $pdo->prepare("SELECT dateigroesse FROM dbdateien ");
+$stmt3->execute();
+$erg= $stmt3->fetch();
+echo="</br>".$erg;
+
+
 ?>
 
 </body>
