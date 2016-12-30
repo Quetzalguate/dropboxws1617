@@ -16,19 +16,21 @@
 <body>
 
 <?php
+//1.0 DATEIGROESSE IN MB
+//1.1 Dateigroesse in byte
 $file = "smeagol.jpg";
 $file2= "upload/hashwert1.jpg";
-$filesizeinbyte = filesize($file2);
+$filesizeinbyte = filesize($file);
 
+//1.2 Dateigroesse in kilobyte
 $erginkb = $filesizeinbyte / 1024;
-//echo $erginkb;
+
+//1.3 Dateigroesse in megabyte
 $erginmb = $erginkb /1024;
 echo $erginmb;
 
-//echo gettype($erginmb);
-
+//1.4 Dateigroesse in megabyte auf 4 Nachkommastellen gerundet
 $gerundeteserg = round($erginmb,4);
-
 echo "</br>".$gerundeteserg;
 
 
