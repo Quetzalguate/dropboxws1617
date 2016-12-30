@@ -48,7 +48,7 @@ $result= $stmt3->fetchAll(PDO::FETCH_ASSOC);
 foreach($result as $show){
 
     foreach($show as $display){
-        $enderg .= '<br />Value: ' . $display;
+        $enderg .= $display."+";
     }
 }
 echo "<br /><br /><br />";
