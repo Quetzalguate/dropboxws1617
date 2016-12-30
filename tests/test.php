@@ -50,7 +50,7 @@ $erg= $stmt3->fetchAll();
 
 
 var_dump($erg);
-echo $erg[dateiname];
+echo $erg[1];
 
 //echo "</br>".$erg[2];
 
