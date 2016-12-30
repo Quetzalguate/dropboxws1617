@@ -25,7 +25,11 @@ $erginkb = $filesizeinbyte / 1024;
 $erginmb = $erginkb /1024;
 echo $erginmb;
 
-echo gettype($erginmb);
+//echo gettype($erginmb);
+
+$gerundeteserg = round($erginmb,2)
+
+echo "</br>".$gerundeteserg;
 
 
 ?>
