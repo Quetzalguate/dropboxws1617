@@ -58,7 +58,7 @@ foreach($erg AS $name) {
 }*/
 for($i=0; ; $i++)
 {
-    echo $i.",  ";
+    echo $erg[$i].",  ";
 }
 
 
