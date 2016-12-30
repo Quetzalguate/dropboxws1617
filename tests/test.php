@@ -54,6 +54,7 @@ foreach($result as $show){
 
 //2.3 Das letzte "+" des strings loeschen
 $summe = substr($ergforeach, 0, -1);
+intval($summe);
 echo "</br>".$summe;
 $rechnung = 2.29+4.5+1.2+3.567;
 echo "</br>".$rechnung;
