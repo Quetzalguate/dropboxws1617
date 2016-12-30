@@ -48,10 +48,10 @@ $result= $stmt3->fetchAll(PDO::FETCH_ASSOC);
 foreach($result as $show){
 
     foreach($show as $display){
-        $ergforeach .= $display."+";
+        $sum+= $display; //$ergforeach .= $display."+"
     }
 }
-
+echo "</br>".$sum;
 //2.3 Das letzte "+" des strings loeschen
 $summe = substr($ergforeach, 0, -1);
 
