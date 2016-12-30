@@ -60,7 +60,9 @@ echo $ergforeach;
 echo "<br /><br /><br />";
 $summe = substr($ergforeach, 0, -1);
 echo $summe;
-
+echo "<br /><br /><br />";
+$freierspeicher = 20 - $summe;
+echo "Du hast noch: "$freierspeicher ."mb frei!";
 //echo "</br>".$erg[2];
 
 /*while($erg= $stmt3->fetch()){
