@@ -46,20 +46,21 @@ $stmt3 = $pdo->prepare("SELECT dbdateien.dateiname
                             ON dbdateien.dateiid = dbzuweisung.dateiid
                             WHERE dbzuweisung.userid=$userid");
 $stmt3->execute();
-$erg= $stmt3->fetchAll();
+
 echo "</br>";
-var_dump($erg);
-/*
-while($erg AS $name){
-    echo $name.", ";
+//var_dump($erg);
+
+while($erg= $stmt3->fetch();){
+    echo $erg.", ";
 }
+/*
 foreach($erg AS $name) {
     echo $name.", ";
-}*/
+}
 for($i=0; $i<=10; $i++)
 {
     echo $erg[$i].",  ";
-}
+}*/
 
 
 ?>
