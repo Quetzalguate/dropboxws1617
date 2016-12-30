@@ -35,7 +35,7 @@ foreach($result as $show){
 }
 
 //2.3 Die Summe der Dateigroessen vom verfügbaren Speicher abziehen und freien Speicher ausgeben
-$freierspeicher = 20 - $sum;
+$freierspeicher = 20 - $summe;
 //echo "</br>Du hast noch: ".$freierspeicher ." mb frei!";
 
 ?>
