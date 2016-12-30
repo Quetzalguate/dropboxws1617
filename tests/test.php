@@ -52,10 +52,10 @@ var_dump($erg);
 /*
 while($erg AS $name){
     echo $name.", ";
-}
+}*/
 foreach($erg AS $name) {
     echo $name.", ";
-}*/
+}
 
 
 ?>
