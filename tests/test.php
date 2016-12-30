@@ -18,10 +18,10 @@
 <?php
 $file = "smeagol.jpg";
 $file2= "upload/hashwert1.jpg";
-$filesize = filesize($file2);
+$filesizeinbyte = filesize($file2);
 
-$erginkb = $filesize / 1024;
-echo $erginkb;
+$erginkb = $filesizeinbyte / 1024;
+//echo $erginkb;
 $erginmb = $erginkb /1024;
 echo $erginmb;
 
