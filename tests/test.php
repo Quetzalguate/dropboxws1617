@@ -52,6 +52,8 @@ foreach($result as $show){
         echo('<br />Value: ' . $display);
     }
 }
+echo "<br /><br /><br />";
+var_dump($result);
 
 
 //echo "</br>".$erg[2];
