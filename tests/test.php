@@ -42,7 +42,6 @@ $userid = "8";
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse FROM dbzuweisung INNER JOIN dbdateien ON dbdateien.dateiid = dbzuweisung.dateiid WHERE dbzuweisung.userid=$userid");
-//JOIN:
 $stmt3->execute();
 $result= $stmt3->fetchAll(PDO::FETCH_ASSOC);
 
@@ -54,6 +53,7 @@ foreach($result as $show){
 }
 echo "<br /><br /><br />";
 var_dump($result);
+echo("hallo");
 
 
 //echo "</br>".$erg[2];
