@@ -52,7 +52,8 @@ echo "</br>";
 
 
 var_dump($erg);
-echo "</br>".$erg[2];
+print($erg);
+//echo "</br>".$erg[2];
 
 /*while($erg= $stmt3->fetch()){
     echo $erg[0]."+";
