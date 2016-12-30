@@ -44,7 +44,10 @@ $stmt3 = $pdo->prepare("SELECT dateigroesse FROM dbdateien ");
 $stmt3->execute();
 $erg= $stmt3->fetch();
 echo "</br>";
-var_dump($erg);
+
+foreach($erg AS $name) {
+    echo $name.", ";
+}
 
 
 ?>
