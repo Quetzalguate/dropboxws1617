@@ -103,7 +103,7 @@ for($i=0; $i<=10; $i++)
                         </td>
                         <td>Dateigröße-Variable</td>
                     </tr>
-                <?php } ?>
+
                 </tbody>
             </table>
         </div>
