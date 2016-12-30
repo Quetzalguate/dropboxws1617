@@ -55,10 +55,10 @@ while($erg AS $name){
 }
 foreach($erg AS $name) {
     echo $name.", ";
-}*/
-foreach($i=0; $i++){
-    echo $i.",  ";
 }
+for($i=0; $i++){
+    echo $i.",  ";
+}*/
 
 
 ?>
