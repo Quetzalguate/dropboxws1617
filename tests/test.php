@@ -51,7 +51,7 @@ foreach($result as $show){
         $sum+= $display; //$ergforeach .= $display."+"
     }
 }
-echo "</br>".$sum;
+echo "</br>"."Summe:".$sum;
 //2.3 Das letzte "+" des strings loeschen
 $summe = substr($ergforeach, 0, -1);
 
