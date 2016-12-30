@@ -56,7 +56,7 @@ while($erg AS $name){
 foreach($erg AS $name) {
     echo $name.", ";
 }*/
-for ($i=0; $i++){
+foreach($i=0; $i++){
     echo $i.",  ";
 }
 
