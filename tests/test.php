@@ -41,7 +41,7 @@ $password = "IeBu2chie3";
 $userid = "8";
 
 $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-$stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse
+$stmt3 = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbzuweisung INNER JOIN dbdateien 
                             ON dbdateien.dateiid = dbzuweisung.dateiid
                             WHERE dbzuweisung.userid=$userid");
