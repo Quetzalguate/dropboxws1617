@@ -48,7 +48,7 @@ $result= $stmt3->fetchAll(PDO::FETCH_ASSOC);
 foreach($result as $show){
 
     foreach($show as $display){
-        $enderg .= $display."+";
+        $ergforeach .= $display."+";
     }
 }
 echo "<br /><br /><br />";
@@ -56,7 +56,10 @@ var_dump($result);
 
 echo "<br /><br /><br />";
 
-echo $enderg;
+echo $ergforeach;
+echo "<br /><br /><br />";
+$summe = substr($ergforeach, 0, -1);
+echo $summe;
 
 //echo "</br>".$erg[2];
 
