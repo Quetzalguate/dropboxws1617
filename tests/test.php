@@ -22,6 +22,8 @@ $filesize = filesize($file2);
 
 $erg = $filesize / 1024;
 echo $erg;
+$erg2 = $erg /1024;
+echo $erg2;
 
 
 ?>
