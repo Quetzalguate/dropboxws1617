@@ -48,12 +48,13 @@ $result= $stmt3->fetchAll(PDO::FETCH_ASSOC);
 foreach($result as $show){
 
     foreach($show as $display){
-        echo('<br />Value: ' . $display);
+        $enderg="'<br />Value: ' . $display";
     }
 }
 echo "<br /><br /><br />";
 var_dump($result);
-echo("hallo");
+
+echo $enderg;
 
 
 //echo "</br>".$erg[2];
