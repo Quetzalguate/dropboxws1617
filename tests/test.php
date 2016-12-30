@@ -50,7 +50,7 @@ $erg= $stmt3->fetch();
 
 echo "</br>";
 
-echo $erg[1];
+echo $erg[0];
 //var_dump($erg);
 
 /*while($erg= $stmt3->fetch()){
