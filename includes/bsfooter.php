@@ -1,3 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MinimalBox - Datei-Teilen</title>
+
+    <!-- Start Include Dateien -->
+    <?php include ("includes/coockie.php"); ?>
+    <?php include ("includes/bseinbindung.php"); ?>
+    <?php include ("includes/connection.php"); ?>
+    <!-- Ende Include Dateien -->
+
+</head>
+
+<body>
+<?php
+
+//2.0 DATEIGROESSE AUS DB AUSLESEN
+//$servername = "localhost";
+//$username = "jv029";
+//$password = "IeBu2chie3";
+//$userid = "8";
+//2.1 Dateigroessen in einem assoziativem Array speichern
+//$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+$stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse FROM dbzuweisung INNER JOIN dbdateien ON dbdateien.dateiid = dbzuweisung.dateiid WHERE dbzuweisung.userid=$userid");
+$stmt3->execute();
+$result= $stmt3->fetchAll(PDO::FETCH_ASSOC);
+// 2.2 Jede Dateigroesse in Schleife ausgeben und in Variable speichern; Mit einem Plus zwischen jeder Dateigroesse
+foreach($result as $show){
+
+    foreach($show as $display){
+        $ergforeach .= $display."+";
+    }
+}
+
+//2.3 Das letzte "+" des strings loeschen
+$summe = substr($ergforeach, 0, -1);
+
+//2.4 Die Summe der Dateigroessen vom verfügbaren Speicher abziehen und freien Speicher ausgeben
+$freierspeicher = 20 - $summe;
+echo "Du hast noch: ".$freierspeicher ." mb frei!";
+
+?>
+
 <!-- Anfang Footer -->
 <nav class="navbar navbar-fixed-bottom">
     <div class="container-fluid">
@@ -9,3 +54,5 @@
     </div>
 </nav>
 <!-- Ende Footer -->
+</body>
+</html>
