@@ -49,7 +49,7 @@ $result= $stmt3->fetchAll();
 foreach($result as $show){
 
     foreach($show as $display){
-        echo('<br />Value: ' . $anzeigen);
+        echo('<br />Value: ' . $display);
     }
 }
 
