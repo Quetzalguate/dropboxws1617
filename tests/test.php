@@ -50,7 +50,8 @@ $erg= $stmt3->fetchAll();
 
 
 var_dump($erg);
-echo $erg[1];
+$anzahl = count($erg);
+echo "</br>".$anzahl;
 
 //echo "</br>".$erg[2];
 
