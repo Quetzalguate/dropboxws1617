@@ -17,17 +17,12 @@
 <body>
 <?php
 
-//2.0 DATEIGROESSE AUS DB AUSLESEN
-//$servername = "localhost";
-//$username = "jv029";
-//$password = "IeBu2chie3";
-//$userid = "8";
-//2.1 Dateigroessen in einem assoziativem Array speichern
-//$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+//1.0 DATEIGROESSE AUS DB AUSLESEN
+//1.1 Dateigroessen in einem assoziativem Array speichern
 $stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse FROM dbzuweisung INNER JOIN dbdateien ON dbdateien.dateiid = dbzuweisung.dateiid WHERE dbzuweisung.userid=$userid");
 $stmt3->execute();
 $result= $stmt3->fetchAll(PDO::FETCH_ASSOC);
-// 2.2 Jede Dateigroesse in Schleife ausgeben und in Variable speichern; Mit einem Plus zwischen jeder Dateigroesse
+//1.2 Jede Dateigroesse in Schleife ausgeben und in Variable speichern; Mit einem Plus zwischen jeder Dateigroesse
 foreach($result as $show){
 
     foreach($show as $display){
@@ -35,7 +30,7 @@ foreach($result as $show){
     }
 }
 
-//2.3 Die Summe der Dateigroessen vom verfügbaren Speicher abziehen und freien Speicher ausgeben
+//1.3 Die Summe der Dateigroessen vom verfügbaren Speicher abziehen und freien Speicher ausgeben
 $freierspeicher = 20 - $summe;
 //echo "</br>Du hast noch: ".$freierspeicher ." mb frei!";
 
