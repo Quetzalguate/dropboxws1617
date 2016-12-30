@@ -46,7 +46,7 @@ $stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse
                             ON dbdateien.dateiid = dbzuweisung.dateiid
                             WHERE dbzuweisung.userid=$userid");
 $stmt3->execute();
-$erg= $stmt3->fetch();
+$erg= $stmt3->fetchAll();
 echo "</br>";
 var_dump($erg);
 /*
