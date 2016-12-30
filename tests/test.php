@@ -59,7 +59,7 @@ echo "</br>".$summe;
 $rechnung = 2.29+4.5+1.2+3.567;
 echo "</br>".$rechnung;
 //2.4 Die Summe der Dateigroessen vom verfügbaren Speicher abziehen und freien Speicher ausgeben
-$freierspeicher = 20 - $summe;
+$freierspeicher = 20 - $sum;
 echo "</br>Du hast noch: ".$freierspeicher ." mb frei!";
 
 
