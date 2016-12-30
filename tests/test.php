@@ -88,11 +88,10 @@ for($i=0; $i<=10; $i++)
                 </tr>
                 </thead>
                 <tbody>
-                <?php while ($dateiname = $statement->fetch()) {?>
                     <tr>
                         <td>
                             <div class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> <?php echo $dateiname[0]; ?>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> datei.jpg
                                     <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/umbenennen.php?var=<?php echo $dateiname[0]; ?>"><img class="icon icons8-Edit" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABhUlEQVRoQ+2Y7U0DMQxAXzdgJTZgBJgAmADYgA2ATTpCR2AEmABkqUEHOB+Xi2NXan5eL9F7jpOrvePEx+7E+TkLeO9gtB24Ax6Ad+AGONQCFEngGnhZAH8AlzWJKAJ/4ZNHVSKCQA6+ScJboAZflfAUaIUvSngJrIVPEvvjwf456x4CvfAC/QlcLK/W2QI5eLnzZSyvUe0TcA88ewmU4F+PUKXdeQPk919j1g60wAtY7j0VXibMEDCDnyFgCm8tYA5vKTAF3kpgGryFwFT40QLT4UcKuMCPEnCDHyHgCr9VwB1+i0AI+F6BMPA9AqHg1wqEg18jEBK+VSAsfItAaPiagBTPt0plLQV4qmG7ykCtWu99lispw0c+CWsCGrz0Y64AaSylsboA741yaZ4m8KVMeAIeo8HnzoAmIO+m3A8R+VIK5QRkjhzef80lINu3sUib5ZqtKVTicINfm0KahCv8VgF3+C0CIeB7BcLA1/5KWF8gQ9af0Z0eAppb5CxgGt6Gxb8B3BaLMbHRAogAAAAASUVORK5CYII=" width="15" height="15"> Umbenennen</a></li>
