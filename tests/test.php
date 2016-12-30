@@ -44,20 +44,14 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse FROM dbzuweisung INNER JOIN dbdateien ON dbdateien.dateiid = dbzuweisung.dateiid WHERE dbzuweisung.userid=$userid");
 $stmt3->execute();
 $result= $stmt3->fetchAll(PDO::FETCH_ASSOC);
-// 2.2 Jede Dateigroesse in Schleife ausgeben und in Variable speichern; Mit einem Plus zwischen jeder Dateigroesse
+// 2.2 Jede Dateigroesse in Schleife ausgeben und Summe Variable gespeichert;
 foreach($result as $show){
 
     foreach($show as $display){
-        $sum+= $display; //$ergforeach .= $display."+"
+        $summe+= $display; //$ergforeach .= $display."+"
     }
 }
-echo "</br>"."Summe:".$sum;
-//2.3 Das letzte "+" des strings loeschen
-$summe = substr($ergforeach, 0, -1);
 
-echo "</br>".$summe;
-$rechnung = 2.29+4.5+1.2+3.567;
-echo "</br>".$rechnung;
 //2.4 Die Summe der Dateigroessen vom verfügbaren Speicher abziehen und freien Speicher ausgeben
 $freierspeicher = 20 - $sum;
 echo "</br>Du hast noch: ".$freierspeicher ." mb frei!";
