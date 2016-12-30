@@ -6,7 +6,7 @@
     <title>MinimalBox - Login</title>
 
     <!-- Start Include Dateien -->
-    <?php include ("includes/bsfooter.php"); ?>
+    <?php include ("includes/bsfooter2.php"); ?>
     <?php include ("includes/bseinbindung.php"); ?>
     <?php include("includes/connection.php"); ?>
 
