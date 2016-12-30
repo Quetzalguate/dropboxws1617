@@ -39,7 +39,7 @@ $summe = substr($ergforeach, 0, -1);
 
 //2.4 Die Summe der Dateigroessen vom verfügbaren Speicher abziehen und freien Speicher ausgeben
 $freierspeicher = 20 - $summe;
-echo "Du hast noch: ".$freierspeicher ." mb frei!";
+//echo "Du hast noch: ".$freierspeicher ." mb frei!";
 
 ?>
 
@@ -47,7 +47,7 @@ echo "Du hast noch: ".$freierspeicher ." mb frei!";
 <nav class="navbar navbar-fixed-bottom">
     <div class="container-fluid">
         <div class="text-right">
-            <span class="label label-default">Freier Speicher: x mb</span>
+            <span class="label label-default">Freier Speicher: <?php echo $freierspeicher; ?> mb</span>
         </div>
         <p class="copyright small text-center">&copy; 2016/2017 Juan Carlos Velarde, Ludwig Stengelin</p>
         <p class="small text-center"> Icons from <a href="https://icons8.com/">Icons8</a>.</p>
