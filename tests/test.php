@@ -49,9 +49,12 @@ $stmt3->execute();
 $erg= $stmt3->fetch();
 echo "</br>";
 
-foreach($erg AS $name) {
+while($erg AS $name){
     echo $name.", ";
 }
+//foreach($erg AS $name) {
+ //   echo $name.", ";
+//}
 
 
 ?>
