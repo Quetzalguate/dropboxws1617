@@ -43,7 +43,8 @@ $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $stmt3 = $pdo->prepare("SELECT dateigroesse FROM dbdateien ");
 $stmt3->execute();
 $erg= $stmt3->fetch();
-echo "</br>".$erg;
+echo "</br>";
+var_dump($erg);
 
 
 ?>
