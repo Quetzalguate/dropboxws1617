@@ -32,7 +32,8 @@ $suchbegriff = $_POST['suchbegriff'];
         $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbzuweisung INNER JOIN dbdateien 
                             ON dbdateien.dateiid = dbzuweisung.dateiid
-                            WHERE dbdateien.dateiname LIKE '%$suchbegriff%' AND dbzuweisung.userid=$userid"); // User ID aus session in Variable speichern und hier eingeben
+                            WHERE dbdateien.dateiname LIKE '%$suchbegriff%' AND dbzuweisung.userid=:userid"); // User ID aus session in Variable speichern und hier eingeben
+        $statement->bindParam(':userid', $userid, PDO::PARAM_STR);
         $statement->execute();
     }
 
