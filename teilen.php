@@ -29,6 +29,7 @@
     $stmt1->execute();
     $erg1= $stmt1->fetch();
     $dateiid = $erg1[0];
+    echo $dateiid;
 
     //1.2 Auslesen ob Besitzer gleich 0 oder 1
     $stmt2 = $pdo->prepare("SELECT besitzer FROM dbzuweisung WHERE dateiid=:dateiid AND userid=:userid"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
@@ -75,7 +76,7 @@
                         <?php } ?>
                         </tbody>
                     </table>
-                    <?php echo $tabelle;?>
+                    <?php// echo $tabelle;?>
                     <form action = teilen.php?var=<?php echo $dateiname; ?> method="post" role ="form">
                         <div class="form-group">
                             <label for="username">"<?php echo $dateiname;?>" mit Nutzer teilen:</label>
