@@ -12,7 +12,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['email'])) {
-    die('
+    die('</br></br></br></br></br></br>
     <div class="container-fluid">
     <div class="row">
         <div class="col-md-4"></div>
