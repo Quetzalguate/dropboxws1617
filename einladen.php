@@ -32,7 +32,7 @@
             <div class="form-group">
                 <label for="nachricht">Nachricht</label>
                 <textarea class="form-control" rows="5" name="nachricht" id="nachricht">Hallo,
-Probier die neue Dropbox aus.
+Probier die neue MinimalBox aus.
 Ich bin begeistert!
 Hier kannst du dich registrieren: https://mars.iuk.hdm-stuttgart.de/~jv029/reg.php
 Wir sehen uns auf der anderen Seite ;-)</textarea>
