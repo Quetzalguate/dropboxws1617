@@ -80,6 +80,7 @@ for($i=0; $i<=10; $i++)
         <div class="col-md-3"></div>
         <div class="col-md-6" >
             <button type="button" class="btn btn-primary btn-lg">Sitzung abgelaufen - zum Login</button>
+            <a class="btn btn-primary btn-lg" href="login.php" role="button">Sitzung abgelaufen - zum Login</a>
         </div>
     </div>
 </div>
