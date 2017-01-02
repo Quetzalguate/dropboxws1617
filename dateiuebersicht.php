@@ -57,7 +57,7 @@
                     <thead>
                         <tr align="center">
                             <th>Dateiname</th>
-                            <th>Dateigröße in Megabyte</th>
+                            <th align="right">Dateigröße in Megabyte</th>
                         </tr>
                     </thead>
                     <tbody>
