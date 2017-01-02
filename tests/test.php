@@ -77,10 +77,9 @@ for($i=0; $i<=10; $i++)
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6" >
-            <button type="button" class="btn btn-primary btn-lg">Sitzung abgelaufen - zum Login</button>
-            <a class="btn btn-primary btn-lg" href="login.php" role="button">Sitzung abgelaufen - zum Login</a>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"  align="center">
+            <a class="btn btn-primary btn-lg" href="https://mars.iuk.hdm-stuttgart.de/~jv029/login.php" role="button">Sitzung abgelaufen - zum Login</a>
         </div>
     </div>
 </div>
