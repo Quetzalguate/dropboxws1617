@@ -61,7 +61,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php while ($dateiname = $statement->fetch() && $dateigroesse = $statement2->fetch()) {?>
+                    <?php while (($dateiname = $statement->fetch()) && ($dateigroesse = $statement2->fetch())) {?>
                         <tr>
                             <td>
                                 <div class="dropdown">
