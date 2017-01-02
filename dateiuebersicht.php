@@ -18,14 +18,12 @@
 
     <body>
 
-
-
-
         </br></br>
 
         <!-- Start Datenbankabfrage für Dateianzeige -->
     <?php
-    // Dateinamen aus DB auslesen
+    // 1.0 DB ABFRAGE FÜR DATEIANZEIGE
+    // 1.1 Dateinamen aus DB auslesen
     $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
     $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbzuweisung INNER JOIN dbdateien 
@@ -33,21 +31,18 @@
                             WHERE dbzuweisung.userid=$userid");
     $statement->execute();
 
-    // Dateigroesse aus DB auslesen
+    // 1.2 Dateigroesse aus DB auslesen
     $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
     $statement2 = $pdo->prepare("SELECT dbdateien.dateigroesse
                             FROM dbzuweisung INNER JOIN dbdateien 
                             ON dbdateien.dateiid = dbzuweisung.dateiid
                             WHERE dbzuweisung.userid=$userid");
     $statement2->execute();
-    /*$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-    $statement2 = $pdo->prepare ("SELECT dateiid FROM dbzuweisung WHERE userid=1 AND besitzer=1");
-    $statement2->execute();
-    $dateiid= $statement2->fetch();*/
+
     ?>
     <!-- Ende Datenbankabfrage für Dateianzeige -->
 
-    <!-- Start Ergebnis der Datenbankabfrage per while Schleife in Tabelle ausgeben -->
+    <!-- Start: Ergebnis der Datenbankabfrage per while Schleife in Tabelle ausgeben -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3"></div>
@@ -83,7 +78,7 @@
             </div>
         </div>
     </div>
-    <!-- Ende Ergebnis der Datenbankabfrage per while Schleife in Tabelle ausgeben -->
+    <!-- Ende: Ergebnis der Datenbankabfrage per while Schleife in Tabelle ausgeben -->
 
 
 
