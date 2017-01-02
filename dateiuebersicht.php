@@ -56,7 +56,7 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Dateiname</th>
+                            <th align="right">Dateiname</th>
                             <th align="right">Dateigröße</th>
                         </tr>
                     </thead>
