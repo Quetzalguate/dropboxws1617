@@ -38,6 +38,43 @@
     $erg2= $stmt2->fetch();
     $besitzer = $erg2[0];
 
+    ?>
+
+    </br></br>
+    <!-- FORMULAR WIRD NUR ANGEZEIGT WENN USER BERECHTIGT ZUM TEILEN -->
+    <?php if ($besitzer !='0') {?>
+        <div class="container-fluid">
+            <div class='col-lg-4'></div>
+            <div class="col-lg-4" align="center">
+                <h3>Teile eine Datei</h3>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Bereits geteilt mit:</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php while ($useremail = $statement4->fetch()) {?>
+                        <tr>
+                            <td><?php echo $useremail[0]; ?></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+                <?php echo $tabelle;?>
+                <form action = teilen.php?var=<?php echo $dateiname; ?> method="post" role ="form">
+                    <div class="form-group">
+                        <label for="username">"<?php echo $dateiname;?>" mit Nutzer teilen:</label>
+                        <input type="email" class="form-control" id="email" name = "email" placeholder="Email deines Freundes eingeben">
+                    </div>
+                    <button type="submit" class="btn btn-default" name="teilen">Teilen</button>
+                </form>
+            </div>
+        </div>
+    <?php }?>
+
+    <?php
+
     if ($besitzer !='0') {
 
         //2.0 NUTZER MIT DENEN DATEI BEREITS GETEILT WURDE AUSGEBEN
@@ -120,38 +157,7 @@
 
 <!-- --------------------------------------------------- PHP -> HTML ----------------------------------------------- -->
 
-    </br></br>
-    <!-- FORMULAR WIRD NUR ANGEZEIGT WENN USER BERECHTIGT ZUM TEILEN -->
-    <?php if ($besitzer !='0') {?>
-    <div class="container-fluid">
-        <div class='col-lg-4'></div>
-        <div class="col-lg-4" align="center">
-            <h3>Teile eine Datei</h3>
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th>Bereits geteilt mit:</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php while ($useremail = $statement4->fetch()) {?>
-                    <tr>
-                        <td><?php echo $useremail[0]; ?></td>
-                    </tr>
-                <?php } ?>
-                </tbody>
-            </table>
-            <?php echo $tabelle;?>
-            <form action = teilen.php?var=<?php echo $dateiname; ?> method="post" role ="form">
-                <div class="form-group">
-                    <label for="username">"<?php echo $dateiname;?>" mit Nutzer teilen:</label>
-                    <input type="email" class="form-control" id="email" name = "email" placeholder="Email deines Freundes eingeben">
-                </div>
-                <button type="submit" class="btn btn-default" name="teilen">Teilen</button>
-            </form>
-        </div>
-    </div>
-<?php }?>
+
 
 </body>
 </html>
