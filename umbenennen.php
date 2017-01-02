@@ -104,8 +104,8 @@
             $stmt5->execute();
 
             //2.5 Datei auf dem Server wird umbenannt
-            $alterdateihashpfad = "upload/".$alterdateihash;
-            $neuerdateihashpfad = "upload/".$neuerdateihash;
+            $alterdateihashpfad = "/home/jv029/public_html/upload/".$alterdateihash;
+            $neuerdateihashpfad = "/home/jv029/public_html/upload/".$neuerdateihash;
             rename($alterdateihashpfad,$neuerdateihashpfad);
 
             echo "
