@@ -50,7 +50,7 @@
         $statement4 = $pdo->prepare("SELECT dbuser.email
                                     FROM dbuser INNER JOIN dbzuweisung 
                                     ON dbuser.userid = dbzuweisung.userid
-                                    WHERE dbzuweisung.dateiid='$dateiid' AND dbzuweisung.besitzer =0");
+                                    WHERE dbzuweisung.dateiid=$dateiid AND dbzuweisung.besitzer =0");
         $statement4->execute();
 
         ?>
@@ -99,11 +99,11 @@
             $statement2 = $pdo->prepare("SELECT userid FROM dbuser WHERE email= '$email'");
             $statement2->execute();
             $uid = $statement2->fetch();
-            //echo $uid[0];
+            echo "Userid mit dem die datei geteilt wurde: ".$uid[0];
 
             //3.1 Dem User wird die Datei-ID zugeordnet - Datei wird geteilt
             $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
-            $statement3 = $pdo->prepare("INSERT INTO dbzuweisung (userid,dateiid) VALUES ($uid[0], $dateiid[0])");
+            $statement3 = $pdo->prepare("INSERT INTO dbzuweisung (userid,dateiid) VALUES ($uid[0], $dateiid)");
             $statement3->execute();
 
             //3.1 Überprüfung ob eine Zeile erfolgreich von SQL Statement betroffen ist
