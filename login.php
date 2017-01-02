@@ -33,7 +33,7 @@
     <div class="row">
         <!-- Start Logo -->
         <div class="col-lg-6">
-            <img class="img-responsive pull-right" src="images/placeholder-Copy.png" alt="image placeholder" width="300" height="200">
+            <img class="img-responsive pull-right" src="images/minimalboxlogo.png" alt="image placeholder" width="300" height="200">
         </div>
         <!-- Ende Logo -->
 
