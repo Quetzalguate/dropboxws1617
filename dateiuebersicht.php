@@ -57,7 +57,7 @@
                     <thead>
                         <tr align="center">
                             <th>Dateiname</th>
-                            <th>Dateigröße</th>
+                            <th>Dateigröße in Megabyte</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -75,7 +75,7 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td><?php echo $dateigroesse[0]; ?> mb</td>
+                            <td><?php echo $dateigroesse[0]; ?></td>
                         </tr>
                     <?php } ?>
                     </tbody>
