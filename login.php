@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MinimalBox - Login</title>
+    <?php session_start(); ?>
 
     <link rel='shortcut icon' type='image/x-icon' href='images/minimalboxfavicon.ico' />
 
@@ -61,7 +62,6 @@
 
 <!-- Start Login -->
 <?php
-session_start();
 $email = $_POST['email'];
 $passwort = $_POST['passwort'];
 $_SESSION['email'] = $email;
