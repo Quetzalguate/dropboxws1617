@@ -57,6 +57,7 @@
         </div>
         <!-- Ende Registrierungsformular -->
         <div class="col-lg-12">
+            </br>
             <p class="text-center">Kostenlos deine Daten online sichern!</p>
         </div>
     </div>
