@@ -7,7 +7,7 @@
 
 
     <!-- Start Include Dateien -->
-    <?php include ("includes/coockie.php"); ?>
+    <?php include ("coockie.php"); ?>
     <?php include ("connection.php"); ?>
     <?php include ("bsfixednavbar.php"); ?>
     <?php include ("bsfooter.php"); ?>
