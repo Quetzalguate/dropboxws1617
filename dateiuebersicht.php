@@ -75,7 +75,7 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td><?php echo $dateigroesse[0]; ?></td>
+                            <td><?php echo $dateigroesse[0]; ?> mb</td>
                         </tr>
                     <?php } ?>
                     </tbody>
