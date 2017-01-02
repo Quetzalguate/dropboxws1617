@@ -11,7 +11,17 @@
 <?php
 session_start();
 if(!isset($_SESSION['email'])) {
-    die('Bitte zuerst <a href="login.php">einloggen</a>');
+    die('
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"  align="center">
+            <a class="btn btn-primary btn-lg" href="https://mars.iuk.hdm-stuttgart.de/~jv029/login.php" role="button">Sitzung abgelaufen - zum Login</a>
+        </div>
+    </div>
+</div>
+    
+    ');//Bitte zuerst <a href="login.php">einloggen</a>
 }
 else {
     $emailsession = $_SESSION['email'];
