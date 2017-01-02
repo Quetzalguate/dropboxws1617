@@ -28,7 +28,8 @@
         $statement = $pdo->prepare("SELECT dbdateien.dateiname
                                 FROM dbzuweisung INNER JOIN dbdateien 
                                 ON dbdateien.dateiid = dbzuweisung.dateiid
-                                WHERE dbzuweisung.userid=$userid");
+                                WHERE dbzuweisung.userid=:userid");
+        $statement->bindParam(':userid', $userid, PDO::PARAM_STR);
         $statement->execute();
 
         // 1.2 Dateigroesse aus DB auslesen
