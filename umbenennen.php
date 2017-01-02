@@ -16,6 +16,29 @@
 </head>
 
 <body>
+
+    <?php
+    //Variablen deklarieren
+    $dateiname = $_GET['var'];
+    $neuerdateiname = $_POST['neuerdateiname'];
+
+    //1.0 BERECHTIGUNG ZUM UMBENENNEN ÜBERPRÜFEN
+    //1.1 Zugehörige Dateiid zum Dateinamen ausgeben
+    $stmt1 = $pdo->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname "); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+    $stmt1->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
+    $stmt1->execute();
+    $erg1= $stmt1->fetch();
+    $dateiid = $erg1[0];
+
+    //1.2 Auslesen ob Besitzer gleich 0 oder 1
+    $stmt2 = $pdo->prepare("SELECT besitzer FROM dbzuweisung WHERE dateiid=:dateiid AND userid=:userid"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+    $stmt2->bindParam(':dateiid', $dateiid, PDO::PARAM_STR);
+    $stmt2->bindParam(':userid', $userid, PDO::PARAM_STR);
+    $stmt2->execute();
+    $erg2= $stmt2->fetch();
+    $besitzer = $erg2[0];
+    ?>
+
     <?php $dateiname = $_GET['var']; ?>
     <?php if ($besitzer !='0') {?>
     <div class="container-fluid">
@@ -49,25 +72,7 @@
 
     <?php
 
-    //Variablen deklarieren
-    $dateiname = $_GET['var'];
-    $neuerdateiname = $_POST['neuerdateiname'];
 
-    //1.0 BERECHTIGUNG ZUM UMBENENNEN ÜBERPRÜFEN
-    //1.1 Zugehörige Dateiid zum Dateinamen ausgeben
-    $stmt1 = $pdo->prepare("SELECT dateiid FROM dbdateien WHERE dateiname=:dateiname "); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
-    $stmt1->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
-    $stmt1->execute();
-    $erg1= $stmt1->fetch();
-    $dateiid = $erg1[0];
-
-    //1.2 Auslesen ob Besitzer gleich 0 oder 1
-    $stmt2 = $pdo->prepare("SELECT besitzer FROM dbzuweisung WHERE dateiid=:dateiid AND userid=:userid"); // Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
-    $stmt2->bindParam(':dateiid', $dateiid, PDO::PARAM_STR);
-    $stmt2->bindParam(':userid', $userid, PDO::PARAM_STR);
-    $stmt2->execute();
-    $erg2= $stmt2->fetch();
-    $besitzer = $erg2[0];
 
     if ($besitzer !='0'){
 
