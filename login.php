@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>MinimalBox - Login</title>
 
+    <link rel='shortcut icon' type='image/x-icon' href='images/minimalboxfavicon.ico' />
+
     <!-- Start Include Dateien -->
     <?php include ("includes/bsfooter2.php"); ?>
     <?php include ("includes/bseinbindung.php"); ?>
