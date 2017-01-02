@@ -38,7 +38,7 @@
     $stmt2->execute();
     $erg2= $stmt2->fetch();
     $besitzer = $erg2[0];
-
+    echo "</br>".$besitzer
 
 
     if ($besitzer !='0') {
