@@ -17,18 +17,7 @@
 
 <body>
     <?php $dateiname = $_GET['var']; ?>
-    </br></br>
-    <div class="container-fluid">
-        <div class="col-lg-12" align="center">
-            <h3>Datei "<?php echo $dateiname; ?>" umbenennen</h3>
-            <form action = umbenennen.php?var=<?php echo $dateiname; ?> method="POST" role ="form">
-                <div class="form-group">
-                    <input type="text" class="from-control" name="neuerdateiname" placeholder=" Name.Dateiendung"
-                </div>
-                <button type="submit" class="btn btn-default" name="submit">Umbenennen</button>
-            </form>
-        </div>
-    </div>
+
 
     <!-- --------------------------------------------------- HTML -> PHP ----------------------------------------------- -->
 
@@ -55,6 +44,22 @@
     $besitzer = $erg2[0];
 
     if ($besitzer !='0'){
+
+        echo "
+            </br></br>
+    <div class=\"container-fluid\">
+        <div class=\"col-lg-12\" align=\"center\">
+            <h3>Datei \"<?php echo $dateiname; ?>\" umbenennen</h3>
+            <form action = umbenennen.php?var=<?php echo $dateiname; ?> method=\"POST\" role =\"form\">
+                <div class=\"form-group\">
+                    <input type=\"text\" class=\"from-control\" name=\"neuerdateiname\" placeholder=\" Name.Dateiendung\"
+                </div>
+                <button type=\"submit\" class=\"btn btn-default\" name=\"submit\">Umbenennen</button>
+            </form>
+        </div>
+    </div>
+        
+        ";
 
         if (isset($_POST['submit']) && !empty($neuerdateiname)){
 
