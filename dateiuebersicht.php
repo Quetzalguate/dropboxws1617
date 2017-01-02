@@ -55,7 +55,7 @@
             <h3 class="text-center">Deine Dateien</h3>
                 <table class="table table-hover">
                     <thead>
-                        <tr align="center">
+                        <tr>
                             <th>Dateiname</th>
                             <th align="right">Dateigröße</th>
                         </tr>
