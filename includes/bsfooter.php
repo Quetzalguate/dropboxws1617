@@ -18,7 +18,11 @@
 
 //1.0 DATEIGROESSE AUS DB AUSLESEN
 //1.1 Dateigroessen in einem assoziativem Array speichern
-$stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse FROM dbzuweisung INNER JOIN dbdateien ON dbdateien.dateiid = dbzuweisung.dateiid WHERE dbzuweisung.userid=$userid");
+$stmt3 = $pdo->prepare("SELECT dbdateien.dateigroesse
+                        FROM dbzuweisung INNER JOIN dbdateien
+                        ON dbdateien.dateiid = dbzuweisung.dateiid
+                        WHERE dbzuweisung.userid=:userid");
+$stmt3->bindParam(':userid', $userid, PDO::PARAM_STR);
 $stmt3->execute();
 $result= $stmt3->fetchAll(PDO::FETCH_ASSOC);
 //1.2 Jede Dateigroesse in Schleife ausgeben und in Variable speichern; Mit einem Plus zwischen jeder Dateigroesse
