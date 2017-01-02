@@ -1,19 +1,18 @@
-<!-- Start Include Dateien -->
-<?php include ("includes/coockie.php"); ?>
-<?php include ("includes/bsfixednavbar.php"); ?>
-<?php include ("includes/bsfooter.php"); ?>
-<?php include ("includes/bseinbindung.php"); ?>
-<?php echo $_COOKIE["background"]; ?>
-<!-- Ende Include Dateien -->
-
-
-
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <title>MinimalBox - Einladen</title>
+    <link rel='shortcut icon' type='image/x-icon' href='images/minimalboxfavicon.ico' />
+
+    <!-- Start Include Dateien -->
+    <?php include ("includes/coockie.php"); ?>
+    <?php include ("includes/bsfixednavbar.php"); ?>
+    <?php include ("includes/bsfooter.php"); ?>
+    <?php include ("includes/bseinbindung.php"); ?>
+    <?php echo $_COOKIE["background"]; ?>
+    <!-- Ende Include Dateien -->
 
 </head>
 

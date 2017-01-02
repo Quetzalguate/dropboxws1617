@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <?php include ("includes/coockie.php"); ?>
+    <link rel='shortcut icon' type='image/x-icon' href='images/minimalboxfavicon.ico' />
     <!-- Preloader Start -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 

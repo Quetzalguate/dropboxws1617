@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>MinimalBox - Profil</title>
+        <link rel='shortcut icon' type='image/x-icon' href='images/minimalboxfavicon.ico' />
 
         <!-- Start Include Dateien -->
         <?php include ("includes/bsfixednavbar.php"); ?>
