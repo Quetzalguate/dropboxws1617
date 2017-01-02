@@ -17,6 +17,34 @@
 
 <body>
     <?php $dateiname = $_GET['var']; ?>
+    <?php if ($besitzer !='0') {?>
+    <div class=\"container-fluid\">
+        <div class=\"col-lg-12\" align=\"center\">
+            <h3>Datei \"<?php echo $dateiname; ?>\" umbenennen</h3>
+            <form action = umbenennen.php?var=<?php echo $dateiname; ?> method=\"POST\" role =\"form\">
+                <div class=\"form-group\">
+                    <input type=\"text\" class=\"from-control\" name=\"neuerdateiname\" placeholder=\" Name.Dateiendung\"
+                </div>
+                <button type=\"submit\" class=\"btn btn-default\" name=\"submit\">Umbenennen</button>
+            </form>
+        </div>
+    </div>
+    <?php }?>
+    <?php
+    else {
+        echo "
+            <div class=\"container-fluid\">
+            <div class='col-lg-4'></div>
+                    <div class=\"col-lg-4\">
+                        <div class=\"alert alert-danger\">
+                            <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+                            <strong>Du bist nicht dazu berechtigt diese Datei umzubennen!</strong>
+                        </div>
+                    </div>
+                </div>
+            ";
+    }
+    ?>
 
 
     <!-- --------------------------------------------------- HTML -> PHP ----------------------------------------------- -->
@@ -45,21 +73,6 @@
 
     if ($besitzer !='0'){
 
-        echo "
-            </br></br>
-    <div class=\"container-fluid\">
-        <div class=\"col-lg-12\" align=\"center\">
-            <h3>Datei \"<?php echo $dateiname; ?>\" umbenennen</h3>
-            <form action = umbenennen.php?var=<?php echo $dateiname; ?> method=\"POST\" role =\"form\">
-                <div class=\"form-group\">
-                    <input type=\"text\" class=\"from-control\" name=\"neuerdateiname\" placeholder=\" Name.Dateiendung\"
-                </div>
-                <button type=\"submit\" class=\"btn btn-default\" name=\"submit\">Umbenennen</button>
-            </form>
-        </div>
-    </div>
-        
-        ";
 
         if (isset($_POST['submit']) && !empty($neuerdateiname)){
 
@@ -122,19 +135,7 @@
 
     }
 
-    else {
-        echo "
-            <div class=\"container-fluid\">
-            <div class='col-lg-4'></div>
-                    <div class=\"col-lg-4\">
-                        <div class=\"alert alert-danger\">
-                            <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
-                            <strong>Du bist nicht dazu berechtigt diese Datei umzubennen!</strong>
-                        </div>
-                    </div>
-                </div>
-            ";
-    }
+
 
     ?>
 
