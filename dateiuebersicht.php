@@ -25,14 +25,21 @@
 
         <!-- Start Datenbankabfrage für Dateianzeige -->
     <?php
-
+    // Dateinamen aus DB auslesen
     $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
     $statement = $pdo->prepare("SELECT dbdateien.dateiname
                             FROM dbzuweisung INNER JOIN dbdateien 
                             ON dbdateien.dateiid = dbzuweisung.dateiid
-                            WHERE dbzuweisung.userid=$userid"); // User ID aus session in Variable speichern und hier eingeben
+                            WHERE dbzuweisung.userid=$userid");
     $statement->execute();
 
+    // Dateigroesse aus DB auslesen
+    $pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
+    $statement2 = $pdo->prepare("SELECT dbdateien.dateigroesse
+                            FROM dbzuweisung INNER JOIN dbdateien 
+                            ON dbdateien.dateiid = dbzuweisung.dateiid
+                            WHERE dbzuweisung.userid=$userid");
+    $statement2->execute();
     /*$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
     $statement2 = $pdo->prepare ("SELECT dateiid FROM dbzuweisung WHERE userid=1 AND besitzer=1");
     $statement2->execute();
@@ -54,7 +61,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php while ($dateiname = $statement->fetch()) {?>
+                    <?php while ($dateiname = $statement->fetch() && $dateigroesse = $statement2->fetch()) {?>
                         <tr>
                             <td>
                                 <div class="dropdown">
@@ -68,7 +75,7 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td>Dateigröße-Variable</td>
+                            <td><?php echo $dateigroesse[0]; ?></td>
                         </tr>
                     <?php } ?>
                     </tbody>
