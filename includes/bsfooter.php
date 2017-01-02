@@ -7,9 +7,9 @@
 
 
     <!-- Start Include Dateien -->
-    <?php include ("includes/coockie.php"); ?>
+    <?php include ("/home/jv029/public_html/includes/coockie.php"); ?>
     <?php //include ("includes/bseinbindung.php"); ?> <!-- Wenn ich diese Zeile nicht auskommentiere funktioniert das dropdownmenü nicht!-->
-    <?php include ("includes/connection.php"); ?>
+    <?php include ("/home/jv029/public_html/includes/connection.php"); ?>
     <!-- Ende Include Dateien -->
 
 </head>
