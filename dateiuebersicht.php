@@ -57,13 +57,13 @@
                     <thead>
                         <tr align="center">
                             <th>Dateiname</th>
-                            <th>Dateigröße in Megabyte</th>
+                            <th align="right">Dateigröße</th>
                         </tr>
                     </thead>
                     <tbody>
                     <?php while (($dateiname = $statement->fetch()) && ($dateigroesse = $statement2->fetch())) {?>
                         <tr>
-                            <td align="right">
+                            <td>
                                 <div class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> <?php echo $dateiname[0]; ?>
                                         <span class="caret"></span></a>
