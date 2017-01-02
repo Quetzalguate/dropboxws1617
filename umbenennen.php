@@ -18,14 +18,14 @@
 <body>
     <?php $dateiname = $_GET['var']; ?>
     <?php if ($besitzer !='0') {?>
-    <div class=\"container-fluid\">
-        <div class=\"col-lg-12\" align=\"center\">
-            <h3>Datei \"<?php echo $dateiname; ?>\" umbenennen</h3>
-            <form action = umbenennen.php?var=<?php echo $dateiname; ?> method=\"POST\" role =\"form\">
-                <div class=\"form-group\">
-                    <input type=\"text\" class=\"from-control\" name=\"neuerdateiname\" placeholder=\" Name.Dateiendung\"
+    <div class="container-fluid">
+        <div class="col-lg-12" align="center">
+            <h3>Datei "<?php echo $dateiname; ?>" umbenennen</h3>
+            <form action = umbenennen.php?var=<?php echo $dateiname; ?> method="POST" role ="form">
+                <div class="form-group">
+                    <input type="text" class="from-control" name="neuerdateiname" placeholder=" Name.Dateiendung"
                 </div>
-                <button type=\"submit\" class=\"btn btn-default\" name=\"submit\">Umbenennen</button>
+                <button type="submit" class="btn btn-default" name="submit">Umbenennen</button>
             </form>
         </div>
     </div>
