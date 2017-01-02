@@ -5,7 +5,7 @@
     <title>MinimalBox - Coockie</title>
     <!-- Start Include Dateien -->
     <?php include ("/home/jv029/public_html/includes/connection.php"); ?>
-    <?php// include ("includes/bseinbindung.php"); ?>
+    <?php// include ("includes/bseinbindung.php"); ?> <!-- Bei BS Einbindung funktioniert das Dropdown-Menü nicht! -->
     <!-- Ende Include Dateien -->
 </head>
 <body>
