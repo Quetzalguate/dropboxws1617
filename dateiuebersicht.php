@@ -63,7 +63,7 @@
                     <tbody>
                     <?php while (($dateiname = $statement->fetch()) && ($dateigroesse = $statement2->fetch())) {?>
                         <tr>
-                            <td>
+                            <td align="right">
                                 <div class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> <?php echo $dateiname[0]; ?>
                                         <span class="caret"></span></a>
