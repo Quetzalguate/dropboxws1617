@@ -13,7 +13,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dropbox - Einladen</title>
+    <title>MinimalBox - Einladen</title>
 
 </head>
 
@@ -57,7 +57,7 @@ Wir sehen uns auf der anderen Seite ;-)</textarea>
 <?php
 $nachricht = $_POST['nachricht'];
 $email = $_POST['email'];
-$emailvon = "From: Dropbox@example.com";
+$emailvon = "From: MinimalBox@example.com";
 $meldung = "Einladung wurde versendet";
 
 
@@ -65,7 +65,7 @@ $meldung = "Einladung wurde versendet";
 
         if (!empty($email) && !empty($nachricht)) {
 
-            mail("$email", "Einladung zur Dropbox", "$nachricht", $emailvon);
+            mail("$email", "Einladung zur MinimalBox", "$nachricht", $emailvon);
             echo "
             <div class=\"container-fluid\">
             <div class='col-lg-4'></div>
