@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MinimalBox - loeschen</title>
-    <link rel='shortcut icon' type='image/x-icon' href='images/minimalboxfavicon.ico' />
+
 
     <!-- Start Include Dateien -->
     <?php include ("includes/coockie.php"); ?>
