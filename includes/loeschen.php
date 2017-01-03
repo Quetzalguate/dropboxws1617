@@ -84,13 +84,20 @@
                 ";
     }
     else {
+
+        //DB-Eintrag aus dbzuweisung löschen --> Zeile löschen wo dateiid = xy
+        $stmt5 = $pdo->prepare("DELETE FROM dbzuweisung WHERE dateiid=:dateiid AND userid=:userid"); //Hier muss als Bedingung noch die userid im hashwert einbezogen werden, da ja der datainame nicht eindeutig ist
+        $stmt5->bindParam(':dateiid', $dateiid, PDO::PARAM_STR);
+        $stmt5->bindParam(':userid', $userid, PDO::PARAM_STR);
+        $stmt5->execute();
+
         echo "
         <div class=\"container-fluid\">
         <div class='col-lg-4'></div>
                 <div class=\"col-lg-4\">
                     <div class=\"alert alert-danger\">
                         <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
-                        <strong>Du bist nicht dazu berechtigt diese Datei zu löschen!</strong>
+                        <strong>Geteilte Datei wurde entfernt!</strong>
                     </div>
                 </div>
             </div>
