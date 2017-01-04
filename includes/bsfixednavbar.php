@@ -37,7 +37,7 @@
 
 <body>
 
-<nav class="navbar"> <!-- "<nav class="navbar navbar-fixed-top">" -->
+<nav class="navbar navbar-inverse"> <!-- "<nav class="navbar navbar-fixed-top">" -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
