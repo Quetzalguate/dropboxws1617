@@ -51,6 +51,7 @@
                 <div class="col-md-3"></div>
                 <div class="col-md-6" >
                 <h3 class="text-center">Deine Dateien</h3>
+                    </br></br>
                     <table class="table table-hover">
                         <thead>
                             <tr>
