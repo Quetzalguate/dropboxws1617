@@ -37,7 +37,7 @@
 
 <body>
 
-<nav class="navbar navbar-inverse"> <!-- "<nav class="navbar navbar-fixed-top">" -->
+<nav class="navbar"> <!-- "<nav class="navbar navbar-fixed-top">" -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -48,6 +48,12 @@
                     <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/einladen.php"><img class="icon icons8-Advertising" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACVUlEQVRoQ+2Z6zEEQRSFz0aACBABIiADRIAIEAEiIANEgAjIABGQASKgPtWjxmz39GOnd7ur5lbNj62Z7T7n3nMf0zNR5TapHL9GAouO4BiBMQJ2D6xJeuvcsqqlVAntSbqrmcCjpJ1aCRxKurYoqwoJbUrC+8s1EgD0syQS2GZFRwDPk7Qu8BAqlgAVB83bZNOORHEEAAxwCIRYMQQAfizpJMDrRUUAnR9Iokz65LLwJAbskgGKRGhKfQmaTUJsemZ06vNao9HvEDQJz0TnAOCpyz7gDZaiCACeuowUQi03gXVJ710wtrDEen5eEfiUtNUlYSNwY6pFqOfnRYB9bk0V+8NmI/ARoXtbnc6VxF1H/f62ESBUlMBYy50DwQSqlxBJ/JIQhdwR+DJV8V8lcr0TQ+Je0kaEjnITCC6jDebYSOQmEN2JIQKJczNK+BK7SAJtBTH+XvZIqh1iOjgjCFczzK1GyDHLNAooZiOXnUq66rlPNBmlcYQvmlkIsCgVwOVJKhetPsQggjRjopKUA10weJi3KZetSKIRhhjygkTfeu11BiHgk9GRJBphjLHmU4CsBiEAsL5R4yHiJb1NMqTvDEbAN2qkHhgjKSLhap6DEbCdHLe9uW+6eIyMmmf7mudgBNisb2SemtkjmXAAwPlo1wYlwJy06wBGqaWpzWJIabuzwKAEXEfgzZ70A/pCqmX/wEHC8ebmsgtT41MJzOUTEx5uV4xX0wOQ19TpQSoT3/9SSx7rMtOQcADmCu3APkxR92chELVRrodHArk8G7pu9RH4ARJPVjGRgPExAAAAAElFTkSuQmCC" width="15" height="15"> Einladen</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <form action = "<?=$_SERVER['PHP_SELF'];?>" method="post" role ="form">
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-default btn-xs" name="an">Licht An</button>
+                            <button type="submit" class="btn btn-default btn-xs" name="aus">Aus</button>
+                        </div>
+                    </form>
                     <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/profil.php"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
                     <li><a href="https://mars.iuk.hdm-stuttgart.de/~jv029/includes/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
