@@ -22,12 +22,13 @@
     <div class='col-lg-4'></div>
     <div class="col-lg-4" align="center">
         <h3>Lade einen Freund ein</h3>
-
+        </br></br>
         <form action="einladen.php" method="POST" role="form">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" name="email" id="email" placeholder="email-deines-freundes@email.de">
             </div>
+            </br>
             <div class="form-group">
                 <label for="nachricht">Nachricht</label>
                 <textarea class="form-control" rows="5" name="nachricht" id="nachricht">Hallo,
