@@ -1,5 +1,5 @@
 <?php
-$filename = 'gollum.jpg';
+$filename = 'smeagol.jpg';
 $dir = "upload/".$filename;
 //sftp://jv029@mars.iuk.hdm-stuttgart.de/home/jv029/public_html/tests/upload/gollum.jpg
 
