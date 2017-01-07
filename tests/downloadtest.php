@@ -1,5 +1,5 @@
 <?php
-$fileName = basename('hashwert1.jpg');
+$fileName = basename('biGGGa_ HowTo.pdf');
 $filePath = 'upload/'.$fileName;
 if(!empty($fileName) && file_exists($filePath)){
     // Define headers
