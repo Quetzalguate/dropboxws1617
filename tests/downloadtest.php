@@ -1,16 +1,16 @@
 <?php
-$fileName = basename('Juan Luis Guerra - Quisiera ser un pez.mp3');
-$filePath = 'upload/'.$fileName;
-if(!empty($fileName) && file_exists($filePath)){
-    // Define headers
+$dateiname = basename('Homer_Simpson_2006.png');
+$pfad = 'upload/'.$dateiname;
+if(!empty($dateiname) && file_exists($pfad)){
+    // Header definieren
     header("Cache-Control: public");
     header("Content-Description: File Transfer");
-    header("Content-Disposition: attachment; filename=$fileName");
+    header("Content-Disposition: attachment; filename=$dateiname");
     header("Content-Type: application/octet-stream"); //--> Hat funktioniert obwohl kein zip download!!! Content-Type:  application/zip     image/jpeg
     header("Content-Transfer-Encoding: binary");
 
-    // Read the file
-    readfile($filePath);
+    // Datei auslesen
+    readfile($pfad);
     exit;
 }else{
     echo 'The file does not exist.';
