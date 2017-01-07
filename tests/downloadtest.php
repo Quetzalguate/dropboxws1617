@@ -6,7 +6,7 @@ if(!empty($fileName) && file_exists($filePath)){
     header("Cache-Control: public");
     header("Content-Description: File Transfer");
     header("Content-Disposition: attachment; filename=$fileName");
-    header("Content-Type: image/jpeg"); //--> Hat funktioniert obwohl kein zip download!!! Content-Type:  application/zip
+    header("Content-Type: application/octet-stream"); //--> Hat funktioniert obwohl kein zip download!!! Content-Type:  application/zip     image/jpeg
     header("Content-Transfer-Encoding: binary");
 
     // Read the file
@@ -16,6 +16,6 @@ if(!empty($fileName) && file_exists($filePath)){
     echo 'The file does not exist.';
 }
 
-
+//Quelle: http://www.codexworld.com/force-download-file-php/
 
 ?>
