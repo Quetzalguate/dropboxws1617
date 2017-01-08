@@ -1,6 +1,6 @@
 <?php
-
-$basename = basename('hashwert1.jpg');
+$dateihash = "hashwert1.jpg";
+$basename = basename($dateihash);
 $pfad = 'upload/'.$basename;
 $mimetype = mime_content_type($pfad);
 if(!empty($basename) && file_exists($pfad)){
