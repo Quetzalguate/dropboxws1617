@@ -17,7 +17,7 @@ if(!empty($dateiname) && file_exists($pfad)){
                 ";
     exit;
 }else{
-    echo 'The file does not exist.';
+    echo 'The file '.$name.'does not exist.';
 }
 
 ?>
