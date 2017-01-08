@@ -10,19 +10,19 @@
 </head>
 <body>
 <?php
-$dateiname = "schmeagol.jpg";
+$dateiname1 = "schmeagol.jpg";
 
 //DB Abfrage um den zum Dateinamen zugehörigen hashwert auszulesen (Datei ist ja mit hashwert auf dem server gespeichert
 $stmt = $pdo->prepare("SELECT dateihash FROM dbdateien WHERE dateiname=:dateiname");
-$stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
+$stmt->bindParam(':dateiname', $dateiname1, PDO::PARAM_STR);
 $stmt->execute();
 $erg= $stmt->fetch();
 $dateihash = $erg[0];
 echo $dateihash;
 
 
-/*$dateiname = basename('Homer_Simpson_2006.png');
-$pfad = 'upload/'.$dateiname;
+$dateiname = basename($dateihash);
+$pfad = '/home/jv029/public_html/upload/'.$dateihash;
 if(!empty($dateiname) && file_exists($pfad)){
     // Header definieren
     header("Cache-Control: public");
@@ -36,7 +36,7 @@ if(!empty($dateiname) && file_exists($pfad)){
     exit;
 }else{
     echo 'The file does not exist.';
-}*/
+}
 
 //Quelle: http://www.codexworld.com/force-download-file-php/
 
