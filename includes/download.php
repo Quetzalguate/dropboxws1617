@@ -21,7 +21,7 @@ $dateihash = $erg[0];
 
 //eventuell rename
 
-$basename = basename("$dateihash");
+$basename = basename($dateihash);
 $pfad = '/home/jv029/public_html/upload/'.$basename;
 if(!empty($basename) && file_exists($pfad)){
     // Header definieren
