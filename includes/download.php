@@ -33,7 +33,7 @@ if(!empty($basename) && file_exists($pfad)){
     header("Content-Transfer-Encoding: binary");
 
     // Read the file
-    readfile($pfad);
+    //readfile($pfad);
     //exit;
 }else{
     echo 'The file does not exist.';
