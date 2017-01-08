@@ -1,7 +1,7 @@
 <?php
 $name = $_GET['var'];
 $dateiname = basename("$name");
-$pfad = 'upload/'.$dateiname;
+$pfad = '/home/jv029/public_html/upload/'.$dateiname;
 if(!empty($dateiname) && file_exists($pfad)){
     // Header definieren
     header("Cache-Control: public");
