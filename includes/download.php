@@ -31,7 +31,7 @@ if(!empty($basename) && file_exists($pfad)){
     header("Content-Disposition: attachment; filename=$basename");
     header("Content-Type: $mimetype");
     header("Content-Transfer-Encoding: binary");
-
+    echo "download wird gestartet";
     // Read the file
     //readfile($pfad);
     //exit;
