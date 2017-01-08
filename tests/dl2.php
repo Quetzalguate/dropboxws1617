@@ -6,7 +6,7 @@ if(!empty($basename) && file_exists($pfad)){
     header("Cache-Control: public");
     header("Content-Description: File Transfer");
     header("Content-Disposition: attachment; filename=$basename");
-    header("Content-Type: application/zip");
+    header("Content-Type: application/octet-stream");
     header("Content-Transfer-Encoding: binary");
 
     // Read the file
