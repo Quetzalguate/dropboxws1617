@@ -1,4 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>MinimalBox - Herunterladen</title>
+
+    <!-- Start Include Dateien -->
+    <?php include ("/home/jv029/public_html/includes/connection.php"); ?>
+    <!-- Ende Include Dateien -->
+</head>
+<body>
 <?php
+$dateiname = "schmeagol.jpg";
+
+//DB Abfrage um den zum Dateinamen zugehörigen hashwert auszulesen (Datei ist ja mit hashwert auf dem server gespeichert
+$stmt = $pdo->prepare("SELECT dateihash FROM dbdateien WHERE dateiname=:dateiname");
+$stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
+$stmt->execute();
+$erg= $stmt->fetch();
+$dateihash = $erg[0];
+echo $dateihash;
+
+
 $dateiname = basename('Homer_Simpson_2006.png');
 $pfad = 'upload/'.$dateiname;
 if(!empty($dateiname) && file_exists($pfad)){
