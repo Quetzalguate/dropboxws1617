@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php
-$dateiname1 = "schmeagol.jpg";
+/*$dateiname1 = "schmeagol.jpg";
 
 //DB Abfrage um den zum Dateinamen zugehörigen hashwert auszulesen (Datei ist ja mit hashwert auf dem server gespeichert
 $stmt = $pdo->prepare("SELECT dateihash FROM dbdateien WHERE dateiname=:dateiname");
@@ -18,7 +18,7 @@ $stmt->bindParam(':dateiname', $dateiname1, PDO::PARAM_STR);
 $stmt->execute();
 $erg= $stmt->fetch();
 $dateihash = $erg[0];
-echo $dateihash;
+echo $dateihash;*/
 
 
 $dateiname = basename('hashwert1.jpg');
