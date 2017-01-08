@@ -10,7 +10,9 @@
 </head>
 <body>
 <?php
-$dateiname = "schmeagol.jpg";//$_GET['var'];
+$name = $_GET['var'];
+echo $name;
+$dateiname = "schmeagol.jpg";//
 
 $stmt = $pdo->prepare("SELECT dateihash FROM dbdateien WHERE dateiname=:dateiname");
 $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
@@ -32,7 +34,7 @@ if(!empty($basename) && file_exists($pfad)){
 
     // Read the file
     readfile($pfad);
-    //exit;
+    exit;
 }else{
     echo 'The file does not exist.';
 }
