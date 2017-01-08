@@ -1,6 +1,6 @@
 <?php
 $name = $_GET['var'];
-$dateiname = basename($name);
+$dateiname = basename("senf.jpg");
 $pfad = 'upload/'.$dateiname;
 if(!empty($dateiname) && file_exists($pfad)){
     // Header definieren
