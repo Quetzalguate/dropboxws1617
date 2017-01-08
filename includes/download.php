@@ -34,7 +34,7 @@ if(!empty($basename) && file_exists($pfad)){
 
     // Read the file
     readfile($pfad);
-    exit;
+    //exit;
 }else{
     echo 'The file does not exist.';
 }
