@@ -21,7 +21,7 @@ $dateihash = $erg[0];
 echo $dateihash;
 
 
-$dateiname = basename('Homer_Simpson_2006.png');
+/*$dateiname = basename('Homer_Simpson_2006.png');
 $pfad = 'upload/'.$dateiname;
 if(!empty($dateiname) && file_exists($pfad)){
     // Header definieren
@@ -32,8 +32,8 @@ if(!empty($dateiname) && file_exists($pfad)){
     header("Content-Transfer-Encoding: binary");
 
     // Datei auslesen
-    //readfile($pfad);
-    //exit;
+    readfile($pfad);
+    exit;*/
 }else{
     echo 'The file does not exist.';
 }
@@ -41,3 +41,5 @@ if(!empty($dateiname) && file_exists($pfad)){
 //Quelle: http://www.codexworld.com/force-download-file-php/
 
 ?>
+</body>
+</html>
