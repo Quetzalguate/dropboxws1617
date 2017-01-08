@@ -1,6 +1,6 @@
 <?php
 $name = $_GET['var'];
-$dateiname = basename("senf.jpg");
+$dateiname = basename($name);
 $pfad = 'upload/'.$dateiname;
 if(!empty($dateiname) && file_exists($pfad)){
     // Header definieren
@@ -18,6 +18,9 @@ if(!empty($dateiname) && file_exists($pfad)){
     exit;
 }else{
     echo 'The file '.$name.' does not exist.';
+    if(file_exists($pfad)){
+        echo "</br>existiert!";
+    }
 }
 
 ?>
