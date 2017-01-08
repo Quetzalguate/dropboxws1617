@@ -10,9 +10,9 @@
 </head>
 <body>
 <?php
-//$dateiname = $_GET['var'];
+$dateiname = $_GET['var'];
 //echo $dateiname;
-$dateiname = "schmeagol.jpg";
+//$dateiname = "schmeagol.jpg";
 
 $stmt = $pdo->prepare("SELECT dateihash FROM dbdateien WHERE dateiname=:dateiname");
 $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
