@@ -32,7 +32,7 @@ if(!empty($dateiname) && file_exists($pfad)){
     header("Content-Transfer-Encoding: binary");
 
     // Datei auslesen
-    readfile($pfad);
+    //readfile($pfad);
     exit;
 }else{
     echo 'The file does not exist.';
