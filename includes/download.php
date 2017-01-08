@@ -19,25 +19,23 @@ $stmt->execute();
 $erg= $stmt->fetch();
 $dateihash = $erg[0];
 
-//eventuell rename
 
 $basename = basename($dateihash);
 $pfad = '/home/jv029/public_html/upload/'.$basename;
 $mimetype = mime_content_type($pfad);
 if(!empty($basename) && file_exists($pfad)){
-    // Header definieren
+    // Define headers
     header("Cache-Control: public");
     header("Content-Description: File Transfer");
-    header("Content-Disposition: attachment; filename=$dateiname");
-    header("Content-Type: $mimetype"); //--> Hat funktioniert obwohl kein zip download!!! Content-Type:  application/zip     image/jpeg
+    header("Content-Disposition: attachment; filename=$basename");
+    header("Content-Type: $mimetype");
     header("Content-Transfer-Encoding: binary");
 
-    // Datei auslesen
+    // Read the file
     readfile($pfad);
-    echo "<meta http-equiv=\"refresh\" content=\"2; url=https://mars.iuk.hdm-stuttgart.de/~jv029/dateiuebersicht.php";
     exit;
 }else{
-    echo 'The file '.$name.' does not exist.';
+    echo 'The file does not exist.';
 }
 
 ?>

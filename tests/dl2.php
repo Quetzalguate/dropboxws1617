@@ -11,7 +11,7 @@ $stmt->execute();
 $erg= $stmt->fetch();
 $dateihash = $erg[0];
 
-//$dateihash = "senf.jpg";
+
 $basename = basename($dateihash);
 $pfad = '/home/jv029/public_html/upload/'.$basename;
 $mimetype = mime_content_type($pfad);
