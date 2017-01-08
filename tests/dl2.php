@@ -1,7 +1,7 @@
 <?php
-$dateihash = "hashwert1.jpg";
+$dateihash = "senf.jpg";
 $basename = basename($dateihash);
-$pfad = 'upload/'.$basename;
+$pfad = '/home/jv029/public_html/upload/'.$basename;
 $mimetype = mime_content_type($pfad);
 if(!empty($basename) && file_exists($pfad)){
     // Define headers
