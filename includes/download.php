@@ -21,6 +21,7 @@ if(!empty($dateiname) && file_exists($pfad)){
     if(file_exists($pfad)){
         echo "</br>existiert!";
     }
+    else{echo "</br>existiert nicht";}
 }
 
 ?>
