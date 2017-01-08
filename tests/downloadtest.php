@@ -33,7 +33,7 @@ if(!empty($dateiname) && file_exists($pfad)){
 
     // Datei auslesen
     //readfile($pfad);
-    exit;
+    //exit;
 }else{
     echo 'The file does not exist.';
 }
