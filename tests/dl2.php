@@ -1,5 +1,5 @@
 <?php
-$dateiname = "hashwert1.jpg";
+$dateiname = "Juan Luis Guerra - Quisiera ser un pez.mp3";
 $dateipfad = "upload/".$dateiname;
 echo mime_content_type($dateipfad);
 
