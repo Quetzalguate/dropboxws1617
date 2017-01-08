@@ -19,7 +19,7 @@ $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
 $stmt->execute();
 $erg= $stmt->fetch();
 $dateihash = $erg[0];
-echo $dateihash;
+echo "</br>".$dateihash;
 
 /*
 $basename = basename($dateihash);
