@@ -20,7 +20,7 @@ $stmt->execute();
 $erg= $stmt->fetch();
 $dateihash = $erg[0];
 
-
+/*
 $basename = basename($dateihash);
 $pfad = '/home/jv029/public_html/upload/'.$basename;
 $mimetype = mime_content_type($pfad);
@@ -33,9 +33,10 @@ if(!empty($basename) && file_exists($pfad)){
     header("Content-Transfer-Encoding: binary");
     echo "download wird gestartet";
     // Read the file
-    //readfile($pfad);
-    //exit;
+    readfile($pfad);
+    exit;
 }else{
     echo 'The file does not exist.';
 }
+*/
 ?>
