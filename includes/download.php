@@ -21,11 +21,12 @@ $erg= $stmt->fetch();
 $dateihash = $erg[0];
 echo "</br>".$dateihash;
 
-/*
+
 $basename = basename($dateihash);
 $pfad = '/home/jv029/public_html/upload/'.$basename;
 $mimetype = mime_content_type($pfad);
-if(!empty($basename) && file_exists($pfad)){
+echo "</br>".$mimetype;
+/*if(!empty($basename) && file_exists($pfad)){
     // Define headers
     header("Cache-Control: public");
     header("Content-Description: File Transfer");
