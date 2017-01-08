@@ -20,9 +20,9 @@ $erg= $stmt->fetch();
 $dateihash = $erg[0];
 echo $dateihash;
 
-$dadaihesch= "";
-$dateiname = basename('asdfghjkl8.jpg');
-$pfad = '/home/jv029/public_html/upload/'.$dateiname;
+
+$dateiname = basename('hashwert1.jpg');
+$pfad = 'upload/'.$dateiname;///home/jv029/public_html/
 if(!empty($dateiname) && file_exists($pfad)){
     // Header definieren
     header("Cache-Control: public");
