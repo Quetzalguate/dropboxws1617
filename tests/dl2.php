@@ -1,6 +1,8 @@
 <?php
 include ("/home/jv029/public_html/includes/connection.php");
 
+$dateiname = "schmeagol.jpg";
+
 $stmt = $pdo->prepare("SELECT dateihash FROM dbdateien WHERE dateiname=:dateiname");
 $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
 $stmt->execute();
