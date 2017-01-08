@@ -28,16 +28,16 @@ $mimetype = mime_content_type($pfad);
 echo "</br>".$mimetype;
 if(!empty($basename) && file_exists($pfad)){
     echo "</br>erfüllt if bedingung";
-    /*// Define headers
+    // Define headers
     header("Cache-Control: public");
     header("Content-Description: File Transfer");
     header("Content-Disposition: attachment; filename=$basename");
     header("Content-Type: $mimetype");
     header("Content-Transfer-Encoding: binary");
-    echo "download wird gestartet";
+
     // Read the file
     readfile($pfad);
-    exit;*/
+    exit;
 }else{
     echo 'The file does not exist.';
 }
