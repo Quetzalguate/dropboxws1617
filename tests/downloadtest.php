@@ -33,10 +33,10 @@ if(!empty($dateiname) && file_exists($pfad)){
 
     // Datei auslesen
     readfile($pfad);
-    exit;*/
+    exit;
 }else{
     echo 'The file does not exist.';
-}
+}*/
 
 //Quelle: http://www.codexworld.com/force-download-file-php/
 
