@@ -1,7 +1,8 @@
 <?php
 $dateiname = "Juan Luis Guerra - Quisiera ser un pez.mp3";
 $dateipfad = "upload/".$dateiname;
-echo mime_content_type($dateipfad);
+$mimetype = mime_content_type($dateipfad);
+echo $mimetype;
 
 /*
 $basename = basename('hashwert1.jpg');
