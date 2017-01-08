@@ -11,7 +11,7 @@
 <body>
 <?php
 $dateiname = $_GET['var'];
-echo $name;
+echo $dateiname;
 //$dateiname = "schmeagol.jpg";//
 
 $stmt = $pdo->prepare("SELECT dateihash FROM dbdateien WHERE dateiname=:dateiname");
