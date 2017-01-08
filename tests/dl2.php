@@ -1,4 +1,9 @@
 <?php
+$dateiname = "hashwert1.jpg";
+$dateipfad = "upload/".$dateiname;
+echo mime_content_type($dateipfad);
+
+/*
 $basename = basename('hashwert1.jpg');
 $pfad = 'upload/'.$basename;
 if(!empty($basename) && file_exists($pfad)){
@@ -15,4 +20,5 @@ if(!empty($basename) && file_exists($pfad)){
 }else{
     echo 'The file does not exist.';
 }
+*/
 ?>
