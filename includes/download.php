@@ -23,12 +23,13 @@ $dateihash = $erg[0];
 
 $basename = basename($dateihash);
 $pfad = '/home/jv029/public_html/upload/'.$basename;
+$mimetype = mime_content_type($pfad);
 if(!empty($basename) && file_exists($pfad)){
     // Header definieren
     header("Cache-Control: public");
     header("Content-Description: File Transfer");
-    header("Content-Disposition: attachment; filename=$basename");
-    header("Content-Type: application/octet-stream"); //--> Hat funktioniert obwohl kein zip download!!! Content-Type:  application/zip     image/jpeg
+    header("Content-Disposition: attachment; filename=$dateiname");
+    header("Content-Type: $mimetype"); //--> Hat funktioniert obwohl kein zip download!!! Content-Type:  application/zip     image/jpeg
     header("Content-Transfer-Encoding: binary");
 
     // Datei auslesen
