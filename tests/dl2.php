@@ -1,10 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "jv029";
-$password = "IeBu2chie3";
-$dateiname = "schmeagol.jpg";
+include ("/home/jv029/public_html/includes/connection.php");
 
-$pdo = new PDO("mysql:host=$servername;dbname=u-jv029", $username, $password);
 $stmt = $pdo->prepare("SELECT dateihash FROM dbdateien WHERE dateiname=:dateiname");
 $stmt->bindParam(':dateiname', $dateiname, PDO::PARAM_STR);
 $stmt->execute();
