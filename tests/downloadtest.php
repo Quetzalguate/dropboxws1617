@@ -20,8 +20,8 @@ $erg= $stmt->fetch();
 $dateihash = $erg[0];
 echo $dateihash;
 
-$dadaihesch= "asdfghjkl8.jpg";
-$dateiname = basename($dadaihesch);
+$dadaihesch= "";
+$dateiname = basename('asdfghjkl8.jpg');
 $pfad = '/home/jv029/public_html/upload/'.$dateiname;
 if(!empty($dateiname) && file_exists($pfad)){
     // Header definieren
